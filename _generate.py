@@ -3,7 +3,9 @@
 import os, json
 BASE = os.path.dirname(os.path.abspath(__file__))
 
-def cp(c): d=c.strip("/").count("/"); return ("../"*d)+"style.css" if d else "style.css"
+def cp(c):
+    # The site uses its own domain, so the root-relative path works from every page.
+    return "/style.css"
 def write(path, html):
     f=os.path.join(BASE,path.lstrip("/")); os.makedirs(os.path.dirname(f),exist_ok=True)
     open(f,"w",encoding="utf-8").write(html); print(f"  ✓ {path}")
