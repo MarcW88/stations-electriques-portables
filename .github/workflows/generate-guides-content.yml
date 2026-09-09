@@ -1,0 +1,98 @@
+name: Generate guide content
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - content/guides-workflow
+    paths:
+      - '_generate.py'
+      - '_generate_guides.py'
+      - '_validate_guides.py'
+      - 'content-workflow.config.yaml'
+      - '.content/guides/**'
+      - '.agents/skills/content-recovery-and-production-workflow/**'
+      - '.github/workflows/generate-guides-content.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate site shell
+        run: python _generate.py
+
+      - name: Generate twelve researched guides
+        run: python _generate_guides.py
+
+      - name: Run workflow structural quality gate
+        run: |
+          python .agents/skills/content-recovery-and-production-workflow/scripts/validate_content_quality.py guides \
+            --min-words 900 \
+            --min-h2 7 \
+            --min-section-words 70 \
+            --min-table-prose 50 \
+            --min-internal-links 5 \
+            --min-unique-targets 4 \
+            --min-sources 3 \
+            --single-p-min-words 130 \
+            --require-noindex
+
+      - name: Run repo-specific guide QA
+        run: python _validate_guides.py
+
+      - name: Check idempotence
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, subprocess
+          pages = sorted(Path('guides').glob('*/index.html'))
+          before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          subprocess.run(['python', '_generate_guides.py'], check=True)
+          after = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          changed = [p for p in before if before[p] != after[p]]
+          if changed:
+              raise SystemExit('Non-idempotent guide generation: ' + ', '.join(changed))
+          print(f'PASS: idempotent across {len(pages)} guide pages')
+          PY
+
+      - name: Preserve noindex
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          bad=[]
+          for p in Path('guides').glob('*/index.html'):
+              s=p.read_text(encoding='utf-8')
+              if 'name="robots" content="noindex, follow"' not in s:
+                  bad.append(str(p))
+          if bad:
+              raise SystemExit('noindex missing: ' + ', '.join(bad))
+          print('PASS: noindex, follow preserved')
+          PY
+
+      - name: Check whitespace
+        run: git diff --check
+
+      - name: Commit generated guide HTML
+        run: |
+          if git diff --quiet -- guides/; then
+            echo 'No rendered guide changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add guides/
+          git commit -m '[skip ci] Generate researched guide content'
+          git push
