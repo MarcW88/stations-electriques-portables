@@ -1,0 +1,62 @@
+project:
+  name: "stations-electriques-portables.fr"
+  domain: "https://stations-electriques-portables.fr"
+  language: "fr"
+
+content:
+  content_scope:
+    - "/guides/"
+  content_type: "affiliate"
+  mode: "new_content"
+  source_of_truth: "_generate.py"
+  guide_source_of_truth: "_generate_guides.py"
+  generation_order:
+    - "python _generate.py"
+    - "python _generate_guides.py"
+
+quality:
+  quality_reference: "/guides/comment-choisir-station-electrique-portable/"
+  minimum_standard: "reference-floor"
+  avoid_wordcount_padding: true
+
+seo:
+  semantic_source: []
+  preserve_existing_ranked_content: true
+
+internal_linking:
+  commercial_paths:
+    - "/comparatifs/"
+    - "/modeles/"
+    - "/marques/"
+  informational_paths:
+    - "/guides/"
+    - "/usages/"
+    - "/solaire/"
+    - "/puissance-capacite/"
+  minimum_contextual_links: 5
+  minimum_unique_targets: 4
+
+workflow:
+  briefs_dir: ".content/briefs"
+  reviews_dir: ".content/reviews"
+  draft_robots: "noindex, follow"
+  require_human_validation_before_publish: true
+  allow_automatic_merge: false
+
+quality_gate:
+  default_min_words: 900
+  minimum_h2_substantive: 5
+  minimum_section_words: 70
+  minimum_prose_around_table: 50
+  minimum_source_links: 3
+  fail_on_single_short_paragraph_section: true
+  single_paragraph_min_words: 130
+
+fact_check:
+  prefer_primary_sources: true
+  statuses:
+    - CONFIRMED
+    - PARTIAL
+    - UNVERIFIED
+    - CONTRADICTED
+    - OUTDATED
