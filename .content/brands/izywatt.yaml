@@ -1,0 +1,194 @@
+{
+  "brand": {
+    "id": "izywatt",
+    "name": "IZYWATT",
+    "canonical_url": "/marques/izywatt/",
+    "updated_at": "2026-09-09"
+  },
+  "entity_map": {
+    "products": [
+      "IZYWATT 800",
+      "IZYWATT Moov",
+      "IZYWATT Home",
+      "IZYWATT Eco",
+      "IZYWATT Extra"
+    ],
+    "services": [],
+    "software": [
+      "Smart Control (Eco)"
+    ],
+    "technologies": [
+      "LiFePO4/LFP",
+      "MPPT",
+      "onduleur sinusoïdal pur",
+      "UPS/EPS selon modèle"
+    ],
+    "accessories": [
+      "panneaux solaires",
+      "câbles de recharge",
+      "batteries additionnelles selon modèle"
+    ],
+    "integrations": [],
+    "formats": [],
+    "use_cases": [
+      "camping",
+      "van",
+      "camping-car",
+      "secours domestique",
+      "télétravail",
+      "chantier"
+    ],
+    "competitors": [
+      "EcoFlow",
+      "BLUETTI",
+      "AFERIY"
+    ]
+  },
+  "brand_positioning": {
+    "statement": "IZYWATT est la gamme énergie nomade d’Orium. En 2026, elle est organisée par usage : 800 pour le compact, Moov pour la mobilité, Home pour le secours domestique et Eco pour la capacité, l’extension et la gestion d’énergie à domicile.",
+    "evidence": [
+      "https://www.oriumfrance.com/gammes/izywatt/",
+      "https://www.oriumfrance.com/station-denergie-nomade-izywatt-moov/"
+    ]
+  },
+  "product_range": [
+    {
+      "id": "izywatt-800",
+      "name": "IZYWATT 800",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "518 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "compacte pour besoins essentiels",
+      "main_limit": "",
+      "source": "https://www.oriumfrance.com/gammes/izywatt/",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "izywatt-moov",
+      "name": "IZYWATT Moov",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "835 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "mobilité, van et camping",
+      "main_limit": "",
+      "source": "https://www.oriumfrance.com/gammes/izywatt/",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "izywatt-home",
+      "name": "IZYWATT Home",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "1 536 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "secours domestique avec EPS",
+      "main_limit": "",
+      "source": "https://www.oriumfrance.com/gammes/izywatt/",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "izywatt-eco",
+      "name": "IZYWATT Eco",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "2 048 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "station évolutive avec injection réglable",
+      "main_limit": "",
+      "source": "https://www.oriumfrance.com/gammes/izywatt/",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "izywatt-extra",
+      "name": "IZYWATT Extra",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "2 048 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "batterie additionnelle pour Eco, jusqu’à quatre modules",
+      "main_limit": "",
+      "source": "https://www.oriumfrance.com/gammes/izywatt/",
+      "verified_at": "2026-09-09"
+    }
+  ],
+  "ecosystem": {
+    "hardware": [
+      "IZYWATT 800",
+      "IZYWATT Moov",
+      "IZYWATT Home",
+      "IZYWATT Eco",
+      "IZYWATT Extra"
+    ],
+    "stylus": [],
+    "os": [],
+    "notes": [],
+    "pdf": [],
+    "ocr": [],
+    "cloud": [],
+    "export": [],
+    "third_party": [
+      "Stations 800, Moov, Home et Eco",
+      "batteries additionnelles Extra pour Eco",
+      "panneaux solaires Orium selon station",
+      "mode EPS sur Moov/Home/Eco selon documentation",
+      "application Smart Control sur Eco"
+    ]
+  },
+  "evidence": [
+    {
+      "entity": "IZYWATT",
+      "claim": "Orium — gamme IZYWATT",
+      "source": "https://www.oriumfrance.com/gammes/izywatt/",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "IZYWATT",
+      "claim": "Orium — IZYWATT Moov",
+      "source": "https://www.oriumfrance.com/station-denergie-nomade-izywatt-moov/",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "IZYWATT",
+      "claim": "Orium — IZYWATT Eco",
+      "source": "https://www.oriumfrance.com/izywatt-eco-decouvrez-la-station-electrique-portable-nouvelle-generation/",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "IZYWATT",
+      "claim": "Orium — IZYWATT Home",
+      "source": "https://www.oriumfrance.com/station-denergie-nomade-izywatt-home/",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    }
+  ],
+  "internal_links": {
+    "products": [],
+    "comparisons": [
+      "/comparatifs/meilleure-station-electrique-portable/",
+      "/comparatifs/station-electrique-portable-puissante/"
+    ],
+    "guides": [
+      "/guides/comment-choisir-station-electrique-portable/",
+      "/guides/ups-eps-station-electrique/",
+      "/solaire/recharger-station-electrique-panneau-solaire/"
+    ],
+    "usages": [
+      "/usages/station-electrique-van/",
+      "/usages/station-electrique-camping/",
+      "/usages/station-electrique-maison/"
+    ],
+    "services": []
+  },
+  "known_exceptions": [
+    "Aucune fiche modèle IZYWATT interne n'existe encore dans le repo; le hub lie la gamme officielle et les pages usages/guides."
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "brand": {
+    "id": "allpowers",
+    "name": "ALLPOWERS",
+    "canonical_url": "/marques/allpowers/",
+    "updated_at": "2026-09-09"
+  },
+  "entity_map": {
+    "products": [
+      "VOLIX P300",
+      "R600",
+      "R1500 Lite",
+      "R2500 Plus / V2",
+      "R3500",
+      "R4000 Lite",
+      "S700"
+    ],
+    "services": [],
+    "software": [
+      "application mobile"
+    ],
+    "technologies": [
+      "LiFePO4/LFP",
+      "MPPT",
+      "onduleur sinusoïdal pur",
+      "UPS/EPS selon modèle"
+    ],
+    "accessories": [
+      "panneaux solaires",
+      "câbles de recharge",
+      "batteries additionnelles selon modèle"
+    ],
+    "integrations": [],
+    "formats": [],
+    "use_cases": [
+      "camping",
+      "van",
+      "camping-car",
+      "secours domestique",
+      "télétravail",
+      "chantier"
+    ],
+    "competitors": [
+      "AFERIY",
+      "BLUETTI",
+      "EcoFlow"
+    ]
+  },
+  "brand_positioning": {
+    "statement": "ALLPOWERS couvre un spectre très large, du petit VOLIX P300 aux stations R3500/R4000 de plusieurs kWh, avec une forte présence de batteries LFP, du solaire et d’une application Wi-Fi/Bluetooth sur la série R.",
+    "evidence": [
+      "https://iallpowers.com/collections/portable-power-stations",
+      "https://iallpowers.com/products/allpowers-r1500-lite-portable-power-station"
+    ]
+  },
+  "product_range": [
+    {
+      "id": "volix-p300",
+      "name": "VOLIX P300",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "256 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "entrée de gamme LFP",
+      "main_limit": "",
+      "source": "https://iallpowers.com/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "r600",
+      "name": "R600",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "299 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "compacte LFP",
+      "main_limit": "",
+      "source": "https://iallpowers.com/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "r1500-lite",
+      "name": "R1500 Lite",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "1 056 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "1 kWh, LFP et UPS",
+      "main_limit": "",
+      "source": "https://iallpowers.com/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "r2500-plus-v2",
+      "name": "R2500 Plus / V2",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "env. 1 920 à 2 016 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "2 kWh, variantes à distinguer",
+      "main_limit": "",
+      "source": "https://iallpowers.com/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "r3500",
+      "name": "R3500",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "3 168 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "secours haute capacité",
+      "main_limit": "",
+      "source": "https://iallpowers.com/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "r4000-lite",
+      "name": "R4000 Lite",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "3 456 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "haut de gamme de la collection",
+      "main_limit": "",
+      "source": "https://iallpowers.com/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "s700",
+      "name": "S700",
+      "status": "PREVIOUS_GENERATION",
+      "generation": "",
+      "size": "606 Wh env.",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "ancienne famille S, à ne pas confondre avec R600",
+      "main_limit": "",
+      "source": "https://iallpowers.com/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    }
+  ],
+  "ecosystem": {
+    "hardware": [
+      "VOLIX P300",
+      "R600",
+      "R1500 Lite",
+      "R2500 Plus / V2",
+      "R3500",
+      "R4000 Lite",
+      "S700"
+    ],
+    "stylus": [],
+    "os": [],
+    "notes": [],
+    "pdf": [],
+    "ocr": [],
+    "cloud": [],
+    "export": [],
+    "third_party": [
+      "Stations VOLIX, R et anciennes S",
+      "batteries B1000/B3000 selon modèles",
+      "panneaux solaires pliables",
+      "application ALLPOWERS Wi-Fi/Bluetooth sur plusieurs R",
+      "recharge CA, solaire, voiture et double entrée selon modèle"
+    ]
+  },
+  "evidence": [
+    {
+      "entity": "ALLPOWERS",
+      "claim": "ALLPOWERS — stations électriques portables",
+      "source": "https://iallpowers.com/collections/portable-power-stations",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "ALLPOWERS",
+      "claim": "ALLPOWERS R1500 Lite",
+      "source": "https://iallpowers.com/products/allpowers-r1500-lite-portable-power-station",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "ALLPOWERS",
+      "claim": "ALLPOWERS R2500 Plus",
+      "source": "https://iallpowers.com/products/allpowers-r2500-portable-home-backup-power-station-2500w-2016wh",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "ALLPOWERS",
+      "claim": "ALLPOWERS — manuels",
+      "source": "https://iallpowers.com/pages/user-guides",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    }
+  ],
+  "internal_links": {
+    "products": [
+      "/modeles/allpowers-s700/"
+    ],
+    "comparisons": [
+      "/comparatifs/station-electrique-portable-pas-chere/",
+      "/comparatifs/station-electrique-portable-puissante/"
+    ],
+    "guides": [
+      "/guides/lifepo4-ou-lithium-ion/",
+      "/guides/onde-sinusoidale-pure/"
+    ],
+    "usages": [
+      "/usages/station-electrique-chantier/",
+      "/usages/station-electrique-camping-car/",
+      "/usages/station-electrique-maison/"
+    ],
+    "services": []
+  },
+  "known_exceptions": []
+}
