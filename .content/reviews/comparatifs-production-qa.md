@@ -2,13 +2,16 @@
 
 ```yaml
 scope: /comparatifs/
-status: QA_COMPLETE_AWAITING_HUMAN_VALIDATION
+status: APPROVED_FOR_MERGE
 methodology_gate: PASS
 editorial_gate: PASS
+human_validation: explicit_user_approval_2026-09-09
 indexing_status: noindex
-publishable: false
-human_validation_required: true
-workflow_run: 34323472260
+publishable_for_indexing: false
+human_validation_required: false
+workflow_runs:
+  - 34323472260
+  - 34323632420
 ```
 
 ## Contrôles éditoriaux
@@ -63,7 +66,7 @@ Sur les comparatifs budget et compact, EcoFlow RIVER 3 reste analysée dans l'un
 
 ## CI final
 
-Run permanent `34323472260` : `PASS`.
+Runs permanents `34323472260` et `34323632420` : `PASS`.
 
 Validé :
 1. génération du shell avec `_generate.py` ;
@@ -79,6 +82,6 @@ Validé :
 
 ## Verdict final
 
-`QA_COMPLETE_AWAITING_HUMAN_VALIDATION`.
+`APPROVED_FOR_MERGE`.
 
-Le workflow, les datasets, les rankings et les pages sont prêts pour revue en PR. Un CI vert ne déclenche ni merge ni passage en index : validation humaine explicite requise.
+Validation humaine explicite reçue le 09/09/2026. Le merge est autorisé. Le passage en index n'est pas autorisé : le `noindex, follow` doit rester en place.
