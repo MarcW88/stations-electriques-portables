@@ -1,0 +1,185 @@
+{
+  "brand": {
+    "id": "anker-solix",
+    "name": "Anker SOLIX",
+    "canonical_url": "/marques/anker-solix/",
+    "updated_at": "2026-09-09"
+  },
+  "entity_map": {
+    "products": [
+      "C300",
+      "C1000 Gen 2",
+      "C2000 Gen 2",
+      "C1000 première génération",
+      "F2000"
+    ],
+    "services": [],
+    "software": [
+      "application mobile"
+    ],
+    "technologies": [
+      "LiFePO4/LFP",
+      "MPPT",
+      "onduleur sinusoïdal pur",
+      "UPS/EPS selon modèle"
+    ],
+    "accessories": [
+      "panneaux solaires",
+      "câbles de recharge",
+      "batteries additionnelles selon modèle"
+    ],
+    "integrations": [],
+    "formats": [],
+    "use_cases": [
+      "camping",
+      "van",
+      "camping-car",
+      "secours domestique",
+      "télétravail",
+      "chantier"
+    ],
+    "competitors": [
+      "EcoFlow",
+      "BLUETTI",
+      "Jackery"
+    ]
+  },
+  "brand_positioning": {
+    "statement": "Anker SOLIX recentre sa gamme portable autour de la série C : C300 pour le compact, C1000 Gen 2 pour le cœur 1 kWh et C2000 Gen 2 pour 2 kWh, avec une forte emphase sur la recharge rapide, la compacité et l’application.",
+    "evidence": [
+      "https://www.ankersolix.com/fr/collections/portable-power-stations",
+      "https://www.ankersolix.com/fr/products/c1000-gen2"
+    ]
+  },
+  "product_range": [
+    {
+      "id": "c300",
+      "name": "C300",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "288 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "compacte, actuellement épuisée sur la boutique FR",
+      "main_limit": "",
+      "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "c1000-gen-2",
+      "name": "C1000 Gen 2",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "1 024 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "cœur de gamme 1 kWh",
+      "main_limit": "",
+      "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "c2000-gen-2",
+      "name": "C2000 Gen 2",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "2 048 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "2 kWh extensible à 4 kWh",
+      "main_limit": "",
+      "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "c1000-premiere-generation",
+      "name": "C1000 première génération",
+      "status": "PREVIOUS_GENERATION",
+      "generation": "",
+      "size": "1 056 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "ancienne génération, épuisée sur la collection FR",
+      "main_limit": "",
+      "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "f2000",
+      "name": "F2000",
+      "status": "PREVIOUS_GENERATION",
+      "generation": "",
+      "size": "2 048 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "ancienne grande station, épuisée sur la collection FR",
+      "main_limit": "",
+      "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
+      "verified_at": "2026-09-09"
+    }
+  ],
+  "ecosystem": {
+    "hardware": [
+      "C300",
+      "C1000 Gen 2",
+      "C2000 Gen 2",
+      "C1000 première génération",
+      "F2000"
+    ],
+    "stylus": [],
+    "os": [],
+    "notes": [],
+    "pdf": [],
+    "ocr": [],
+    "cloud": [],
+    "export": [],
+    "third_party": [
+      "Stations série C",
+      "batterie additionnelle BP2000 Gen 2",
+      "panneaux solaires Anker SOLIX",
+      "chargeur d’alternateur 800 W pour C2000 Gen 2",
+      "application Anker avec Wi-Fi/Bluetooth"
+    ]
+  },
+  "evidence": [
+    {
+      "entity": "Anker SOLIX",
+      "claim": "Anker SOLIX France — stations portables",
+      "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "Anker SOLIX",
+      "claim": "Anker SOLIX C1000 Gen 2",
+      "source": "https://www.ankersolix.com/fr/products/c1000-gen2",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "Anker SOLIX",
+      "claim": "Anker SOLIX C2000 Gen 2",
+      "source": "https://www.ankersolix.com/fr/products/c2000-gen2",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    }
+  ],
+  "internal_links": {
+    "products": [
+      "/modeles/anker-solix-c1000/"
+    ],
+    "comparisons": [
+      "/comparatifs/meilleure-station-electrique-portable/",
+      "/comparatifs/station-electrique-portable-compacte/"
+    ],
+    "guides": [
+      "/guides/recharge-rapide-station-electrique/",
+      "/guides/ups-eps-station-electrique/"
+    ],
+    "usages": [
+      "/usages/station-electrique-van/",
+      "/usages/station-electrique-teletravail/",
+      "/usages/station-electrique-coupure-courant/"
+    ],
+    "services": []
+  },
+  "known_exceptions": []
+}

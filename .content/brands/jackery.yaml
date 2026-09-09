@@ -1,0 +1,221 @@
+{
+  "brand": {
+    "id": "jackery",
+    "name": "Jackery",
+    "canonical_url": "/marques/jackery/",
+    "updated_at": "2026-09-09"
+  },
+  "entity_map": {
+    "products": [
+      "Explorer 240 v2",
+      "Explorer 500 v2",
+      "Explorer 1000 v2",
+      "Explorer 2000 v2",
+      "Explorer 3000 v2",
+      "Explorer 300 Plus / 1000 Plus",
+      "Explorer 3000 Pro"
+    ],
+    "services": [],
+    "software": [
+      "application mobile"
+    ],
+    "technologies": [
+      "LiFePO4/LFP",
+      "MPPT",
+      "onduleur sinusoïdal pur",
+      "UPS/EPS selon modèle"
+    ],
+    "accessories": [
+      "panneaux solaires",
+      "câbles de recharge",
+      "batteries additionnelles selon modèle"
+    ],
+    "integrations": [],
+    "formats": [],
+    "use_cases": [
+      "camping",
+      "van",
+      "camping-car",
+      "secours domestique",
+      "télétravail",
+      "chantier"
+    ],
+    "competitors": [
+      "EcoFlow",
+      "BLUETTI",
+      "Anker SOLIX"
+    ]
+  },
+  "brand_positioning": {
+    "statement": "Jackery conserve une logique de gamme très lisible : les stations Explorer constituent le cœur du catalogue, les panneaux SolarSaga forment l’écosystème solaire et les générations v2 modernisent les capacités clés de 240 Wh à 3 kWh.",
+    "evidence": [
+      "https://fr.jackery.com/pages/new-arrivals",
+      "https://fr.jackery.com/pages/jackery-buying-guide"
+    ]
+  },
+  "product_range": [
+    {
+      "id": "explorer-240-v2",
+      "name": "Explorer 240 v2",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "256 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "petit format LFP",
+      "main_limit": "",
+      "source": "https://fr.jackery.com/pages/new-arrivals",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "explorer-500-v2",
+      "name": "Explorer 500 v2",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "512 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "camping léger et mobilité",
+      "main_limit": "",
+      "source": "https://fr.jackery.com/pages/new-arrivals",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "explorer-1000-v2",
+      "name": "Explorer 1000 v2",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "1 070 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "1 kWh compact",
+      "main_limit": "",
+      "source": "https://fr.jackery.com/pages/new-arrivals",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "explorer-2000-v2",
+      "name": "Explorer 2000 v2",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "2 042 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "2 kWh, secours et camping-car",
+      "main_limit": "",
+      "source": "https://fr.jackery.com/pages/new-arrivals",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "explorer-3000-v2",
+      "name": "Explorer 3000 v2",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "3 072 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "forte puissance et secours",
+      "main_limit": "",
+      "source": "https://fr.jackery.com/pages/new-arrivals",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "explorer-300-plus-1000-plus",
+      "name": "Explorer 300 Plus / 1000 Plus",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "288 / 1 264 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "famille Plus, dont capacité extensible sur 1000 Plus",
+      "main_limit": "",
+      "source": "https://fr.jackery.com/pages/new-arrivals",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "explorer-3000-pro",
+      "name": "Explorer 3000 Pro",
+      "status": "PREVIOUS_GENERATION",
+      "generation": "",
+      "size": "3 024 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "ancienne génération haut de gamme",
+      "main_limit": "",
+      "source": "https://fr.jackery.com/pages/new-arrivals",
+      "verified_at": "2026-09-09"
+    }
+  ],
+  "ecosystem": {
+    "hardware": [
+      "Explorer 240 v2",
+      "Explorer 500 v2",
+      "Explorer 1000 v2",
+      "Explorer 2000 v2",
+      "Explorer 3000 v2",
+      "Explorer 300 Plus / 1000 Plus",
+      "Explorer 3000 Pro"
+    ],
+    "stylus": [],
+    "os": [],
+    "notes": [],
+    "pdf": [],
+    "ocr": [],
+    "cloud": [],
+    "export": [],
+    "third_party": [
+      "Stations Explorer v2 et Plus",
+      "panneaux SolarSaga 40/100/200 W",
+      "kits générateurs solaires",
+      "application Jackery sur modèles compatibles",
+      "câbles et accessoires de recharge véhicule"
+    ]
+  },
+  "evidence": [
+    {
+      "entity": "Jackery",
+      "claim": "Jackery France — nouveautés et gamme",
+      "source": "https://fr.jackery.com/pages/new-arrivals",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "Jackery",
+      "claim": "Jackery — guide d’achat",
+      "source": "https://fr.jackery.com/pages/jackery-buying-guide",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "Jackery",
+      "claim": "Jackery Explorer 1000 v2",
+      "source": "https://fr.jackery.com/products/explorer-1000-v2-portable-power-station",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "Jackery",
+      "claim": "Jackery Explorer 2000 v2",
+      "source": "https://fr.jackery.com/products/explorer-2000-v2-portable-power-station",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    }
+  ],
+  "internal_links": {
+    "products": [
+      "/modeles/jackery-explorer-1000-v2/",
+      "/modeles/jackery-explorer-2000-v2/",
+      "/modeles/jackery-explorer-3000-pro/"
+    ],
+    "comparisons": [
+      "/comparatifs/meilleure-station-electrique-portable/",
+      "/comparatifs/generateur-solaire/"
+    ],
+    "guides": [
+      "/solaire/recharger-station-electrique-panneau-solaire/"
+    ],
+    "usages": [
+      "/usages/station-electrique-camping/",
+      "/usages/station-electrique-camping-car/"
+    ],
+    "services": []
+  },
+  "known_exceptions": []
+}

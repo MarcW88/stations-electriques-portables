@@ -1,0 +1,213 @@
+{
+  "brand": {
+    "id": "aferiy",
+    "name": "AFERIY",
+    "canonical_url": "/marques/aferiy/",
+    "updated_at": "2026-09-09"
+  },
+  "entity_map": {
+    "products": [
+      "Nano100",
+      "Nomad400 P040",
+      "Nomad800 P010",
+      "Nomad1800 Pro",
+      "Haven2400 P210",
+      "Haven2800 P280",
+      "Haven3600 P310"
+    ],
+    "services": [],
+    "software": [
+      "application mobile"
+    ],
+    "technologies": [
+      "LiFePO4/LFP",
+      "MPPT",
+      "onduleur sinusoïdal pur",
+      "UPS/EPS selon modèle"
+    ],
+    "accessories": [
+      "panneaux solaires",
+      "câbles de recharge",
+      "batteries additionnelles selon modèle"
+    ],
+    "integrations": [],
+    "formats": [],
+    "use_cases": [
+      "camping",
+      "van",
+      "camping-car",
+      "secours domestique",
+      "télétravail",
+      "chantier"
+    ],
+    "competitors": [
+      "BLUETTI",
+      "EcoFlow",
+      "ALLPOWERS"
+    ]
+  },
+  "brand_positioning": {
+    "statement": "AFERIY organise désormais sa gamme en trois niveaux très explicites : Nano pour les petits besoins, Nomad sous 2 000 W et Haven au-dessus de 2 000 W, avec plusieurs modèles extensibles.",
+    "evidence": [
+      "https://fr.aferiy.com/collections/station-denergie-portable",
+      "https://eu.aferiy.com/fr/pages/compare-aferiy-portable-power-stations"
+    ]
+  },
+  "product_range": [
+    {
+      "id": "nano100",
+      "name": "Nano100",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "99,2 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "recharge légère et mobilité",
+      "main_limit": "",
+      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "nomad400-p040",
+      "name": "Nomad400 P040",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "256 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "petit camping et électronique",
+      "main_limit": "",
+      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "nomad800-p010",
+      "name": "Nomad800 P010",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "512 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "nomade intermédiaire",
+      "main_limit": "",
+      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "nomad1800-pro",
+      "name": "Nomad1800 Pro",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "1 024 Wh à 5 120 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "1 kWh extensible",
+      "main_limit": "",
+      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "haven2400-p210",
+      "name": "Haven2400 P210",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "2 048 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "2 kWh non extensible",
+      "main_limit": "",
+      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "haven2800-p280",
+      "name": "Haven2800 P280",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "2 048 Wh à 10 240 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "forte extension de capacité",
+      "main_limit": "",
+      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "haven3600-p310",
+      "name": "Haven3600 P310",
+      "status": "CURRENT",
+      "generation": "",
+      "size": "3 840 Wh à 11 520 Wh",
+      "technology": "LFP lorsque indiqué par la source officielle",
+      "positioning": "flagship et secours longue durée",
+      "main_limit": "",
+      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "verified_at": "2026-09-09"
+    }
+  ],
+  "ecosystem": {
+    "hardware": [
+      "Nano100",
+      "Nomad400 P040",
+      "Nomad800 P010",
+      "Nomad1800 Pro",
+      "Haven2400 P210",
+      "Haven2800 P280",
+      "Haven3600 P310"
+    ],
+    "stylus": [],
+    "os": [],
+    "notes": [],
+    "pdf": [],
+    "ocr": [],
+    "cloud": [],
+    "export": [],
+    "third_party": [
+      "Séries Nano, Nomad et Haven",
+      "batteries P180-B, P280-B, P310-B selon modèles",
+      "panneaux 120/200/400 W et autres formats",
+      "application sur modèles récents",
+      "recharge CA, solaire, voiture et générateur selon modèle"
+    ]
+  },
+  "evidence": [
+    {
+      "entity": "AFERIY",
+      "claim": "AFERIY France — stations électriques",
+      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "AFERIY",
+      "claim": "AFERIY — comparaison P310/P280/P210/P180 Pro",
+      "source": "https://eu.aferiy.com/fr/pages/compare-aferiy-portable-power-stations",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "AFERIY",
+      "claim": "AFERIY P210 — fiche officielle",
+      "source": "https://fr.aferiy.com/products/aferiy-p210-station-denergie-portable-2400w-2048wh",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    }
+  ],
+  "internal_links": {
+    "products": [
+      "/modeles/aferiy-p210/"
+    ],
+    "comparisons": [
+      "/comparatifs/station-electrique-portable-puissante/",
+      "/comparatifs/generateur-solaire/"
+    ],
+    "guides": [
+      "/guides/lifepo4-ou-lithium-ion/",
+      "/guides/ups-eps-station-electrique/"
+    ],
+    "usages": [
+      "/usages/station-electrique-chantier/",
+      "/usages/station-electrique-camping-car/",
+      "/usages/station-electrique-maison/"
+    ],
+    "services": []
+  },
+  "known_exceptions": []
+}
