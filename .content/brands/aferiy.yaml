@@ -6,51 +6,22 @@
     "updated_at": "2026-09-09"
   },
   "entity_map": {
-    "products": [
-      "Nano100",
-      "Nomad400 P040",
-      "Nomad800 P010",
-      "Nomad1800 Pro",
-      "Haven2400 P210",
-      "Haven2800 P280",
-      "Haven3600 P310"
-    ],
-    "services": [],
-    "software": [
-      "application mobile"
-    ],
-    "technologies": [
-      "LiFePO4/LFP",
-      "MPPT",
-      "onduleur sinusoïdal pur",
-      "UPS/EPS selon modèle"
-    ],
-    "accessories": [
-      "panneaux solaires",
-      "câbles de recharge",
-      "batteries additionnelles selon modèle"
-    ],
-    "integrations": [],
-    "formats": [],
-    "use_cases": [
-      "camping",
-      "van",
-      "camping-car",
-      "secours domestique",
-      "télétravail",
-      "chantier"
-    ],
-    "competitors": [
-      "BLUETTI",
-      "EcoFlow",
-      "ALLPOWERS"
-    ]
+    "families": ["Nano", "Nomad", "Haven"],
+    "products": ["Nano100", "Nomad400 P040", "Nomad800 P010", "Nomad1800", "Nomad1800 Pro", "Haven2400 P210", "Haven2800 P280", "Haven3000 P300", "Haven3600 P310"],
+    "battery_chemistry": ["LiFePO4 on current compared models"],
+    "charging": ["AC", "solar MPPT", "vehicle charging", "DC060 DC-DC on compatible models"],
+    "solar": ["model-specific solar inputs; P280 documents dual 600 W MPPT inputs"],
+    "ups_eps": ["UPS <10 ms on several recent models"],
+    "software": ["AFERIY app on supported recent models"],
+    "expansion": ["Nomad1800 Pro up to 5,120 Wh", "P280 up to 10,240 Wh", "P300 up to 10,240 Wh", "P310 up to 11,520 Wh"],
+    "use_cases": ["camping", "van", "camping-car", "chantier", "secours domestique"],
+    "competitors": ["EcoFlow", "BLUETTI", "ALLPOWERS", "Jackery"]
   },
   "brand_positioning": {
-    "statement": "AFERIY organise désormais sa gamme en trois niveaux très explicites : Nano pour les petits besoins, Nomad sous 2 000 W et Haven au-dessus de 2 000 W, avec plusieurs modèles extensibles.",
+    "statement": "AFERIY is best understood through its Nano, Nomad and Haven families, then by whether the selected model is fixed-capacity or expandable.",
     "evidence": [
-      "https://fr.aferiy.com/collections/station-denergie-portable",
-      "https://eu.aferiy.com/fr/pages/compare-aferiy-portable-power-stations"
+      "https://fr.aferiy.com/pages/compare-aferiy-portable-power-stations",
+      "https://fr.aferiy.com/collections/station-denergie-portable"
     ]
   },
   "product_range": [
@@ -58,156 +29,138 @@
       "id": "nano100",
       "name": "Nano100",
       "status": "CURRENT",
-      "generation": "",
-      "size": "99,2 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "recharge légère et mobilité",
-      "main_limit": "",
-      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "generation": "Nano",
+      "size": "99.2 Wh",
+      "power": "100 W",
+      "technology": "LiFePO4 where documented",
+      "positioning": "very small mobile loads",
+      "main_limit": "not a 230 V high-power substitute",
+      "source": "https://fr.aferiy.com/pages/compare-aferiy-portable-power-stations",
       "verified_at": "2026-09-09"
     },
     {
-      "id": "nomad400-p040",
-      "name": "Nomad400 P040",
+      "id": "nomad1800",
+      "name": "Nomad1800",
       "status": "CURRENT",
-      "generation": "",
-      "size": "256 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "petit camping et électronique",
-      "main_limit": "",
-      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
-      "verified_at": "2026-09-09"
-    },
-    {
-      "id": "nomad800-p010",
-      "name": "Nomad800 P010",
-      "status": "CURRENT",
-      "generation": "",
-      "size": "512 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "nomade intermédiaire",
-      "main_limit": "",
-      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "generation": "Nomad",
+      "size": "1,024 Wh",
+      "power": "1,800 W",
+      "technology": "LiFePO4",
+      "positioning": "fixed-capacity 1 kWh Nomad",
+      "main_limit": "less system growth than Nomad1800 Pro",
+      "source": "https://fr.aferiy.com/collections/nomad-series",
       "verified_at": "2026-09-09"
     },
     {
       "id": "nomad1800-pro",
       "name": "Nomad1800 Pro",
       "status": "CURRENT",
-      "generation": "",
-      "size": "1 024 Wh à 5 120 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "1 kWh extensible",
-      "main_limit": "",
-      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "generation": "Nomad",
+      "size": "1,024 Wh to 5,120 Wh",
+      "power": "1,800 W",
+      "technology": "LiFePO4",
+      "positioning": "expandable 1 kWh Nomad",
+      "main_limit": "expansion increases system weight and cost",
+      "source": "https://fr.aferiy.com/collections/nomad-series",
       "verified_at": "2026-09-09"
     },
     {
       "id": "haven2400-p210",
       "name": "Haven2400 P210",
       "status": "CURRENT",
-      "generation": "",
-      "size": "2 048 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "2 kWh non extensible",
-      "main_limit": "",
-      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "generation": "Haven / P210",
+      "size": "2,048 Wh",
+      "power": "2,400 W",
+      "technology": "LiFePO4 >=4,000 cycles stated by manufacturer",
+      "positioning": "fixed-capacity 2 kWh Haven",
+      "main_limit": "not expandable; about 22 kg",
+      "source": "https://fr.aferiy.com/pages/compare-aferiy-portable-power-stations",
       "verified_at": "2026-09-09"
     },
     {
       "id": "haven2800-p280",
       "name": "Haven2800 P280",
       "status": "CURRENT",
-      "generation": "",
-      "size": "2 048 Wh à 10 240 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "forte extension de capacité",
-      "main_limit": "",
-      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "generation": "Haven / P280",
+      "size": "2,048 Wh to 10,240 Wh",
+      "power": "2,800 W",
+      "technology": "LiFePO4 >=4,000 cycles stated by manufacturer",
+      "positioning": "expandable 2 kWh Haven",
+      "main_limit": "about 22 kg before extra batteries",
+      "source": "https://fr.aferiy.com/pages/compare-aferiy-portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "haven3000-p300",
+      "name": "Haven3000 P300",
+      "status": "CURRENT",
+      "generation": "Haven / P300",
+      "size": "2,048 Wh to 10,240 Wh",
+      "power": "3,000 W",
+      "technology": "LiFePO4",
+      "positioning": "higher-output expandable 2 kWh Haven",
+      "main_limit": "large system once expanded",
+      "source": "https://fr.aferiy.com/collections/haven-series",
       "verified_at": "2026-09-09"
     },
     {
       "id": "haven3600-p310",
       "name": "Haven3600 P310",
       "status": "CURRENT",
-      "generation": "",
-      "size": "3 840 Wh à 11 520 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "flagship et secours longue durée",
-      "main_limit": "",
-      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "generation": "Haven / P310",
+      "size": "3,840 Wh to 11,520 Wh",
+      "power": "3,600 W",
+      "technology": "LiFePO4 >=4,000 cycles stated by manufacturer",
+      "positioning": "large expandable flagship",
+      "main_limit": "manufacturer pages conflict on weight (40 vs 42 kg); treat as approximately 40 kg until clarified",
+      "source": "https://fr.aferiy.com/pages/compare-aferiy-portable-power-stations",
       "verified_at": "2026-09-09"
     }
   ],
   "ecosystem": {
-    "hardware": [
-      "Nano100",
-      "Nomad400 P040",
-      "Nomad800 P010",
-      "Nomad1800 Pro",
-      "Haven2400 P210",
-      "Haven2800 P280",
-      "Haven3600 P310"
-    ],
-    "stylus": [],
-    "os": [],
-    "notes": [],
-    "pdf": [],
-    "ocr": [],
-    "cloud": [],
-    "export": [],
-    "third_party": [
-      "Séries Nano, Nomad et Haven",
-      "batteries P180-B, P280-B, P310-B selon modèles",
-      "panneaux 120/200/400 W et autres formats",
-      "application sur modèles récents",
-      "recharge CA, solaire, voiture et générateur selon modèle"
-    ]
+    "stations": ["Nano", "Nomad", "Haven"],
+    "extra_batteries": ["Nomad1800 Pro expansion", "P280-B", "P300-compatible expansion", "P310-B"],
+    "solar_panels": ["AF-S400A1", "AF-S200A1", "AF-S100A1"],
+    "vehicle_charging": ["12 V vehicle charging", "DC060 DC-DC on compatible models"],
+    "ups_eps": ["UPS <10 ms on several recent products"],
+    "app_firmware": ["AFERIY app on supported models"],
+    "compatibility_notes": ["P210 is fixed-capacity", "P280/P300/P310 use model-specific expansion batteries", "solar and DC-DC simultaneous charging differs by model"]
   },
   "evidence": [
     {
-      "entity": "AFERIY",
-      "claim": "AFERIY France — stations électriques",
-      "source": "https://fr.aferiy.com/collections/station-denergie-portable",
+      "entity": "AFERIY current range",
+      "claim": "Current official range includes Nano, Nomad and Haven products including Nomad1800, Nomad1800 Pro and Haven P210/P280/P300/P310.",
+      "source": "https://fr.aferiy.com/pages/compare-aferiy-portable-power-stations",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     },
     {
-      "entity": "AFERIY",
-      "claim": "AFERIY — comparaison P310/P280/P210/P180 Pro",
-      "source": "https://eu.aferiy.com/fr/pages/compare-aferiy-portable-power-stations",
+      "entity": "P280",
+      "claim": "2,048 Wh, 2,800 W, expandable to 10,240 Wh, about 21.6–22 kg and dual MPPT inputs up to 600 W each.",
+      "source": "https://fr.aferiy.com/pages/compare-aferiy-portable-power-stations",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     },
     {
-      "entity": "AFERIY",
-      "claim": "AFERIY P210 — fiche officielle",
-      "source": "https://fr.aferiy.com/products/aferiy-p210-station-denergie-portable-2400w-2048wh",
+      "entity": "P310",
+      "claim": "3,840 Wh, 3,600 W, expandable to 11,520 Wh; official pages conflict on listed weight (40 vs 42 kg).",
+      "source": "https://fr.aferiy.com/pages/compare-aferiy-p310-vs-p280",
       "verified_at": "2026-09-09",
-      "status": "VERIFIED",
+      "status": "CONTRADICTED",
       "freshness": "high"
     }
   ],
   "internal_links": {
-    "products": [
-      "/modeles/aferiy-p210/"
-    ],
-    "comparisons": [
-      "/comparatifs/station-electrique-portable-puissante/",
-      "/comparatifs/generateur-solaire/"
-    ],
-    "guides": [
-      "/guides/lifepo4-ou-lithium-ion/",
-      "/guides/ups-eps-station-electrique/"
-    ],
-    "usages": [
-      "/usages/station-electrique-chantier/",
-      "/usages/station-electrique-camping-car/",
-      "/usages/station-electrique-maison/"
-    ],
-    "services": []
+    "products": ["/modeles/aferiy-p210/"],
+    "comparisons": ["/comparatifs/station-electrique-portable-puissante/", "/comparatifs/generateur-solaire/"],
+    "guides": ["/guides/ups-eps-station-electrique/", "/guides/lifepo4-ou-lithium-ion/"],
+    "usages": ["/usages/station-electrique-chantier/", "/usages/station-electrique-camping-car/", "/usages/station-electrique-maison/"],
+    "services": ["/calculateur-autonomie/"]
   },
-  "known_exceptions": []
+  "known_exceptions": [
+    "AFERIY official pages disagree on the exact P310 weight; the hub uses an approximate statement instead of inventing precision.",
+    "Price/value comparisons are omitted unless dated against direct competitors."
+  ]
 }
