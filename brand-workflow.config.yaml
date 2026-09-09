@@ -2,16 +2,27 @@ project:
   name: "stations-electriques-portables"
   domain: "https://stations-electriques-portables.fr"
   language: "fr"
+  editorial_identity: "base de données indépendante et comparateur technique de stations électriques portables"
 
 content:
   scope:
     - "/marques/"
-  source_of_truth: "_generate.py + _generate_brands.py"
-  mode: "new_content"
+  source_of_truth:
+    - "_generate.py"
+    - "_generate_brands.py"
+    - ".content/brand-pages/"
+    - ".content/brands/"
+  mode: "recovery"
 
 quality:
   quality_reference: "/marques/ecoflow/"
-  draft_robots: "noindex, follow"
+  draft_robots: "noindex,follow"
+  prohibit_word_count_quotas: true
+  prohibit_heading_count_quotas: true
+  prohibit_internal_link_quotas: true
+  prohibit_page_type_templates: true
+  require_cluster_structure_review: true
+  require_station_specific_reasoning: true
 
 routing:
   page_types:
@@ -21,12 +32,51 @@ routing:
     - SERVICE
     - ACCESSORY_HUB
     - ALTERNATIVES
+  page_type_defines_structure: false
 
 entities:
-  require_entity_map: true
-  require_current_range: true
-  require_ecosystem_map: true
-  require_brand_positioning: true
+  require_entity_map_when_relevant: true
+  require_current_range_when_relevant: true
+  require_ecosystem_map_when_relevant: true
+  require_brand_positioning_when_relevant: true
+  preferred_station_entities:
+    - station
+    - product_family
+    - battery_chemistry
+    - inverter
+    - bms
+    - ac_dc_usb_outputs
+    - solar_mppt
+    - extra_battery
+    - solar_panel
+    - vehicle_charging
+    - ups_eps
+    - app_firmware
+    - use_case
+    - limitation
+    - competitor
+  reject_as_primary_schema:
+    - stylus
+    - notes
+    - pdf
+    - ocr
+
+technical_decision_dimensions:
+  - use_case
+  - capacity_wh
+  - continuous_power_w
+  - surge_or_boost_when_relevant
+  - weight_and_portability
+  - battery_chemistry
+  - cycle_life_when_verified
+  - ac_charging
+  - solar_input_and_mppt
+  - vehicle_or_alternator_charging_when_relevant
+  - ups_eps_when_relevant
+  - expandable_capacity_when_relevant
+  - compatibility_and_accessories
+  - app_and_firmware_when_relevant
+  - dated_price_and_availability_when_used
 
 evidence:
   prefer_primary_sources: true
@@ -37,32 +87,68 @@ evidence:
     - UNKNOWN
     - OUTDATED
     - CONTRADICTED
+  prohibit_model_memory_gap_filling: true
+  prohibit_fake_hands_on: true
 
 internal_linking:
-  required_paths:
+  policy: "contextual_only"
+  destinations_when_relevant:
+    - "/modeles/"
     - "/comparatifs/"
     - "/guides/"
     - "/usages/"
-  minimum_contextual_links: 8
-  minimum_unique_targets: 6
-  require_product_link_on_brand_hub: true
-  require_comparison_link_when_relevant: true
+    - "/solaire/"
+    - "/puissance-capacite/"
+    - "/calculateur-autonomie/"
 
 workflow:
   brands_dir: ".content/brands"
   brand_pages_dir: ".content/brand-pages"
   briefs_dir: ".content/briefs"
+  audits_dir: ".content/brand-audits"
   reviews_dir: ".content/reviews"
+  content_workflow: ".agents/skills/brand-content-workflow/SKILL.md"
+  analysis_workflow: ".agents/skills/brand-analysis-workflow/SKILL.md"
+  final_review_mode: "PUBLISH_REVIEW"
+  apply_script: "_generate_brands.py"
+  machine_validator: "_validate_brands.py"
+  require_analysis_pass_before_human_validation: true
   require_human_validation_before_publish: true
   allow_automatic_merge: false
+  allow_automatic_indexation: false
+
+editorial_chain:
+  - brand_analysis_audit_for_existing_page
+  - search_intent
+  - content_audit_and_refresh_when_needed
+  - evidence_brief_and_fact_check
+  - evidence_based_reviews_when_needed
+  - original_affiliate_value
+  - station_specific_entity_map
+  - bespoke_outline_from_intent_and_evidence
+  - evidence_bound_writing
+  - post_draft_fact_check
+  - humanizer_and_general_writing
+  - anti_ai_slop
+  - internal_linking_audit
+  - seo_editorial_and_technical
+  - editorial_qa
+  - machine_validation
+  - brand_analysis_publish_review
+  - human_validation
 
 quality_gate:
-  minimum_h2_brand_hub: 9
-  minimum_words_brand_hub: 1000
-  minimum_sources: 3
-  require_limit_section: true
-  require_choose_avoid: true
+  require_sources_for_factual_claims: true
+  require_limitations_when_decision_relevant: true
+  require_choose_avoid_when_decision_relevant: true
   require_noindex_in_draft: true
+  prohibit_fake_test_language: true
+  prohibit_editor_facing_metadiscourse: true
+  prohibit_merchant_rewrite_without_original_value: true
+  prohibit_high_severity_ai_slop: true
+  prohibit_unresolved_cannibalization: true
+  prohibit_unjustified_structural_cloning: true
+  prohibit_generic_brand_alternative_copy: true
 
 known_exceptions:
   izywatt:
