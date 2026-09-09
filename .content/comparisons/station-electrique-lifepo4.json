@@ -1,0 +1,382 @@
+{
+  "slug": "station-electrique-lifepo4",
+  "research_date": "2026-09-09",
+  "intent": {
+    "query": "station électrique LiFePO4",
+    "comparison_type": "FEATURE_SPECIFIC",
+    "dominant_intent": "Choisir une station LFP durable sans réduire le comparatif au seul nombre de cycles.",
+    "main_constraint": "Hard gate : batterie LiFePO₄ actuelle et cycle de vie documenté."
+  },
+  "product_universe": [
+    {
+      "id": "delta3plus",
+      "name": "EcoFlow DELTA 3 Plus",
+      "brand": "EcoFlow",
+      "status": "ELIGIBLE",
+      "internal_url": "/modeles/ecoflow-delta-3-plus/",
+      "source_url": "https://fr.ecoflow.com/products/delta-3-series-portable-power-station",
+      "facts": {
+        "capacity_wh": 1024,
+        "output_w": 1800,
+        "weight_kg": 12.5,
+        "cycles": "4 000 cycles à 80 %",
+        "solar_w": 1000,
+        "ac_charge": "0–100 % en 56 min",
+        "ups": "<10 ms",
+        "warranty": "5 ans",
+        "expandability": "jusqu’à 5 kWh"
+      }
+    },
+    {
+      "id": "elite200v2",
+      "name": "BLUETTI Elite 200 V2",
+      "brand": "BLUETTI",
+      "status": "ELIGIBLE",
+      "internal_url": "/modeles/bluetti-elite-200-v2/",
+      "source_url": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "facts": {
+        "capacity_wh": 2073.6,
+        "output_w": 2600,
+        "weight_kg": 24.2,
+        "cycles": "6 000+ cycles à 80 %",
+        "solar_w": 1000,
+        "ac_charge": "0–100 % env. 1,4 h",
+        "ups": "≤15 ms",
+        "warranty": "5 ans",
+        "expandability": "non extensible avec batterie additionnelle classique"
+      }
+    },
+    {
+      "id": "jackery1000v2",
+      "name": "Jackery Explorer 1000 v2",
+      "brand": "Jackery",
+      "status": "ELIGIBLE",
+      "internal_url": "/modeles/jackery-explorer-1000-v2/",
+      "source_url": "https://fr.jackery.com/products/explorer-1000-v2-portable-power-station",
+      "facts": {
+        "capacity_wh": 1070,
+        "output_w": 1500,
+        "weight_kg": 11.0,
+        "cycles": "4 000 cycles annoncés",
+        "solar_w": 400,
+        "ac_charge": "charge d’urgence env. 1 h; charge réseau env. 1,7 h",
+        "ups": "≤20 ms",
+        "warranty": "garantie fabricant selon offre",
+        "expandability": "non mise en avant sur ce modèle"
+      }
+    },
+    {
+      "id": "river3_lfp",
+      "name": "EcoFlow RIVER 3",
+      "status": "NOT_COMPARABLE",
+      "exclusion_reason": "Bien que LFP, son format 245 Wh répond à un autre segment que les stations 1–2 kWh retenues ici."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "longevity",
+      "label": "Longévité documentée",
+      "weight": 30,
+      "hard_gate": true,
+      "basis": "cycles et seuil de capacité résiduelle quand disponible",
+      "hard_gate_min": 7
+    },
+    {
+      "id": "balance",
+      "label": "Capacité / puissance",
+      "weight": 20,
+      "hard_gate": false,
+      "basis": "utilité de la batterie au-delà de la chimie"
+    },
+    {
+      "id": "charging_solar",
+      "label": "Recharge et solaire",
+      "weight": 20,
+      "hard_gate": false,
+      "basis": "vitesse et capacité PV"
+    },
+    {
+      "id": "portability",
+      "label": "Portabilité",
+      "weight": 15,
+      "hard_gate": false,
+      "basis": "poids relatif à la capacité"
+    },
+    {
+      "id": "warranty_features",
+      "label": "Garantie et fonctions",
+      "weight": 15,
+      "hard_gate": false,
+      "basis": "garantie, UPS et fonctions de gestion"
+    }
+  ],
+  "evidence_ledger": [
+    {
+      "product_id": "delta3plus",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 1024 Wh / 1800 W.",
+      "source": "https://fr.ecoflow.com/products/delta-3-series-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "delta3plus",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 4 000 cycles à 80 %.",
+      "source": "https://fr.ecoflow.com/products/delta-3-series-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "delta3plus",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 1000 W; 0–100 % en 56 min.",
+      "source": "https://fr.ecoflow.com/products/delta-3-series-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "delta3plus",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 12.5 kg; UPS/ASI <10 ms; garantie 5 ans.",
+      "source": "https://fr.ecoflow.com/products/delta-3-series-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite200v2",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 2073.6 Wh / 2600 W.",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite200v2",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 6 000+ cycles à 80 %.",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite200v2",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 1000 W; 0–100 % env. 1,4 h.",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite200v2",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 24.2 kg; UPS/ASI ≤15 ms; garantie 5 ans.",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery1000v2",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 1070 Wh / 1500 W.",
+      "source": "https://fr.jackery.com/products/explorer-1000-v2-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery1000v2",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 4 000 cycles annoncés.",
+      "source": "https://fr.jackery.com/products/explorer-1000-v2-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery1000v2",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 400 W; charge d’urgence env. 1 h; charge réseau env. 1,7 h.",
+      "source": "https://fr.jackery.com/products/explorer-1000-v2-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery1000v2",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 11.0 kg; UPS/ASI ≤20 ms; garantie garantie fabricant selon offre.",
+      "source": "https://fr.jackery.com/products/explorer-1000-v2-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    }
+  ],
+  "scores": {
+    "delta3plus": {
+      "longevity": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité documentée évalué selon cycles et seuil de capacité résiduelle quand disponible. Données de référence : 1 024 Wh, 1 800 W, ≤12,5 kg, LFP 4 000 cycles à 80 %, entrée solaire jusqu’à 1 000 W, recharge CA 56 min, ASI <10 ms, capacité extensible jusqu’à 5 kWh."
+      },
+      "balance": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Capacité / puissance évalué selon utilité de la batterie au-delà de la chimie. Données de référence : 1 024 Wh, 1 800 W, ≤12,5 kg, LFP 4 000 cycles à 80 %, entrée solaire jusqu’à 1 000 W, recharge CA 56 min, ASI <10 ms, capacité extensible jusqu’à 5 kWh."
+      },
+      "charging_solar": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge et solaire évalué selon vitesse et capacité PV. Données de référence : 1 024 Wh, 1 800 W, ≤12,5 kg, LFP 4 000 cycles à 80 %, entrée solaire jusqu’à 1 000 W, recharge CA 56 min, ASI <10 ms, capacité extensible jusqu’à 5 kWh."
+      },
+      "portability": {
+        "score": 7.5,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids relatif à la capacité. Données de référence : 1 024 Wh, 1 800 W, ≤12,5 kg, LFP 4 000 cycles à 80 %, entrée solaire jusqu’à 1 000 W, recharge CA 56 min, ASI <10 ms, capacité extensible jusqu’à 5 kWh."
+      },
+      "warranty_features": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Garantie et fonctions évalué selon garantie, UPS et fonctions de gestion. Données de référence : 1 024 Wh, 1 800 W, ≤12,5 kg, LFP 4 000 cycles à 80 %, entrée solaire jusqu’à 1 000 W, recharge CA 56 min, ASI <10 ms, capacité extensible jusqu’à 5 kWh."
+      }
+    },
+    "elite200v2": {
+      "longevity": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité documentée évalué selon cycles et seuil de capacité résiduelle quand disponible. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      },
+      "balance": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Capacité / puissance évalué selon utilité de la batterie au-delà de la chimie. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      },
+      "charging_solar": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge et solaire évalué selon vitesse et capacité PV. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      },
+      "portability": {
+        "score": 6.5,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids relatif à la capacité. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      },
+      "warranty_features": {
+        "score": 9,
+        "evidence_class": "INFERRED",
+        "justification": "Garantie et fonctions évalué selon garantie, UPS et fonctions de gestion. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      }
+    },
+    "jackery1000v2": {
+      "longevity": {
+        "score": 9,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité documentée évalué selon cycles et seuil de capacité résiduelle quand disponible. Données de référence : 1 070 Wh, 1 500 W, 11 kg, LFP 4 000 cycles annoncés, charge d’urgence env. 1 h, UPS ≤20 ms et charge solaire avec panneaux SolarSaga."
+      },
+      "balance": {
+        "score": 8.5,
+        "evidence_class": "INFERRED",
+        "justification": "Capacité / puissance évalué selon utilité de la batterie au-delà de la chimie. Données de référence : 1 070 Wh, 1 500 W, 11 kg, LFP 4 000 cycles annoncés, charge d’urgence env. 1 h, UPS ≤20 ms et charge solaire avec panneaux SolarSaga."
+      },
+      "charging_solar": {
+        "score": 7.5,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge et solaire évalué selon vitesse et capacité PV. Données de référence : 1 070 Wh, 1 500 W, 11 kg, LFP 4 000 cycles annoncés, charge d’urgence env. 1 h, UPS ≤20 ms et charge solaire avec panneaux SolarSaga."
+      },
+      "portability": {
+        "score": 9,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids relatif à la capacité. Données de référence : 1 070 Wh, 1 500 W, 11 kg, LFP 4 000 cycles annoncés, charge d’urgence env. 1 h, UPS ≤20 ms et charge solaire avec panneaux SolarSaga."
+      },
+      "warranty_features": {
+        "score": 8.5,
+        "evidence_class": "INFERRED",
+        "justification": "Garantie et fonctions évalué selon garantie, UPS et fonctions de gestion. Données de référence : 1 070 Wh, 1 500 W, 11 kg, LFP 4 000 cycles annoncés, charge d’urgence env. 1 h, UPS ≤20 ms et charge solaire avec panneaux SolarSaga."
+      }
+    }
+  },
+  "notes": {
+    "affiliate_commission_used_in_ranking": false,
+    "first_hand_test": false,
+    "prices_are_dated": true,
+    "human_validation_required": true
+  },
+  "page": {
+    "title": "Meilleure station électrique LiFePO₄ — Comparatif 2026",
+    "description": "Comparatif 2026 des stations électriques LiFePO₄ : cycles, puissance, recharge, poids et garanties pour choisir une batterie LFP durable.",
+    "answer": "La <strong>EcoFlow DELTA 3 Plus</strong> est notre meilleur choix LiFePO₄ polyvalent : 4 000 cycles à 80 %, 1 024 Wh, 1 800 W et jusqu’à 1 000 W de solaire. La <strong>BLUETTI Elite 200 V2</strong> gagne sur la longévité annoncée avec 6 000+ cycles à 80 % et double presque la capacité, mais pèse plus de 24 kg. La <strong>Jackery Explorer 1000 v2</strong> est l’option la plus légère du trio.",
+    "method_context": "Toutes les candidates utilisent déjà du LFP. Le comparatif ne récompense donc pas simplement l’étiquette LiFePO₄ : il regarde comment la batterie est exploitée dans un produit complet. Le nombre de cycles n’est comparable que si le fabricant indique le seuil de capacité résiduelle ou au moins une définition claire.",
+    "decision_paragraphs": [
+      "BLUETTI annonce 6 000+ cycles à 80 % sur l’Elite 200 V2, ce qui est remarquable, mais ce bénéfice s’accompagne d’une station 2 kWh de plus de 24 kg. Pour un utilisateur qui déplace souvent sa batterie, le meilleur choix peut donc rester un modèle 1 kWh.",
+      "DELTA 3 Plus combine 4 000 cycles à 80 %, 1 800 W et une entrée solaire 1 000 W. C’est cette absence de faiblesse majeure qui lui donne le meilleur score global malgré une durée de cycle annoncée inférieure à celle de BLUETTI.",
+      "Jackery met en avant 4 000 cycles et ne pèse que 11 kg. Sa limite est ailleurs : 1 500 W de sortie et une configuration solaire plus modeste. Pour le camping et les déplacements, cette concession peut être parfaitement rationnelle."
+    ],
+    "cost_note": "Le coût d’une station LFP doit être rapporté à l’usage, pas seulement au nombre de cycles. Une batterie deux fois plus grosse mais utilisée rarement peut coûter plus cher par service rendu qu’une station 1 kWh correctement dimensionnée. Le calculateur d’autonomie aide à éviter ce surdimensionnement.",
+    "limits_note": "Le cycle de vie n’est pas une date de mort. « 4 000 cycles à 80 % » signifie qu’après le protocole annoncé, la batterie conserve environ 80 % de sa capacité initiale ; elle peut continuer à fonctionner ensuite. Température, profondeur de décharge et stockage influencent aussi la durée réelle.",
+    "choose_note": "DELTA 3 Plus pour l’équilibre, Elite 200 V2 pour maximiser longévité et capacité, Explorer 1000 v2 pour garder une station LFP autour de 11 kg. Si vous cherchez surtout à comprendre la chimie, consultez le guide LFP vs NMC avant de choisir un modèle.",
+    "related": [
+      [
+        "/guides/lifepo4-ou-lithium-ion/",
+        "LiFePO₄ vs NMC"
+      ],
+      [
+        "/guides/duree-vie-cycles-batterie/",
+        "Cycles de batterie"
+      ],
+      [
+        "/guides/calculer-capacite-station-electrique/",
+        "Calculer la capacité"
+      ],
+      [
+        "/comparatifs/meilleure-station-electrique-portable/",
+        "Comparatif général"
+      ],
+      [
+        "/comparatifs/station-electrique-portable-puissante/",
+        "Stations puissantes"
+      ]
+    ],
+    "product_notes": {
+      "delta3plus": [
+        "excellent équilibre entre 4 000 cycles à 80 %, puissance, solaire et évolutivité",
+        "ne détient pas le record de cycles de ce comparatif",
+        "usage LFP polyvalent et fréquent",
+        "si vous cherchez avant tout 2 kWh et un maximum de cycles"
+      ],
+      "elite200v2": [
+        "6 000+ cycles à 80 % et 2 073,6 Wh",
+        "poids de 24,2 kg",
+        "usage stationnaire ou semi-mobile intensif",
+        "si la portabilité quotidienne prime"
+      ],
+      "jackery1000v2": [
+        "station LFP 1 kWh de 11 kg, facile à déplacer",
+        "puissance et solaire moins ambitieux",
+        "camping et mobilité avec priorité à la simplicité",
+        "si vous voulez un système extensible et une forte entrée PV"
+      ]
+    }
+  },
+  "ranking": [
+    {
+      "product_id": "delta3plus",
+      "name": "EcoFlow DELTA 3 Plus",
+      "raw_score": 93.0,
+      "confidence_adjusted_score": 79.05,
+      "hard_gate_failed": false,
+      "rank": 1
+    },
+    {
+      "product_id": "elite200v2",
+      "name": "BLUETTI Elite 200 V2",
+      "raw_score": 92.25,
+      "confidence_adjusted_score": 78.41,
+      "hard_gate_failed": false,
+      "rank": 2
+    },
+    {
+      "product_id": "jackery1000v2",
+      "name": "Jackery Explorer 1000 v2",
+      "raw_score": 85.25,
+      "confidence_adjusted_score": 72.46,
+      "hard_gate_failed": false,
+      "rank": 3
+    }
+  ]
+}

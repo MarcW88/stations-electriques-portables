@@ -1,0 +1,403 @@
+{
+  "slug": "station-electrique-portable-puissante",
+  "research_date": "2026-09-09",
+  "intent": {
+    "query": "station électrique portable puissante",
+    "comparison_type": "FEATURE_SPECIFIC",
+    "dominant_intent": "Choisir une station autour de 2 kWh capable d’alimenter des appareils à forte puissance sans sacrifier complètement mobilité et recharge.",
+    "main_constraint": "Hard gate de puissance : une candidate doit réellement appartenir au segment 2 kW+."
+  },
+  "product_universe": [
+    {
+      "id": "elite200v2",
+      "name": "BLUETTI Elite 200 V2",
+      "brand": "BLUETTI",
+      "status": "ELIGIBLE",
+      "internal_url": "/modeles/bluetti-elite-200-v2/",
+      "source_url": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "facts": {
+        "capacity_wh": 2073.6,
+        "output_w": 2600,
+        "weight_kg": 24.2,
+        "cycles": "6 000+ cycles à 80 %",
+        "solar_w": 1000,
+        "ac_charge": "0–100 % env. 1,4 h",
+        "ups": "≤15 ms",
+        "warranty": "5 ans",
+        "expandability": "non extensible avec batterie additionnelle classique"
+      }
+    },
+    {
+      "id": "jackery2000v2",
+      "name": "Jackery Explorer 2000 v2",
+      "brand": "Jackery",
+      "status": "ELIGIBLE",
+      "internal_url": "/modeles/jackery-explorer-2000-v2/",
+      "source_url": "https://fr.jackery.com/products/explorer-2000-v2-portable-power-station",
+      "facts": {
+        "capacity_wh": 2042,
+        "output_w": 2200,
+        "weight_kg": 17.5,
+        "cycles": "4 000 cycles annoncés",
+        "solar_w": 400,
+        "ac_charge": "0–100 % env. 1,7 h; urgence env. 1,33 h",
+        "ups": "fonction secours selon fiche",
+        "warranty": "selon offre fabricant"
+      }
+    },
+    {
+      "id": "aferiy_p210",
+      "name": "AFERIY P210",
+      "brand": "AFERIY",
+      "status": "ELIGIBLE",
+      "internal_url": "/modeles/aferiy-p210/",
+      "source_url": "https://fr.aferiy.com/products/aferiy-p210-2400w-2048wh",
+      "facts": {
+        "capacity_wh": 2048,
+        "output_w": 2400,
+        "weight_kg": 22.0,
+        "cycles": "3 500+ cycles à 85 % dans la table de spécifications",
+        "solar_w": 500,
+        "ac_charge": "0–100 % env. 2 h",
+        "ups": "<10 ms",
+        "warranty": "7 ans",
+        "price_eur": 739
+      }
+    },
+    {
+      "id": "ac200max",
+      "name": "BLUETTI AC200Max",
+      "status": "OUTDATED",
+      "exclusion_reason": "Ancienne génération écartée au profit de références 2 kWh actuelles mieux documentées en 2026."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "output",
+      "label": "Puissance continue",
+      "weight": 25,
+      "hard_gate": true,
+      "basis": "puissance CA nominale, pas seulement une pointe ou un mode lifting",
+      "hard_gate_min": 7
+    },
+    {
+      "id": "capacity",
+      "label": "Capacité",
+      "weight": 15,
+      "hard_gate": false,
+      "basis": "énergie stockée autour de 2 kWh"
+    },
+    {
+      "id": "portability",
+      "label": "Portabilité",
+      "weight": 15,
+      "hard_gate": false,
+      "basis": "poids à capacité comparable"
+    },
+    {
+      "id": "charging",
+      "label": "Recharge secteur",
+      "weight": 15,
+      "hard_gate": false,
+      "basis": "temps et puissance de recharge"
+    },
+    {
+      "id": "longevity",
+      "label": "Longévité",
+      "weight": 15,
+      "hard_gate": false,
+      "basis": "cycles documentés et seuil résiduel"
+    },
+    {
+      "id": "solar_backup",
+      "label": "Solaire et secours",
+      "weight": 15,
+      "hard_gate": false,
+      "basis": "entrée PV, UPS et fonctions utiles"
+    }
+  ],
+  "evidence_ledger": [
+    {
+      "product_id": "elite200v2",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 2073.6 Wh / 2600 W.",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite200v2",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 6 000+ cycles à 80 %.",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite200v2",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 1000 W; 0–100 % env. 1,4 h.",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite200v2",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 24.2 kg; UPS/ASI ≤15 ms; garantie 5 ans.",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery2000v2",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 2042 Wh / 2200 W.",
+      "source": "https://fr.jackery.com/products/explorer-2000-v2-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery2000v2",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 4 000 cycles annoncés.",
+      "source": "https://fr.jackery.com/products/explorer-2000-v2-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery2000v2",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 400 W; 0–100 % env. 1,7 h; urgence env. 1,33 h.",
+      "source": "https://fr.jackery.com/products/explorer-2000-v2-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery2000v2",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 17.5 kg; UPS/ASI fonction secours selon fiche; garantie selon offre fabricant.",
+      "source": "https://fr.jackery.com/products/explorer-2000-v2-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "aferiy_p210",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 2048 Wh / 2400 W.",
+      "source": "https://fr.aferiy.com/products/aferiy-p210-2400w-2048wh",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "aferiy_p210",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 3 500+ cycles à 85 % dans la table de spécifications.",
+      "source": "https://fr.aferiy.com/products/aferiy-p210-2400w-2048wh",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "aferiy_p210",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 500 W; 0–100 % env. 2 h.",
+      "source": "https://fr.aferiy.com/products/aferiy-p210-2400w-2048wh",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "aferiy_p210",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 22.0 kg; UPS/ASI <10 ms; garantie 7 ans.",
+      "source": "https://fr.aferiy.com/products/aferiy-p210-2400w-2048wh",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    }
+  ],
+  "scores": {
+    "elite200v2": {
+      "output": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Puissance continue évalué selon puissance CA nominale, pas seulement une pointe ou un mode lifting. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      },
+      "capacity": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Capacité évalué selon énergie stockée autour de 2 kWh. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      },
+      "portability": {
+        "score": 6.5,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids à capacité comparable. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      },
+      "charging": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge secteur évalué selon temps et puissance de recharge. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      },
+      "longevity": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité évalué selon cycles documentés et seuil résiduel. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      },
+      "solar_backup": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Solaire et secours évalué selon entrée PV, UPS et fonctions utiles. Données de référence : 2 073,6 Wh, 2 600 W, env. 24,2 kg, LFP 6 000+ cycles à 80 %, solaire jusqu’à 1 000 W, recharge CA env. 1,4 h, UPS ≤15 ms."
+      }
+    },
+    "jackery2000v2": {
+      "output": {
+        "score": 8.8,
+        "evidence_class": "INFERRED",
+        "justification": "Puissance continue évalué selon puissance CA nominale, pas seulement une pointe ou un mode lifting. Données de référence : 2 042 Wh, 2 200 W, 17,5 kg, LFP 4 000 cycles annoncés, recharge réseau env. 1,7 h et configuration solaire jusqu’à 2×200 W dans les kits officiels."
+      },
+      "capacity": {
+        "score": 9.3,
+        "evidence_class": "INFERRED",
+        "justification": "Capacité évalué selon énergie stockée autour de 2 kWh. Données de référence : 2 042 Wh, 2 200 W, 17,5 kg, LFP 4 000 cycles annoncés, recharge réseau env. 1,7 h et configuration solaire jusqu’à 2×200 W dans les kits officiels."
+      },
+      "portability": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids à capacité comparable. Données de référence : 2 042 Wh, 2 200 W, 17,5 kg, LFP 4 000 cycles annoncés, recharge réseau env. 1,7 h et configuration solaire jusqu’à 2×200 W dans les kits officiels."
+      },
+      "charging": {
+        "score": 8.5,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge secteur évalué selon temps et puissance de recharge. Données de référence : 2 042 Wh, 2 200 W, 17,5 kg, LFP 4 000 cycles annoncés, recharge réseau env. 1,7 h et configuration solaire jusqu’à 2×200 W dans les kits officiels."
+      },
+      "longevity": {
+        "score": 8.8,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité évalué selon cycles documentés et seuil résiduel. Données de référence : 2 042 Wh, 2 200 W, 17,5 kg, LFP 4 000 cycles annoncés, recharge réseau env. 1,7 h et configuration solaire jusqu’à 2×200 W dans les kits officiels."
+      },
+      "solar_backup": {
+        "score": 7.5,
+        "evidence_class": "INFERRED",
+        "justification": "Solaire et secours évalué selon entrée PV, UPS et fonctions utiles. Données de référence : 2 042 Wh, 2 200 W, 17,5 kg, LFP 4 000 cycles annoncés, recharge réseau env. 1,7 h et configuration solaire jusqu’à 2×200 W dans les kits officiels."
+      }
+    },
+    "aferiy_p210": {
+      "output": {
+        "score": 9.4,
+        "evidence_class": "INFERRED",
+        "justification": "Puissance continue évalué selon puissance CA nominale, pas seulement une pointe ou un mode lifting. Données de référence : 2 048 Wh, 2 400 W, 22 kg, LFP, 3 500+ cycles à 85 % dans la table technique, solaire 500 W, recharge CA env. 2 h, UPS <10 ms, garantie 7 ans."
+      },
+      "capacity": {
+        "score": 9.3,
+        "evidence_class": "INFERRED",
+        "justification": "Capacité évalué selon énergie stockée autour de 2 kWh. Données de référence : 2 048 Wh, 2 400 W, 22 kg, LFP, 3 500+ cycles à 85 % dans la table technique, solaire 500 W, recharge CA env. 2 h, UPS <10 ms, garantie 7 ans."
+      },
+      "portability": {
+        "score": 7.8,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids à capacité comparable. Données de référence : 2 048 Wh, 2 400 W, 22 kg, LFP, 3 500+ cycles à 85 % dans la table technique, solaire 500 W, recharge CA env. 2 h, UPS <10 ms, garantie 7 ans."
+      },
+      "charging": {
+        "score": 7.5,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge secteur évalué selon temps et puissance de recharge. Données de référence : 2 048 Wh, 2 400 W, 22 kg, LFP, 3 500+ cycles à 85 % dans la table technique, solaire 500 W, recharge CA env. 2 h, UPS <10 ms, garantie 7 ans."
+      },
+      "longevity": {
+        "score": 8.2,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité évalué selon cycles documentés et seuil résiduel. Données de référence : 2 048 Wh, 2 400 W, 22 kg, LFP, 3 500+ cycles à 85 % dans la table technique, solaire 500 W, recharge CA env. 2 h, UPS <10 ms, garantie 7 ans."
+      },
+      "solar_backup": {
+        "score": 8.5,
+        "evidence_class": "INFERRED",
+        "justification": "Solaire et secours évalué selon entrée PV, UPS et fonctions utiles. Données de référence : 2 048 Wh, 2 400 W, 22 kg, LFP, 3 500+ cycles à 85 % dans la table technique, solaire 500 W, recharge CA env. 2 h, UPS <10 ms, garantie 7 ans."
+      }
+    }
+  },
+  "notes": {
+    "affiliate_commission_used_in_ranking": false,
+    "first_hand_test": false,
+    "prices_are_dated": true,
+    "human_validation_required": true
+  },
+  "page": {
+    "title": "Station électrique portable puissante — Comparatif 2026",
+    "description": "Comparatif 2026 des stations électriques portables puissantes de 2 kWh : BLUETTI Elite 200 V2, Jackery Explorer 2000 v2 et AFERIY P210.",
+    "answer": "Pour une station portable de 2 kWh réellement orientée forte puissance, la <strong>BLUETTI Elite 200 V2</strong> prend la tête avec 2 600 W et 6 000+ cycles à 80 %. La <strong>Jackery Explorer 2000 v2</strong> est nettement plus légère à 17,5 kg et devient notre choix mobilité. L’<strong>AFERIY P210</strong> offre 2 400 W, une garantie de 7 ans et un positionnement prix agressif, mais une recharge et une entrée solaire moins ambitieuses.",
+    "method_context": "Nous comparons trois stations proches de 2 kWh. Le score privilégie la puissance continue réelle et non les modes « boost » réservés à certaines charges résistives. La mobilité reste importante : à capacité voisine, un écart de plusieurs kilos change nettement l’usage en voiture, camping-car ou chantier.",
+    "decision_paragraphs": [
+      "L’Elite 200 V2 gagne d’abord sur la puissance continue et la longévité documentée. Ses 2 600 W donnent davantage de marge aux appareils de cuisson et outils, tandis que BLUETTI annonce 6 000+ cycles à 80 %.",
+      "Jackery répond à un autre problème : transporter 2 kWh. À 17,5 kg, l’Explorer 2000 v2 est sensiblement plus facile à déplacer que les deux autres. Son compromis est une puissance nominale de 2 200 W et une recharge solaire moins rapide avec les configurations 2×200 W.",
+      "AFERIY se situe entre les deux en puissance et en poids. Son P210 propose 2 400 W, 2 048 Wh, UPS <10 ms et 7 ans de garantie. En revanche, l’entrée solaire maximale de 500 W et la charge secteur autour de deux heures sont moins agressives que chez BLUETTI."
+    ],
+    "cost_note": "Le prix promotionnel n’est pas intégré au score principal, car il change fréquemment. AFERIY affiche néanmoins souvent un tarif inférieur aux deux autres, ce qui peut inverser la décision si votre critère n°1 devient le coût par kWh plutôt que la recharge ou la longévité.",
+    "limits_note": "« Puissante » ne veut pas dire illimitée. Vérifiez la puissance continue, la pointe de démarrage de l’appareil et la durée d’utilisation. Une plaque, une scie ou un chauffage peut être compatible en watts mais vider 2 kWh très rapidement.",
+    "choose_note": "Elite 200 V2 pour la puissance, les cycles et le solaire 1 000 W ; Explorer 2000 v2 pour la mobilité d’une vraie station 2 kWh ; AFERIY P210 pour un compromis puissance/prix avec longue garantie. Pour un besoin supérieur à 3 kW continus, changez de catégorie plutôt que de forcer ce classement.",
+    "related": [
+      [
+        "/guides/watt-ou-watt-heure/",
+        "W vs Wh"
+      ],
+      [
+        "/guides/calculer-autonomie-station-electrique/",
+        "Calculer l’autonomie"
+      ],
+      [
+        "/puissance-capacite/station-electrique-2000w/",
+        "Stations 2 000 W"
+      ],
+      [
+        "/usages/station-electrique-chantier/",
+        "Chantier"
+      ],
+      [
+        "/comparatifs/generateur-solaire/",
+        "Générateurs solaires"
+      ]
+    ],
+    "product_notes": {
+      "elite200v2": [
+        "2 600 W, 6 000+ cycles à 80 % et entrée solaire 1 000 W",
+        "plus de 24 kg et pas d’extension de batterie classique",
+        "fortes charges, secours et usage fréquent où la longévité compte",
+        "si vous devez la porter souvent"
+      ],
+      "jackery2000v2": [
+        "2 kWh dans une station de 17,5 kg",
+        "2 200 W et solaire plus lent que BLUETTI",
+        "van, chantier mobile et utilisateurs qui déplacent souvent 2 kWh",
+        "si la puissance maximale et l’entrée PV sont prioritaires"
+      ],
+      "aferiy_p210": [
+        "2 400 W, UPS <10 ms et garantie 7 ans",
+        "22 kg, entrée solaire 500 W et recharge secteur autour de deux heures",
+        "acheteur cherchant beaucoup de capacité et de puissance avec un coût contenu",
+        "si vous voulez un système solaire très évolutif"
+      ]
+    }
+  },
+  "ranking": [
+    {
+      "product_id": "elite200v2",
+      "name": "BLUETTI Elite 200 V2",
+      "raw_score": 93.25,
+      "confidence_adjusted_score": 79.26,
+      "hard_gate_failed": false,
+      "rank": 1
+    },
+    {
+      "product_id": "jackery2000v2",
+      "name": "Jackery Explorer 2000 v2",
+      "raw_score": 88.15,
+      "confidence_adjusted_score": 74.93,
+      "hard_gate_failed": false,
+      "rank": 2
+    },
+    {
+      "product_id": "aferiy_p210",
+      "name": "AFERIY P210",
+      "raw_score": 85.45,
+      "confidence_adjusted_score": 72.63,
+      "hard_gate_failed": false,
+      "rank": 3
+    }
+  ]
+}

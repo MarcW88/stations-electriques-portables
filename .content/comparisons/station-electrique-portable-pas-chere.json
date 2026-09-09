@@ -1,0 +1,406 @@
+{
+  "slug": "station-electrique-portable-pas-chere",
+  "research_date": "2026-09-09",
+  "intent": {
+    "query": "station électrique portable pas chère",
+    "comparison_type": "BUDGET",
+    "dominant_intent": "Trouver une station LFP réellement utile sous environ 300 € au prix fabricant observé le jour de la recherche.",
+    "main_constraint": "Le prix est un hard gate daté ; un modèle excellent mais indisponible ne peut pas gagner."
+  },
+  "product_universe": [
+    {
+      "id": "elite30v2",
+      "name": "BLUETTI Elite 30 V2",
+      "brand": "BLUETTI",
+      "status": "ELIGIBLE",
+      "internal_url": "/marques/bluetti/",
+      "source_url": "https://fr.bluettipower.eu/products/elite-30-v2-station-electrique-portable",
+      "facts": {
+        "capacity_wh": 288,
+        "output_w": 600,
+        "weight_kg": 4.3,
+        "cycles": "3 000+ cycles à 80 %",
+        "solar_w": 200,
+        "ac_charge": "80 % en 45 min en Turbo",
+        "ups": "≤10 ms",
+        "warranty": "5 ans",
+        "price_eur": 219
+      }
+    },
+    {
+      "id": "jackery300plus",
+      "name": "Jackery Explorer 300 Plus",
+      "brand": "Jackery",
+      "status": "ELIGIBLE",
+      "internal_url": "/marques/jackery/",
+      "source_url": "https://fr.jackery.com/products/explorer-300-plus-portable-power-station",
+      "facts": {
+        "capacity_wh": 288,
+        "output_w": 300,
+        "weight_kg": 3.75,
+        "cycles": "3 000 cycles à 80 %",
+        "solar_w": 100,
+        "ac_charge": "0–100 % env. 2 h",
+        "ups": "non retenu comme critère fort",
+        "warranty": "3 + 2 ans selon conditions Jackery",
+        "price_eur": 279
+      }
+    },
+    {
+      "id": "river3",
+      "name": "EcoFlow RIVER 3",
+      "brand": "EcoFlow",
+      "status": "CONDITIONALLY_ELIGIBLE",
+      "internal_url": "/modeles/ecoflow-river-3/",
+      "source_url": "https://fr.ecoflow.com/products/river-3-portable-power-station",
+      "facts": {
+        "capacity_wh": 245,
+        "output_w": 300,
+        "weight_kg": 3.55,
+        "cycles": "3 000 cycles à 80 %",
+        "solar_w": 110,
+        "ac_charge": "0–100 % en 60 min",
+        "ups": "<20 ms; variante ASI <10 ms",
+        "warranty": "selon offre fabricant",
+        "price_eur": 249,
+        "availability": "stock direct EcoFlow fluctuant / indiqué épuisé sur certaines variantes consultées"
+      }
+    },
+    {
+      "id": "river2",
+      "name": "EcoFlow RIVER 2",
+      "status": "OUTDATED",
+      "exclusion_reason": "La RIVER 3 est la génération actuelle retenue pour le segment compact EcoFlow."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "value",
+      "label": "Valeur sous 300 €",
+      "weight": 25,
+      "hard_gate": true,
+      "basis": "prix fabricant daté et équipement réellement obtenu",
+      "hard_gate_min": 6
+    },
+    {
+      "id": "power_capacity",
+      "label": "Puissance et capacité",
+      "weight": 25,
+      "hard_gate": false,
+      "basis": "Wh, puissance CA continue et marge d’usage"
+    },
+    {
+      "id": "portability",
+      "label": "Portabilité",
+      "weight": 15,
+      "hard_gate": false,
+      "basis": "poids et encombrement"
+    },
+    {
+      "id": "charging",
+      "label": "Recharge",
+      "weight": 15,
+      "hard_gate": false,
+      "basis": "vitesse secteur et entrée solaire"
+    },
+    {
+      "id": "longevity",
+      "label": "Longévité LFP",
+      "weight": 10,
+      "hard_gate": false,
+      "basis": "cycles documentés et seuil de capacité"
+    },
+    {
+      "id": "availability",
+      "label": "Disponibilité",
+      "weight": 10,
+      "hard_gate": true,
+      "basis": "possibilité réelle d’acheter la référence sur le canal fabricant consulté",
+      "hard_gate_min": 5
+    }
+  ],
+  "evidence_ledger": [
+    {
+      "product_id": "elite30v2",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 288 Wh / 600 W.",
+      "source": "https://fr.bluettipower.eu/products/elite-30-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite30v2",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 3 000+ cycles à 80 %.",
+      "source": "https://fr.bluettipower.eu/products/elite-30-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite30v2",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 200 W; 80 % en 45 min en Turbo.",
+      "source": "https://fr.bluettipower.eu/products/elite-30-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "elite30v2",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 4.3 kg; UPS/ASI ≤10 ms; garantie 5 ans.",
+      "source": "https://fr.bluettipower.eu/products/elite-30-v2-station-electrique-portable",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery300plus",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 288 Wh / 300 W.",
+      "source": "https://fr.jackery.com/products/explorer-300-plus-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery300plus",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 3 000 cycles à 80 %.",
+      "source": "https://fr.jackery.com/products/explorer-300-plus-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery300plus",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 100 W; 0–100 % env. 2 h.",
+      "source": "https://fr.jackery.com/products/explorer-300-plus-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery300plus",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 3.75 kg; UPS/ASI non retenu comme critère fort; garantie 3 + 2 ans selon conditions Jackery.",
+      "source": "https://fr.jackery.com/products/explorer-300-plus-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "river3",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 245 Wh / 300 W.",
+      "source": "https://fr.ecoflow.com/products/river-3-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "river3",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 3 000 cycles à 80 %.",
+      "source": "https://fr.ecoflow.com/products/river-3-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "river3",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 110 W; 0–100 % en 60 min.",
+      "source": "https://fr.ecoflow.com/products/river-3-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "river3",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 3.55 kg; UPS/ASI <20 ms; variante ASI <10 ms; garantie selon offre fabricant.",
+      "source": "https://fr.ecoflow.com/products/river-3-portable-power-station",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    }
+  ],
+  "scores": {
+    "elite30v2": {
+      "value": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Valeur évaluée à partir du prix fabricant observé (219 € le 2026-09-09) et de la configuration : 288 Wh, 600 W, 4,3 kg, LFP 3 000+ cycles à 80 %, entrée solaire 200 W, charge Turbo 80 % en 45 min, UPS ≤10 ms, prix fabricant observé 219 € le 09/09/2026."
+      },
+      "power_capacity": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Puissance et capacité évalué selon Wh, puissance CA continue et marge d’usage. Données de référence : 288 Wh, 600 W, 4,3 kg, LFP 3 000+ cycles à 80 %, entrée solaire 200 W, charge Turbo 80 % en 45 min, UPS ≤10 ms, prix fabricant observé 219 € le 09/09/2026."
+      },
+      "portability": {
+        "score": 8.5,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids et encombrement. Données de référence : 288 Wh, 600 W, 4,3 kg, LFP 3 000+ cycles à 80 %, entrée solaire 200 W, charge Turbo 80 % en 45 min, UPS ≤10 ms, prix fabricant observé 219 € le 09/09/2026."
+      },
+      "charging": {
+        "score": 9,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge évalué selon vitesse secteur et entrée solaire. Données de référence : 288 Wh, 600 W, 4,3 kg, LFP 3 000+ cycles à 80 %, entrée solaire 200 W, charge Turbo 80 % en 45 min, UPS ≤10 ms, prix fabricant observé 219 € le 09/09/2026."
+      },
+      "longevity": {
+        "score": 9,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité LFP évalué selon cycles documentés et seuil de capacité. Données de référence : 288 Wh, 600 W, 4,3 kg, LFP 3 000+ cycles à 80 %, entrée solaire 200 W, charge Turbo 80 % en 45 min, UPS ≤10 ms, prix fabricant observé 219 € le 09/09/2026."
+      },
+      "availability": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Disponibilité observée le 2026-09-09 : référence active sur le canal fabricant consulté."
+      }
+    },
+    "jackery300plus": {
+      "value": {
+        "score": 8,
+        "evidence_class": "INFERRED",
+        "justification": "Valeur évaluée à partir du prix fabricant observé (279 € le 2026-09-09) et de la configuration : 288 Wh, 300 W, env. 3,75 kg, LFP 3 000 cycles à 80 %, entrée solaire 100 W, charge secteur env. 2 h, prix fabricant observé 279 € le 09/09/2026."
+      },
+      "power_capacity": {
+        "score": 7.5,
+        "evidence_class": "INFERRED",
+        "justification": "Puissance et capacité évalué selon Wh, puissance CA continue et marge d’usage. Données de référence : 288 Wh, 300 W, env. 3,75 kg, LFP 3 000 cycles à 80 %, entrée solaire 100 W, charge secteur env. 2 h, prix fabricant observé 279 € le 09/09/2026."
+      },
+      "portability": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids et encombrement. Données de référence : 288 Wh, 300 W, env. 3,75 kg, LFP 3 000 cycles à 80 %, entrée solaire 100 W, charge secteur env. 2 h, prix fabricant observé 279 € le 09/09/2026."
+      },
+      "charging": {
+        "score": 7.5,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge évalué selon vitesse secteur et entrée solaire. Données de référence : 288 Wh, 300 W, env. 3,75 kg, LFP 3 000 cycles à 80 %, entrée solaire 100 W, charge secteur env. 2 h, prix fabricant observé 279 € le 09/09/2026."
+      },
+      "longevity": {
+        "score": 9,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité LFP évalué selon cycles documentés et seuil de capacité. Données de référence : 288 Wh, 300 W, env. 3,75 kg, LFP 3 000 cycles à 80 %, entrée solaire 100 W, charge secteur env. 2 h, prix fabricant observé 279 € le 09/09/2026."
+      },
+      "availability": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Disponibilité observée le 2026-09-09 : référence active sur le canal fabricant consulté."
+      }
+    },
+    "river3": {
+      "value": {
+        "score": 8.5,
+        "evidence_class": "INFERRED",
+        "justification": "Valeur évaluée à partir du prix fabricant observé (249 € le 2026-09-09) et de la configuration : 245 Wh, 300 W, 3,55 kg, LFP 3 000 cycles à 80 %, solaire 110 W, recharge 60 min. Le stock direct EcoFlow était fluctuant et certaines variantes étaient indiquées épuisées lors de la recherche."
+      },
+      "power_capacity": {
+        "score": 7,
+        "evidence_class": "INFERRED",
+        "justification": "Puissance et capacité évalué selon Wh, puissance CA continue et marge d’usage. Données de référence : 245 Wh, 300 W, 3,55 kg, LFP 3 000 cycles à 80 %, solaire 110 W, recharge 60 min. Le stock direct EcoFlow était fluctuant et certaines variantes étaient indiquées épuisées lors de la recherche."
+      },
+      "portability": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids et encombrement. Données de référence : 245 Wh, 300 W, 3,55 kg, LFP 3 000 cycles à 80 %, solaire 110 W, recharge 60 min. Le stock direct EcoFlow était fluctuant et certaines variantes étaient indiquées épuisées lors de la recherche."
+      },
+      "charging": {
+        "score": 8,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge évalué selon vitesse secteur et entrée solaire. Données de référence : 245 Wh, 300 W, 3,55 kg, LFP 3 000 cycles à 80 %, solaire 110 W, recharge 60 min. Le stock direct EcoFlow était fluctuant et certaines variantes étaient indiquées épuisées lors de la recherche."
+      },
+      "longevity": {
+        "score": 9,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité LFP évalué selon cycles documentés et seuil de capacité. Données de référence : 245 Wh, 300 W, 3,55 kg, LFP 3 000 cycles à 80 %, solaire 110 W, recharge 60 min. Le stock direct EcoFlow était fluctuant et certaines variantes étaient indiquées épuisées lors de la recherche."
+      },
+      "availability": {
+        "score": 3,
+        "evidence_class": "VERIFIED",
+        "justification": "Disponibilité observée le 2026-09-09 : stock direct EcoFlow fluctuant / indiqué épuisé sur certaines variantes consultées."
+      }
+    }
+  },
+  "notes": {
+    "affiliate_commission_used_in_ranking": false,
+    "first_hand_test": false,
+    "prices_are_dated": true,
+    "human_validation_required": true
+  },
+  "page": {
+    "title": "Station électrique portable pas chère — Comparatif 2026",
+    "description": "Comparatif des stations électriques portables pas chères en 2026 : budget, puissance, capacité, poids, batterie LFP et disponibilité réelle.",
+    "answer": "Sous 300 € au moment de notre recherche, la <strong>BLUETTI Elite 30 V2</strong> offre le meilleur compromis : 288 Wh, 600 W, 4,3 kg, batterie LFP et recharge solaire jusqu’à 200 W. La <strong>Jackery Explorer 300 Plus</strong> est plus légère mais limitée à 300 W. L’<strong>EcoFlow RIVER 3</strong> reste intéressante, mais son stock direct était fluctuant et certaines variantes étaient indiquées épuisées.",
+    "method_context": "Cette page est la seule où le prix entre explicitement dans le scoring. Nous avons utilisé les prix fabricant observés le 9 septembre 2026 et non un tarif Amazon ou une promotion non vérifiable. Comme ces montants changent, le classement doit être relu si un écart de prix important apparaît.",
+    "decision_paragraphs": [
+      "Le budget ne doit pas conduire à acheter une station trop faible. À prix proche, passer de 300 W à 600 W change la liste des appareils utilisables : l’Elite 30 V2 dispose ici d’un avantage concret sur les deux modèles 300 W.",
+      "La capacité reste assez proche entre 245 et 288 Wh. La différence de puissance et de recharge devient donc plus décisive que quelques dizaines de Wh. En revanche, pour plusieurs jours d’autonomie, aucune de ces stations n’est la bonne catégorie.",
+      "La disponibilité est un hard gate. Une référence peut avoir un excellent ratio poids/capacité mais ne pas être recommandable comme achat immédiat si le fabricant la marque épuisée. C’est pourquoi la RIVER 3 est conservée comme alternative conditionnelle plutôt que comme gagnante."
+    ],
+    "cost_note": "Prix observés le 09/09/2026 : Elite 30 V2 autour de 219 €, Explorer 300 Plus 279 € et RIVER 3 autour de 249 € selon variante, avec stock EcoFlow fluctuant. Ces prix sont des instantanés : accessoires, panneaux et promotions ne sont pas intégrés au score de base.",
+    "limits_note": "Une station « pas chère » n’est pas une solution de secours domestique complète. Avec environ 250–300 Wh, l’autonomie devient vite limitée sur un réfrigérateur, une couverture chauffante ou un appareil de cuisson. Le bon achat dépend de la puissance réelle et du nombre d’heures nécessaires.",
+    "choose_note": "Elite 30 V2 est la plus cohérente si vous voulez une vraie prise 230 V de 600 W et une recharge rapide. Explorer 300 Plus convient si chaque kilo compte et que 300 W suffisent. RIVER 3 mérite d’être reconsidérée si le stock redevient stable, notamment pour son poids de 3,55 kg et sa recharge en une heure.",
+    "related": [
+      [
+        "/guides/calculer-autonomie-station-electrique/",
+        "Calculer l’autonomie"
+      ],
+      [
+        "/guides/watt-ou-watt-heure/",
+        "W vs Wh"
+      ],
+      [
+        "/comparatifs/station-electrique-portable-compacte/",
+        "Comparatif compact"
+      ],
+      [
+        "/usages/station-electrique-camping/",
+        "Camping"
+      ],
+      [
+        "/marques/bluetti/",
+        "BLUETTI"
+      ]
+    ],
+    "product_notes": {
+      "elite30v2": [
+        "600 W de sortie à un prix observé inférieur à 250 €",
+        "4,3 kg, donc pas la plus légère du trio",
+        "budget serré avec besoin d’une vraie marge sur la prise 230 V",
+        "si 300 W suffisent et chaque gramme compte"
+      ],
+      "jackery300plus": [
+        "format sous 4 kg et architecture simple pour petits appareils",
+        "puissance limitée à 300 W et recharge plus lente",
+        "photo, camping léger, petits appareils et mobilité fréquente",
+        "si vous devez alimenter des charges au-dessus de 300 W"
+      ],
+      "river3": [
+        "meilleur poids brut et recharge secteur en une heure",
+        "disponibilité directe insuffisamment stable au moment de la recherche",
+        "acheteur prêt à attendre le retour en stock",
+        "si vous devez acheter immédiatement"
+      ]
+    }
+  },
+  "ranking": [
+    {
+      "product_id": "elite30v2",
+      "name": "BLUETTI Elite 30 V2",
+      "raw_score": 93.0,
+      "confidence_adjusted_score": 80.4,
+      "hard_gate_failed": false,
+      "rank": 1
+    },
+    {
+      "product_id": "jackery300plus",
+      "name": "Jackery Explorer 300 Plus",
+      "raw_score": 82.25,
+      "confidence_adjusted_score": 71.26,
+      "hard_gate_failed": false,
+      "rank": 2
+    },
+    {
+      "product_id": "river3",
+      "name": "EcoFlow RIVER 3",
+      "raw_score": 77.75,
+      "confidence_adjusted_score": 66.54,
+      "hard_gate_failed": true,
+      "rank": null
+    }
+  ]
+}
