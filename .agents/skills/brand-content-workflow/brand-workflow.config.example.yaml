@@ -1,17 +1,20 @@
 project:
-  name: "example-site"
+  name: "example-station-site"
   domain: "https://example.com"
   language: "fr"
 
 content:
   scope:
     - "/marques/"
-  source_of_truth: "_generate.py"
-  mode: "auto"  # auto | recovery | new_content
+  mode: "recovery"
 
 quality:
-  quality_reference: "/marques/reference/"
   draft_robots: "noindex,follow"
+  prohibit_word_count_quotas: true
+  prohibit_heading_count_quotas: true
+  prohibit_internal_link_quotas: true
+  prohibit_page_type_templates: true
+  require_cluster_structure_review: true
 
 routing:
   page_types:
@@ -21,12 +24,23 @@ routing:
     - SERVICE
     - ACCESSORY_HUB
     - ALTERNATIVES
+  page_type_defines_structure: false
 
 entities:
-  require_entity_map: true
-  require_current_range: true
-  require_ecosystem_map: true
-  require_brand_positioning: true
+  require_entity_map_when_relevant: true
+  require_current_range_when_relevant: true
+  require_ecosystem_map_when_relevant: true
+  preferred_station_entities:
+    - station
+    - product_family
+    - battery_chemistry
+    - solar_mppt
+    - extra_battery
+    - vehicle_charging
+    - ups_eps
+    - app_firmware
+    - use_case
+    - limitation
 
 evidence:
   prefer_primary_sources: true
@@ -37,28 +51,26 @@ evidence:
     - UNKNOWN
     - OUTDATED
     - CONTRADICTED
+  prohibit_fake_hands_on: true
 
 internal_linking:
-  required_paths:
-    - "/comparatifs/"
-    - "/guides/"
-    - "/usages/"
-  minimum_contextual_links: 6
-  minimum_unique_targets: 5
-  require_product_link_on_brand_hub: true
-  require_comparison_link_when_relevant: true
+  policy: "contextual_only"
 
 workflow:
   brands_dir: ".content/brands"
-  briefs_dir: ".content/briefs"
+  brand_pages_dir: ".content/brand-pages"
+  audits_dir: ".content/brand-audits"
   reviews_dir: ".content/reviews"
+  content_workflow: ".agents/skills/brand-content-workflow/SKILL.md"
+  analysis_workflow: ".agents/skills/brand-analysis-workflow/SKILL.md"
+  machine_validator: "_validate_brands.py"
   require_human_validation_before_publish: true
-  allow_automatic_merge: false
+  allow_automatic_indexation: false
 
 quality_gate:
-  minimum_h2_brand_hub: 7
-  minimum_h2_product: 6
-  minimum_sources: 3
-  require_limit_section: true
-  require_choose_avoid: true
+  require_sources_for_factual_claims: true
+  require_limitations_when_decision_relevant: true
+  require_choose_avoid_when_decision_relevant: true
   require_noindex_in_draft: true
+  prohibit_fake_test_language: true
+  prohibit_unjustified_structural_cloning: true
