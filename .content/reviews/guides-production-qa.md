@@ -2,12 +2,13 @@
 
 ```yaml
 scope: /guides/
-status: QA_IN_PROGRESS
-structural_gate: PENDING_CI
-editorial_gate: MANUAL_REVIEW_COMPLETE
+status: QA_COMPLETE_AWAITING_HUMAN_VALIDATION
+structural_gate: PASS
+editorial_gate: PASS
 indexing_status: noindex
 publishable: false
 human_validation_required: true
+workflow_run: 34319164391
 ```
 
 ## Revue éditoriale
@@ -26,18 +27,42 @@ human_validation_required: true
 - Recharge voiture AC180 12/24 V : `CONFIRMED`.
 - Coefficient 0,85 dans les calculs : présenté comme hypothèse d’estimation, jamais comme constante fabricant.
 
-## Qualité
+## Métriques finales
 
-- Réponse initiale autonome sur chaque page.
-- Minimum visé : 7 H2 substantiels, 5 liens internes, 4 cibles uniques et 3 sources.
-- Tableaux introduits et interprétés.
-- Maillage vers calculateur, guides, usages, solaire et comparatifs selon le besoin.
-- Pas de promesse absolue, faux témoignage, faux test ou urgence artificielle.
+| Guide | Mots | H2 | Liens internes | Cibles uniques | Sources |
+|---|---:|---:|---:|---:|---:|
+| batterie-nomade-ou-station-electrique | 975 | 8 | 10 | 8 | 3 |
+| calculer-autonomie-station-electrique | 985 | 8 | 8 | 6 | 3 |
+| calculer-capacite-station-electrique | 949 | 8 | 11 | 8 | 3 |
+| comment-choisir-station-electrique-portable | 1117 | 8 | 15 | 12 | 4 |
+| duree-vie-cycles-batterie | 1015 | 8 | 7 | 4 | 3 |
+| lifepo4-ou-lithium-ion | 1097 | 8 | 8 | 5 | 4 |
+| onde-sinusoidale-pure | 955 | 8 | 8 | 5 | 3 |
+| recharge-rapide-station-electrique | 964 | 8 | 8 | 7 | 3 |
+| recharger-station-electrique-voiture | 958 | 8 | 7 | 5 | 3 |
+| station-electrique-portable-comment-ca-marche | 1030 | 8 | 12 | 10 | 3 |
+| ups-eps-station-electrique | 1054 | 8 | 10 | 8 | 3 |
+| watt-ou-watt-heure | 1007 | 8 | 9 | 7 | 3 |
 
-## CI attendu
+## CI final
 
-Le workflow doit valider la génération des 12 guides, le quality gate du skill, le QA repo-specific, l’idempotence, le maintien du noindex et `git diff --check`.
+Run `34319164391` : `PASS`.
 
-## Verdict provisoire
+Validé :
+- génération des 12 guides ;
+- quality gate structurel du skill ;
+- QA repo-specific ;
+- minimum 900 mots ;
+- réponse answer-first ;
+- au moins 7 H2 substantiels ;
+- au moins 5 liens internes vers 4 cibles uniques ;
+- au moins 3 sources ;
+- idempotence sur les 12 pages ;
+- maintien de `noindex, follow` ;
+- `git diff --check`.
 
-`QA_IN_PROGRESS` jusqu’au premier run GitHub Actions vert. Un CI vert ne déclenche pas de merge automatique : validation humaine requise.
+## Verdict final
+
+`QA_COMPLETE_AWAITING_HUMAN_VALIDATION`.
+
+Le contenu est prêt pour revue dans une PR. Conformément au workflow, un CI vert ne suffit pas pour merger ou rendre le site indexable : validation humaine explicite requise.
