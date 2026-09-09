@@ -6,38 +6,69 @@
     "updated_at": "2026-09-09"
   },
   "entity_map": {
-    "products": [
+    "product_families": [
       "RIVER 3",
       "RIVER 3 Plus",
-      "DELTA 3 Plus",
+      "DELTA 3",
+      "DELTA 3 Classic",
+      "DELTA 3 1500",
+      "DELTA 3 Max",
       "DELTA 3 Max Plus",
-      "DELTA Pro 3",
-      "DELTA 2 / RIVER 2"
+      "DELTA Pro 3"
     ],
-    "services": [],
+    "battery_chemistry": [
+      "LiFePO4/LFP"
+    ],
+    "power_system": [
+      "onduleur CA",
+      "BMS",
+      "X-Boost selon modèle"
+    ],
+    "solar_mppt": [
+      "entrée solaire 110 W sur RIVER 3",
+      "entrée solaire 220 W sur RIVER 3 Plus",
+      "double MPPT 2 x 500 W sur DELTA 3 Plus",
+      "entrée solaire 1 000 W sur DELTA 3 Max Plus",
+      "double entrée solaire jusqu'à 2 600 W sur DELTA Pro 3"
+    ],
+    "extra_batteries": [
+      "EB300 / EB600 pour RIVER 3 Plus",
+      "batteries supplémentaires DELTA 3 / DELTA 2 / DELTA 2 Max / DELTA Pro 3 selon compatibilité",
+      "batterie supplémentaire DELTA 3 Max Plus",
+      "batterie supplémentaire DELTA Pro 3"
+    ],
+    "charging": [
+      "secteur CA",
+      "solaire",
+      "véhicule",
+      "chargeur d'alternateur EcoFlow selon modèle",
+      "générateur intelligent selon modèle",
+      "charge combinée selon modèle"
+    ],
+    "ups_eps": [
+      "RIVER 3 <20 ms / variante ASI <10 ms",
+      "RIVER 3 Plus <10 ms",
+      "DELTA 3 / DELTA 3 Plus <10 ms",
+      "DELTA 3 Max Plus 10 ms + HID",
+      "DELTA Pro 3 <10 ms dans les configurations documentées"
+    ],
     "software": [
-      "application mobile"
-    ],
-    "technologies": [
-      "LiFePO4/LFP",
-      "MPPT",
-      "onduleur sinusoïdal pur",
-      "UPS/EPS selon modèle"
+      "application EcoFlow",
+      "Wi-Fi / Bluetooth selon modèle"
     ],
     "accessories": [
-      "panneaux solaires",
-      "câbles de recharge",
-      "batteries additionnelles selon modèle"
+      "panneaux solaires portables et rigides",
+      "câbles de charge solaire",
+      "chargeurs d'alternateur",
+      "câbles et adaptateurs de batteries supplémentaires"
     ],
-    "integrations": [],
-    "formats": [],
     "use_cases": [
       "camping",
       "van",
       "camping-car",
+      "télétravail et réseau",
       "secours domestique",
-      "télétravail",
-      "chantier"
+      "charges lourdes"
     ],
     "competitors": [
       "BLUETTI",
@@ -46,10 +77,12 @@
     ]
   },
   "brand_positioning": {
-    "statement": "EcoFlow structure sa gamme autour de deux familles très lisibles : RIVER pour la mobilité et les besoins légers à intermédiaires, DELTA pour les puissances et capacités plus élevées, jusqu’au secours domestique.",
+    "statement": "EcoFlow se distingue moins par un modèle unique que par une progression continue de systèmes : des RIVER très compactes aux DELTA extensibles et aux solutions de secours domestique. La valeur de la marque augmente surtout quand plusieurs modes de recharge, le solaire ou l'extension de capacité sont réellement utilisés.",
     "evidence": [
       "https://fr.ecoflow.com/pages/portable-power-stations",
-      "https://fr.ecoflow.com/collections/delta-series-portable-power-stations"
+      "https://fr.ecoflow.com/collections/1-delta-series-menu/products/delta-3-series-portable-power-station",
+      "https://fr.ecoflow.com/products/delta-3-max-series-portable-power-station",
+      "https://fr.ecoflow.com/products/delta-pro-3-portable-power-station"
     ]
   },
   "product_range": [
@@ -57,35 +90,69 @@
       "id": "river-3",
       "name": "RIVER 3",
       "status": "CURRENT",
-      "generation": "",
-      "size": "245 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "ultra-compacte, petits appareils et mobilité",
-      "main_limit": "",
-      "source": "https://fr.ecoflow.com/pages/portable-power-stations",
+      "capacity_wh": 245,
+      "continuous_power_w": 300,
+      "weight_kg": 3.55,
+      "battery": "LFP",
+      "solar_input": "110 W max.",
+      "expansion": "non documentée comme extensible sur la fiche officielle",
+      "decision_role": "mobilité et petits appareils",
+      "source": "https://fr.ecoflow.com/products/river-3-portable-power-station",
       "verified_at": "2026-09-09"
     },
     {
       "id": "river-3-plus",
       "name": "RIVER 3 Plus",
       "status": "CURRENT",
-      "generation": "",
-      "size": "286 à 858 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "compacte et extensible selon configuration",
-      "main_limit": "",
-      "source": "https://fr.ecoflow.com/pages/portable-power-stations",
+      "capacity_wh": 286,
+      "continuous_power_w": 600,
+      "weight_kg": 4.7,
+      "battery": "LFP",
+      "solar_input": "220 W max.",
+      "expansion": "jusqu'à 858 Wh avec EB300 ou EB600",
+      "decision_role": "premier niveau compact et extensible",
+      "source": "https://fr.ecoflow.com/products/river-3-plus-portable-power-station",
       "verified_at": "2026-09-09"
     },
     {
       "id": "delta-3-plus",
       "name": "DELTA 3 Plus",
       "status": "CURRENT",
-      "generation": "",
-      "size": "1 024 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "polyvalence 1 kWh, solaire et secours",
-      "main_limit": "",
+      "capacity_wh": 1024,
+      "continuous_power_w": 1800,
+      "weight_kg": "<=12.5",
+      "battery": "LFP",
+      "solar_input": "2 x 500 W MPPT",
+      "expansion": "famille DELTA 3 documentée de 1 à 5 kWh selon batterie supplémentaire compatible",
+      "decision_role": "système 1 kWh polyvalent, solaire et recharge multi-source",
+      "source": "https://fr.ecoflow.com/collections/1-delta-series-menu/products/delta-3-series-portable-power-station",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "delta-3-classic",
+      "name": "DELTA 3 Classic",
+      "status": "CURRENT",
+      "capacity_wh": 1024,
+      "continuous_power_w": 1800,
+      "weight_kg": "UNKNOWN",
+      "battery": "LFP",
+      "solar_input": "UNKNOWN",
+      "expansion": "UNKNOWN",
+      "decision_role": "variante actuelle 1 kWh à distinguer de DELTA 3 Plus",
+      "source": "https://fr.ecoflow.com/pages/portable-power-stations",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "delta-3-1500",
+      "name": "DELTA 3 1500",
+      "status": "CURRENT",
+      "capacity_wh": 1500,
+      "continuous_power_w": 1800,
+      "weight_kg": "UNKNOWN",
+      "battery": "UNKNOWN",
+      "solar_input": "UNKNOWN",
+      "expansion": "1.5 à 5.5 kWh selon les batteries supplémentaires listées par EcoFlow",
+      "decision_role": "palier intermédiaire entre 1 kWh et 2 kWh",
       "source": "https://fr.ecoflow.com/pages/portable-power-stations",
       "verified_at": "2026-09-09"
     },
@@ -93,89 +160,161 @@
       "id": "delta-3-max-plus",
       "name": "DELTA 3 Max Plus",
       "status": "CURRENT",
-      "generation": "",
-      "size": "2 048 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "forte puissance dans la famille DELTA",
-      "main_limit": "",
-      "source": "https://fr.ecoflow.com/pages/portable-power-stations",
+      "capacity_wh": 2048,
+      "continuous_power_w": 3000,
+      "weight_kg": 22.1,
+      "battery": "LFP",
+      "solar_input": "1 000 W max.",
+      "expansion": "jusqu'à 10 kWh dans les configurations documentées; certaines configurations multi-batteries nécessitent un adaptateur d'extension",
+      "decision_role": "forte puissance 2 kWh, transportable plutôt que légère",
+      "source": "https://fr.ecoflow.com/products/delta-3-max-series-portable-power-station",
       "verified_at": "2026-09-09"
     },
     {
       "id": "delta-pro-3",
       "name": "DELTA Pro 3",
       "status": "CURRENT",
-      "generation": "",
-      "size": "4 kWh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "secours domestique et charges lourdes",
-      "main_limit": "",
-      "source": "https://fr.ecoflow.com/pages/portable-power-stations",
-      "verified_at": "2026-09-09"
-    },
-    {
-      "id": "delta-2-river-2",
-      "name": "DELTA 2 / RIVER 2",
-      "status": "PREVIOUS_GENERATION",
-      "generation": "",
-      "size": "selon modèle",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "anciennes générations encore visibles ou vendues selon références",
-      "main_limit": "",
-      "source": "https://fr.ecoflow.com/pages/portable-power-stations",
+      "capacity_wh": 4096,
+      "continuous_power_w": 4000,
+      "weight_kg": 51.5,
+      "battery": "LFP",
+      "solar_input": "2 600 W max. sur deux entrées",
+      "expansion": "jusqu'à 12 kWh avec deux batteries supplémentaires compatibles",
+      "decision_role": "secours domestique et charges lourdes; mobilité occasionnelle seulement",
+      "source": "https://fr.ecoflow.com/products/delta-pro-3-portable-power-station",
       "verified_at": "2026-09-09"
     }
   ],
-  "ecosystem": {
-    "hardware": [
-      "RIVER 3",
-      "RIVER 3 Plus",
-      "DELTA 3 Plus",
-      "DELTA 3 Max Plus",
-      "DELTA Pro 3",
-      "DELTA 2 / RIVER 2"
+  "catalog_overlap": {
+    "current_store_also_lists": [
+      "DELTA 2",
+      "DELTA 2 Max",
+      "RIVER 2 family",
+      "DELTA Pro",
+      "DELTA Pro Ultra",
+      "TRAIL family"
     ],
-    "stylus": [],
-    "os": [],
-    "notes": [],
-    "pdf": [],
-    "ocr": [],
-    "cloud": [],
-    "export": [],
-    "third_party": [
-      "Stations RIVER et DELTA",
-      "batteries additionnelles sur certaines DELTA/RIVER 3 Plus",
-      "panneaux solaires portables et rigides",
+    "interpretation": "La boutique officielle mélange nouveautés, générations antérieures encore vendues et systèmes résidentiels. La page marque présente donc des repères de décision plutôt qu'un inventaire marchand exhaustif.",
+    "source": "https://fr.ecoflow.com/pages/portable-power-stations",
+    "verified_at": "2026-09-09"
+  },
+  "ecosystem": {
+    "stations": [
+      "RIVER 3 / RIVER 3 Plus",
+      "DELTA 3 / DELTA 3 Plus / variantes",
+      "DELTA 3 Max / Max Plus",
+      "DELTA Pro 3"
+    ],
+    "battery_chemistry": [
+      "LFP sur les repères actuels vérifiés"
+    ],
+    "solar_mppt": [
+      "110 W à 2 600 W d'entrée solaire selon le niveau de gamme",
+      "double MPPT sur DELTA 3 Plus",
+      "double entrée PV haute/basse tension sur DELTA Pro 3"
+    ],
+    "extra_batteries": [
+      "RIVER 3 Plus : EB300 / EB600",
+      "DELTA 3 family : compatibilités multiples selon batterie et câble",
+      "DELTA 3 Max Plus : compatibilités multiples et adaptateur selon configuration",
+      "DELTA Pro 3 : jusqu'à deux batteries supplémentaires compatibles"
+    ],
+    "charging": [
+      "CA",
+      "solaire",
+      "voiture",
+      "alternateur selon modèle",
+      "générateur selon modèle",
+      "charge combinée selon modèle"
+    ],
+    "ups_eps": [
+      "temps de transfert inférieur à 10 ou 20 ms selon modèle/variante"
+    ],
+    "app_firmware": [
       "application EcoFlow",
-      "recharge secteur, solaire et véhicule selon modèle"
+      "Wi-Fi / Bluetooth selon modèle"
+    ],
+    "compatibility_constraints": [
+      "les batteries additionnelles ne sont pas universelles entre toutes les familles",
+      "certaines extensions DELTA 3 Max Plus nécessitent un adaptateur dédié",
+      "une compatibilité solaire ne doit pas être déduite du connecteur seul; tension, courant et plage MPPT doivent être vérifiés"
     ]
   },
   "evidence": [
     {
-      "entity": "EcoFlow",
-      "claim": "EcoFlow — stations électriques portables France",
+      "entity": "EcoFlow portable power stations",
+      "claim": "La boutique France liste simultanément RIVER 3, RIVER 3 Plus, DELTA 3, DELTA 3 Classic, DELTA 3 1500, DELTA 3 Max, DELTA 3 Max Plus, DELTA Pro 3 et plusieurs générations antérieures encore vendues.",
       "source": "https://fr.ecoflow.com/pages/portable-power-stations",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     },
     {
-      "entity": "EcoFlow",
-      "claim": "EcoFlow — série DELTA",
-      "source": "https://fr.ecoflow.com/collections/delta-series-portable-power-stations",
+      "entity": "RIVER 3",
+      "claim": "245 Wh, 300 W, 3.55 kg, LFP, 110 W solaire max.",
+      "source": "https://fr.ecoflow.com/products/river-3-portable-power-station",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     },
     {
-      "entity": "EcoFlow",
-      "claim": "EcoFlow — série RIVER",
-      "source": "https://fr.ecoflow.com/collections/river-series-portable-power-stations",
+      "entity": "RIVER 3 Plus",
+      "claim": "286 Wh, 600 W, 4.7 kg, LFP, 220 W solaire max., extensible à 858 Wh avec EB300/EB600.",
+      "source": "https://fr.ecoflow.com/products/river-3-plus-portable-power-station",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "DELTA 3 Plus",
+      "claim": "1 024 Wh, 1 800 W, <=12.5 kg pour la famille, LFP, deux MPPT de 500 W et extension de la famille de 1 à 5 kWh selon batteries compatibles.",
+      "source": "https://fr.ecoflow.com/collections/1-delta-series-menu/products/delta-3-series-portable-power-station",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "DELTA 3 Max Plus",
+      "claim": "2 048 Wh, 3 000 W, env. 22.1 kg, LFP, 1 000 W solaire, capacité documentée jusqu'à 10 kWh dans certaines configurations.",
+      "source": "https://fr.ecoflow.com/products/delta-3-max-series-portable-power-station",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "DELTA Pro 3",
+      "claim": "4 096 Wh, 4 000 W, 51.5 kg, LFP, 2 600 W solaire et extension jusqu'à 12 kWh.",
+      "source": "https://fr.ecoflow.com/products/delta-pro-3-portable-power-station",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "EcoFlow warranty",
+      "claim": "Les durées de garantie diffèrent selon les familles; DELTA 3/3 Plus et DELTA Pro 3 sont listées à 5 ans, DELTA 3 Max/Max Plus à 3+2 ans avec extension après inscription.",
+      "source": "https://fr.ecoflow.com/pages/warranty-policy",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     }
   ],
+  "decision_brief": {
+    "primary_question": "RIVER ou DELTA, puis quel niveau de capacité/puissance et quelle architecture d'extension ?",
+    "original_value": [
+      "distinguer les familles avant les modèles",
+      "rendre visible le coût en poids de la montée en gamme",
+      "traiter la compatibilité des batteries comme une contrainte de décision",
+      "éviter de confondre X-Boost/crête avec puissance continue",
+      "router vers le calculateur pour l'autonomie réelle"
+    ],
+    "unknowns_not_to_fill": [
+      "autonomie réelle sans profil de charge",
+      "fiabilité long terme",
+      "qualité comparative de l'application",
+      "prix promotionnels futurs",
+      "compatibilité de panneaux tiers sans vérification électrique"
+    ]
+  },
   "internal_links": {
     "products": [
       "/modeles/ecoflow-river-3/",
@@ -187,15 +326,28 @@
       "/comparatifs/station-electrique-portable-avec-panneau-solaire/"
     ],
     "guides": [
-      "/guides/lifepo4-ou-lithium-ion/",
-      "/guides/calculer-autonomie-station-electrique/"
+      "/guides/watt-ou-watt-heure/",
+      "/guides/calculer-capacite-station-electrique/",
+      "/guides/ups-eps-station-electrique/",
+      "/guides/lifepo4-ou-lithium-ion/"
+    ],
+    "solar": [
+      "/solaire/recharger-station-electrique-panneau-solaire/"
     ],
     "usages": [
       "/usages/station-electrique-camping/",
-      "/usages/station-electrique-coupure-courant/",
-      "/usages/station-electrique-van/"
+      "/usages/station-electrique-van/",
+      "/usages/station-electrique-camping-car/",
+      "/usages/station-electrique-coupure-courant/"
     ],
-    "services": []
+    "tools": [
+      "/calculateur-autonomie/"
+    ],
+    "brands": [
+      "/marques/bluetti/",
+      "/marques/jackery/",
+      "/marques/anker-solix/"
+    ]
   },
   "known_exceptions": []
 }

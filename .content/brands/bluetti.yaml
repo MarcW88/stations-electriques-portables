@@ -6,50 +6,23 @@
     "updated_at": "2026-09-09"
   },
   "entity_map": {
-    "products": [
-      "Elite 30 V2",
-      "Elite 100 V2",
-      "Elite 200 V2",
-      "Apex 300",
-      "AC70",
-      "AC180 / AC200MAX / EB3A"
-    ],
-    "services": [],
-    "software": [
-      "application mobile"
-    ],
-    "technologies": [
-      "LiFePO4/LFP",
-      "MPPT",
-      "onduleur sinusoïdal pur",
-      "UPS/EPS selon modèle"
-    ],
-    "accessories": [
-      "panneaux solaires",
-      "câbles de recharge",
-      "batteries additionnelles selon modèle"
-    ],
-    "integrations": [],
-    "formats": [],
-    "use_cases": [
-      "camping",
-      "van",
-      "camping-car",
-      "secours domestique",
-      "télétravail",
-      "chantier"
-    ],
-    "competitors": [
-      "EcoFlow",
-      "Jackery",
-      "Anker SOLIX"
-    ]
+    "families": ["Elite", "Apex", "AC/EB"],
+    "products": ["Elite 10", "Elite 30 V2", "Elite 100 V2", "Elite 200 V2", "Elite 300", "Elite 400", "Apex 300", "AC180", "EB3A"],
+    "battery_chemistry": ["LiFePO4 on current Elite/Apex and several AC/EB models"],
+    "charging": ["AC", "solar MPPT", "Charger 1", "Charger 2"],
+    "solar": ["Elite 100 V2 up to 1,000 W", "model-specific limits elsewhere"],
+    "ups_eps": ["UPS <=10 ms on selected recent products"],
+    "software": ["BLUETTI app on compatible models"],
+    "expansion": ["Apex 300 + B300K", "Apex 300 + B500K"],
+    "vehicle_charging": ["Charger 1 / Charger 2 depending on model"],
+    "use_cases": ["camping", "camping-car", "secours domestique", "hors réseau"],
+    "competitors": ["EcoFlow", "Jackery", "Anker SOLIX"]
   },
   "brand_positioning": {
-    "statement": "BLUETTI pousse en 2026 une gamme très structurée autour des familles Elite pour le portable et Apex pour le secours plus ambitieux, tout en conservant de nombreuses références AC/EB plus anciennes dans l’écosystème.",
+    "statement": "BLUETTI should be read as three overlapping logics: Elite for the mainstream portable line, Apex for expandable backup systems, and AC/EB as older naming that still remains commercially relevant on selected products.",
     "evidence": [
       "https://fr.bluettipower.eu/pages/station-de-energie-portative",
-      "https://fr.bluettipower.eu/products/elite-200-v2"
+      "https://fr.bluettipower.eu/collections/apex-serie"
     ]
   },
   "product_range": [
@@ -57,143 +30,160 @@
       "id": "elite-30-v2",
       "name": "Elite 30 V2",
       "status": "CURRENT",
-      "generation": "",
+      "generation": "Elite",
       "size": "288 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "compacte, UPS ≤10 ms, mobilité",
-      "main_limit": "",
-      "source": "https://fr.bluettipower.eu/pages/station-de-energie-portative",
+      "power": "600 W",
+      "technology": "LiFePO4",
+      "positioning": "compact Elite tier with fast UPS",
+      "main_limit": "small energy reserve",
+      "source": "https://fr.bluettipower.eu/products/elite-30-v2-station-electrique-portable",
       "verified_at": "2026-09-09"
     },
     {
       "id": "elite-100-v2",
       "name": "Elite 100 V2",
       "status": "CURRENT",
-      "generation": "",
-      "size": "1 024 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "format 1 kWh polyvalent",
-      "main_limit": "",
-      "source": "https://fr.bluettipower.eu/pages/station-de-energie-portative",
+      "generation": "Elite",
+      "size": "1,024 Wh",
+      "power": "1,800 W",
+      "technology": "LiFePO4",
+      "positioning": "current 1 kWh portable anchor and explicit AC180 successor",
+      "main_limit": "accessory compatibility must be checked per charger/panel",
+      "source": "https://fr.bluettipower.eu/pages/elite-100-v2-station-electrique-portable",
       "verified_at": "2026-09-09"
     },
     {
       "id": "elite-200-v2",
       "name": "Elite 200 V2",
       "status": "CURRENT",
-      "generation": "",
-      "size": "2 073,6 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "2 kWh, camping-car et secours",
-      "main_limit": "",
-      "source": "https://fr.bluettipower.eu/pages/station-de-energie-portative",
+      "generation": "Elite",
+      "size": "2,073.6 Wh",
+      "power": "2,600 W",
+      "technology": "LiFePO4",
+      "positioning": "2 kWh portable/off-grid tier",
+      "main_limit": "large enough that portability depends on transport pattern",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "elite-300",
+      "name": "Elite 300",
+      "status": "CURRENT",
+      "generation": "Elite",
+      "size": "3,014.4 Wh",
+      "power": "2,400 W",
+      "technology": "current Elite family",
+      "positioning": "3 kWh current Elite tier",
+      "main_limit": "not interchangeable with Apex expansion architecture",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "elite-400",
+      "name": "Elite 400",
+      "status": "CURRENT",
+      "generation": "Elite",
+      "size": "3,840 Wh",
+      "power": "2,600 W",
+      "technology": "current Elite family",
+      "positioning": "high-capacity Elite tier",
+      "main_limit": "transportable rather than lightweight portable",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
       "verified_at": "2026-09-09"
     },
     {
       "id": "apex-300",
       "name": "Apex 300",
       "status": "CURRENT",
-      "generation": "",
-      "size": "2 764,8 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "secours et système extensible",
-      "main_limit": "",
-      "source": "https://fr.bluettipower.eu/pages/station-de-energie-portative",
+      "generation": "Apex",
+      "size": "2,764.8 Wh",
+      "power": "3,840 W",
+      "technology": "LiFePO4",
+      "positioning": "expandable backup/system architecture",
+      "main_limit": "system complexity and cost grow with B300K/B500K/transfer accessories",
+      "source": "https://fr.bluettipower.eu/collections/apex-serie",
       "verified_at": "2026-09-09"
     },
     {
-      "id": "ac70",
-      "name": "AC70",
-      "status": "CURRENT",
-      "generation": "",
-      "size": "env. 768 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "milieu de gamme encore proposé",
-      "main_limit": "",
-      "source": "https://fr.bluettipower.eu/pages/station-de-energie-portative",
+      "id": "ac180",
+      "name": "AC180",
+      "status": "CURRENT_LEGACY_NAMING",
+      "generation": "AC",
+      "size": "1,152 Wh",
+      "power": "1,800 W",
+      "technology": "LiFePO4",
+      "positioning": "older naming still sold; predecessor context for Elite 100 V2",
+      "main_limit": "should not inherit Elite 100 V2 features by analogy",
+      "source": "https://fr.bluettipower.eu/pages/promotion-pour-membres",
       "verified_at": "2026-09-09"
     },
     {
-      "id": "ac180-ac200max-eb3a",
-      "name": "AC180 / AC200MAX / EB3A",
-      "status": "PREVIOUS_GENERATION",
-      "generation": "",
-      "size": "selon modèle",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "anciennes familles à distinguer des Elite/Apex",
-      "main_limit": "",
-      "source": "https://fr.bluettipower.eu/pages/station-de-energie-portative",
+      "id": "eb3a",
+      "name": "EB3A",
+      "status": "CURRENT_LEGACY_NAMING",
+      "generation": "EB",
+      "size": "268 Wh",
+      "power": "600 W",
+      "technology": "LiFePO4",
+      "positioning": "older compact naming still sold",
+      "main_limit": "not representative of current Elite architecture",
+      "source": "https://fr.bluettipower.eu/pages/promotion-pour-membres",
       "verified_at": "2026-09-09"
     }
   ],
   "ecosystem": {
-    "hardware": [
-      "Elite 30 V2",
-      "Elite 100 V2",
-      "Elite 200 V2",
-      "Apex 300",
-      "AC70",
-      "AC180 / AC200MAX / EB3A"
-    ],
-    "stylus": [],
-    "os": [],
-    "notes": [],
-    "pdf": [],
-    "ocr": [],
-    "cloud": [],
-    "export": [],
-    "third_party": [
-      "Stations Elite, Apex et AC",
-      "batteries d’extension selon modèles",
-      "Chargeur 2 / recharge véhicule selon références",
-      "panneaux solaires",
-      "application BLUETTI et fonctions UPS"
-    ]
+    "stations": ["Elite", "Apex", "AC/EB"],
+    "extra_batteries": ["B300K", "B500K"],
+    "solar_panels": ["BLUETTI panels; input limits vary by station"],
+    "vehicle_charging": ["Charger 1", "Charger 2"],
+    "ups_eps": ["fast UPS on selected recent products"],
+    "app_firmware": ["BLUETTI app"],
+    "home_integration": ["Balco Transfer Hub on compatible Apex configurations"],
+    "compatibility_notes": ["Elite, Apex and AC/EB are not one interchangeable accessory ecosystem", "Apex battery modules are system-specific and should be checked before purchase"]
   },
   "evidence": [
     {
-      "entity": "BLUETTI",
-      "claim": "BLUETTI France — stations électriques portables",
-      "source": "https://fr.bluettipower.eu/pages/station-de-energie-portative",
+      "entity": "BLUETTI current portable range",
+      "claim": "Current France site exposes Elite 10, Elite 30 V2, Elite 100 V2, Elite 200 V2, Elite 300, Elite 400 and Apex 300 among current portable/system products.",
+      "source": "https://fr.bluettipower.eu/products/elite-200-v2-station-electrique-portable",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     },
     {
-      "entity": "BLUETTI",
-      "claim": "BLUETTI — Elite 200 V2",
-      "source": "https://fr.bluettipower.eu/products/elite-200-v2",
+      "entity": "Elite 100 V2",
+      "claim": "1,024 Wh, 1,800 W, 11.5 kg, up to 1,000 W solar; BLUETTI positions it as an improved AC180 generation.",
+      "source": "https://fr.bluettipower.eu/pages/elite-100-v2-station-electrique-portable",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     },
     {
-      "entity": "BLUETTI",
-      "claim": "BLUETTI — gamme et accessoires",
-      "source": "https://fr.bluettipower.eu/",
+      "entity": "Apex 300",
+      "claim": "2,764.8 Wh / 3,840 W with B300K and B500K expansion configurations sold by BLUETTI France.",
+      "source": "https://fr.bluettipower.eu/collections/apex-serie",
+      "verified_at": "2026-09-09",
+      "status": "VERIFIED",
+      "freshness": "high"
+    },
+    {
+      "entity": "AC/EB commercial status",
+      "claim": "AC180 and EB3A remain commercially listed despite older naming.",
+      "source": "https://fr.bluettipower.eu/pages/promotion-pour-membres",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     }
   ],
   "internal_links": {
-    "products": [
-      "/modeles/bluetti-elite-200-v2/",
-      "/modeles/bluetti-ac180/"
-    ],
-    "comparisons": [
-      "/comparatifs/station-electrique-lifepo4/",
-      "/comparatifs/station-electrique-portable-puissante/"
-    ],
-    "guides": [
-      "/guides/ups-eps-station-electrique/",
-      "/guides/duree-vie-cycles-batterie/"
-    ],
-    "usages": [
-      "/usages/station-electrique-camping-car/",
-      "/usages/station-electrique-coupure-courant/"
-    ],
-    "services": []
+    "products": ["/modeles/bluetti-elite-200-v2/", "/modeles/bluetti-ac180/"],
+    "comparisons": ["/comparatifs/station-electrique-lifepo4/", "/comparatifs/station-electrique-portable-puissante/"],
+    "guides": ["/guides/ups-eps-station-electrique/", "/guides/duree-vie-cycles-batterie/"],
+    "usages": ["/usages/station-electrique-camping-car/", "/usages/station-electrique-coupure-courant/"],
+    "services": ["/calculateur-autonomie/"]
   },
-  "known_exceptions": []
+  "known_exceptions": [
+    "Older AC/EB naming does not automatically mean discontinued; commercial status must be checked product by product.",
+    "Manufacturer longevity marketing is not converted into real-world lifespan claims without cycle methodology and retention thresholds."
+  ]
 }

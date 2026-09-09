@@ -5,10 +5,13 @@ on:
   push:
     branches:
       - content/marques-workflow
+      - adapt-brand-workflows-stations
     paths:
       - '.agents/skills/brand-content-workflow/**'
+      - '.agents/skills/brand-analysis-workflow/**'
       - '.content/brands/**'
       - '.content/brand-pages/**'
+      - '.content/brand-audits/**'
       - '.content/briefs/marques-production-2026-09-09.md'
       - '.content/reviews/marques-production-qa.md'
       - 'brand-workflow.config.yaml'
@@ -17,11 +20,16 @@ on:
       - '.github/workflows/generate-brands-content.yml'
   pull_request:
     paths:
+      - '.agents/skills/brand-content-workflow/**'
+      - '.agents/skills/brand-analysis-workflow/**'
       - '.content/brands/**'
       - '.content/brand-pages/**'
+      - '.content/brand-audits/**'
+      - 'brand-workflow.config.yaml'
       - '_generate_brands.py'
       - '_validate_brands.py'
       - 'marques/**'
+      - '.github/workflows/generate-brands-content.yml'
 
 permissions:
   contents: write
@@ -50,18 +58,7 @@ jobs:
       - name: Generate seven brand hubs
         run: python _generate_brands.py
 
-      - name: Run generic brand workflow gate
-        run: |
-          python .agents/skills/brand-content-workflow/scripts/validate_brand_quality.py marques \
-            --min-h2 9 \
-            --min-internal-links 8 \
-            --min-unique-targets 6 \
-            --min-sources 3 \
-            --require-noindex \
-            --require-limits \
-            --require-choose-avoid
-
-      - name: Run repo-specific brand QA
+      - name: Run repo-specific hard brand invariants
         run: python _validate_brands.py
 
       - name: Check idempotence

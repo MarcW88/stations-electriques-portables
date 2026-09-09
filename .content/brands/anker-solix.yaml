@@ -6,180 +6,150 @@
     "updated_at": "2026-09-09"
   },
   "entity_map": {
-    "products": [
-      "C300",
-      "C1000 Gen 2",
-      "C2000 Gen 2",
-      "C1000 première génération",
-      "F2000"
-    ],
-    "services": [],
-    "software": [
-      "application mobile"
-    ],
-    "technologies": [
-      "LiFePO4/LFP",
-      "MPPT",
-      "onduleur sinusoïdal pur",
-      "UPS/EPS selon modèle"
-    ],
-    "accessories": [
-      "panneaux solaires",
-      "câbles de recharge",
-      "batteries additionnelles selon modèle"
-    ],
-    "integrations": [],
-    "formats": [],
-    "use_cases": [
-      "camping",
-      "van",
-      "camping-car",
-      "secours domestique",
-      "télétravail",
-      "chantier"
-    ],
-    "competitors": [
-      "EcoFlow",
-      "BLUETTI",
-      "Jackery"
-    ]
+    "families": ["C-series Gen 2", "older C/F generation"],
+    "products": ["C1000 Gen 2", "C2000 Gen 2", "BP2000 Gen 2", "C300", "C1000 first generation", "F2000"],
+    "battery_chemistry": ["LFP on C1000 Gen 2 and C2000 Gen 2"],
+    "charging": ["AC HyperFlash/UltraFast", "solar MPPT", "800 W alternator charger on C2000 Gen 2"],
+    "solar": ["C1000 Gen 2 up to 600 W", "C2000 Gen 2 up to 800 W"],
+    "ups_eps": ["10 ms UPS on C1000 Gen 2 and C2000 Gen 2"],
+    "software": ["Anker app via Wi-Fi/Bluetooth"],
+    "expansion": ["C2000 Gen 2 + BP2000 Gen 2 up to about 4 kWh"],
+    "vehicle_charging": ["800 W alternator charger for C2000 Gen 2"],
+    "use_cases": ["camping", "van", "camping-car", "télétravail", "secours domestique"],
+    "competitors": ["EcoFlow", "BLUETTI", "Jackery"]
   },
   "brand_positioning": {
-    "statement": "Anker SOLIX recentre sa gamme portable autour de la série C : C300 pour le compact, C1000 Gen 2 pour le cœur 1 kWh et C2000 Gen 2 pour 2 kWh, avec une forte emphase sur la recharge rapide, la compacité et l’application.",
+    "statement": "The current French portable range is concentrated around C1000 Gen 2 as a compact high-power 1 kWh station and C2000 Gen 2 as a 2–4 kWh system with alternator charging.",
     "evidence": [
       "https://www.ankersolix.com/fr/collections/portable-power-stations",
-      "https://www.ankersolix.com/fr/products/c1000-gen2"
+      "https://www.ankersolix.com/fr/products/c1000-gen2",
+      "https://www.ankersolix.com/fr/c2000-gen2"
     ]
   },
   "product_range": [
     {
-      "id": "c300",
-      "name": "C300",
-      "status": "CURRENT",
-      "generation": "",
-      "size": "288 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "compacte, actuellement épuisée sur la boutique FR",
-      "main_limit": "",
-      "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
-      "verified_at": "2026-09-09"
-    },
-    {
       "id": "c1000-gen-2",
       "name": "C1000 Gen 2",
       "status": "CURRENT",
-      "generation": "",
-      "size": "1 024 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "cœur de gamme 1 kWh",
-      "main_limit": "",
-      "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
+      "generation": "Gen 2",
+      "size": "1,024 Wh",
+      "power": "2,000 W continuous / 3,000 W peak",
+      "technology": "LFP; manufacturer states 4,000 cycles to >=80% capacity",
+      "positioning": "compact high-power 1 kWh anchor",
+      "main_limit": "capacity remains 1 kWh despite high inverter output; no current expansion architecture highlighted",
+      "source": "https://www.ankersolix.com/fr/products/c1000-gen2",
       "verified_at": "2026-09-09"
     },
     {
       "id": "c2000-gen-2",
       "name": "C2000 Gen 2",
       "status": "CURRENT",
-      "generation": "",
-      "size": "2 048 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "2 kWh extensible à 4 kWh",
-      "main_limit": "",
+      "generation": "Gen 2",
+      "size": "2,048 Wh to about 4 kWh with BP2000 Gen 2",
+      "power": "2,400 W continuous / 4,000 W peak",
+      "technology": "LFP; manufacturer states 4,000 cycles",
+      "positioning": "2 kWh travel/backup system with expansion and alternator charging",
+      "main_limit": "18.9 kg before expansion; system ceiling is about 4 kWh",
+      "source": "https://www.ankersolix.com/fr/c2000-gen2",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "bp2000-gen-2",
+      "name": "BP2000 Gen 2",
+      "status": "CURRENT_ACCESSORY",
+      "generation": "Gen 2 expansion",
+      "size": "2,048 Wh",
+      "power": "n/a",
+      "technology": "LFP expansion battery",
+      "positioning": "capacity extension for C2000 Gen 2",
+      "main_limit": "not a standalone portable station",
+      "source": "https://www.ankersolix.com/fr/c2000-gen2",
+      "verified_at": "2026-09-09"
+    },
+    {
+      "id": "c300",
+      "name": "C300",
+      "status": "SOLD_OUT_FR_2026-09-09",
+      "generation": "C-series",
+      "size": "288 Wh",
+      "power": "300 W",
+      "technology": "LFP where documented by Anker",
+      "positioning": "compact historical/current-catalogue context",
+      "main_limit": "sold out on French collection at verification date",
       "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
       "verified_at": "2026-09-09"
     },
     {
-      "id": "c1000-premiere-generation",
-      "name": "C1000 première génération",
-      "status": "PREVIOUS_GENERATION",
-      "generation": "",
-      "size": "1 056 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "ancienne génération, épuisée sur la collection FR",
-      "main_limit": "",
+      "id": "c1000-first-gen",
+      "name": "C1000 first generation",
+      "status": "SOLD_OUT_FR_2026-09-09",
+      "generation": "Gen 1",
+      "size": "1,056 Wh",
+      "power": "1,800 W",
+      "technology": "LFP",
+      "positioning": "older 1 kWh generation",
+      "main_limit": "sold out on French collection and superseded for current comparison by C1000 Gen 2",
       "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
       "verified_at": "2026-09-09"
     },
     {
       "id": "f2000",
       "name": "F2000",
-      "status": "PREVIOUS_GENERATION",
-      "generation": "",
-      "size": "2 048 Wh",
-      "technology": "LFP lorsque indiqué par la source officielle",
-      "positioning": "ancienne grande station, épuisée sur la collection FR",
-      "main_limit": "",
+      "status": "SOLD_OUT_FR_2026-09-09",
+      "generation": "older F generation",
+      "size": "2,048 Wh",
+      "power": "2,400 W",
+      "technology": "LFP",
+      "positioning": "older 2 kWh generation",
+      "main_limit": "sold out on French collection and significantly heavier than C2000 Gen 2",
       "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
       "verified_at": "2026-09-09"
     }
   ],
   "ecosystem": {
-    "hardware": [
-      "C300",
-      "C1000 Gen 2",
-      "C2000 Gen 2",
-      "C1000 première génération",
-      "F2000"
-    ],
-    "stylus": [],
-    "os": [],
-    "notes": [],
-    "pdf": [],
-    "ocr": [],
-    "cloud": [],
-    "export": [],
-    "third_party": [
-      "Stations série C",
-      "batterie additionnelle BP2000 Gen 2",
-      "panneaux solaires Anker SOLIX",
-      "chargeur d’alternateur 800 W pour C2000 Gen 2",
-      "application Anker avec Wi-Fi/Bluetooth"
-    ]
+    "stations": ["C1000 Gen 2", "C2000 Gen 2"],
+    "extra_batteries": ["BP2000 Gen 2 for C2000 Gen 2"],
+    "solar_panels": ["Anker SOLIX panels; exact voltage/input compatibility must be checked per station"],
+    "vehicle_charging": ["800 W alternator charger for C2000 Gen 2"],
+    "ups_eps": ["10 ms UPS on both current Gen 2 anchors"],
+    "app_firmware": ["Anker app with Wi-Fi/Bluetooth energy controls"],
+    "compatibility_notes": ["C2000 Gen 2 system accessories should not be assumed compatible with C1000 Gen 2 or older generations"]
   },
   "evidence": [
     {
-      "entity": "Anker SOLIX",
-      "claim": "Anker SOLIX France — stations portables",
+      "entity": "Anker SOLIX France range",
+      "claim": "French collection currently centers on C1000 Gen 2 and C2000 Gen 2; C300, first-generation C1000 and F2000 are marked sold out.",
       "source": "https://www.ankersolix.com/fr/collections/portable-power-stations",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     },
     {
-      "entity": "Anker SOLIX",
-      "claim": "Anker SOLIX C1000 Gen 2",
+      "entity": "C1000 Gen 2",
+      "claim": "1,024 Wh, 2,000 W, 11.3 kg, up to 600 W solar, 10 ms UPS and up to 1,600 W UltraFast AC input.",
       "source": "https://www.ankersolix.com/fr/products/c1000-gen2",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     },
     {
-      "entity": "Anker SOLIX",
-      "claim": "Anker SOLIX C2000 Gen 2",
-      "source": "https://www.ankersolix.com/fr/products/c2000-gen2",
+      "entity": "C2000 Gen 2",
+      "claim": "2,048 Wh, 2,400 W, 18.9 kg, up to 800 W solar, 10 ms transfer, 800 W alternator charging and expansion to about 4 kWh with BP2000 Gen 2.",
+      "source": "https://www.ankersolix.com/fr/c2000-gen2",
       "verified_at": "2026-09-09",
       "status": "VERIFIED",
       "freshness": "high"
     }
   ],
   "internal_links": {
-    "products": [
-      "/modeles/anker-solix-c1000/"
-    ],
-    "comparisons": [
-      "/comparatifs/meilleure-station-electrique-portable/",
-      "/comparatifs/station-electrique-portable-compacte/"
-    ],
-    "guides": [
-      "/guides/recharge-rapide-station-electrique/",
-      "/guides/ups-eps-station-electrique/"
-    ],
-    "usages": [
-      "/usages/station-electrique-van/",
-      "/usages/station-electrique-teletravail/",
-      "/usages/station-electrique-coupure-courant/"
-    ],
-    "services": []
+    "products": ["/modeles/anker-solix-c1000/"],
+    "comparisons": ["/comparatifs/meilleure-station-electrique-portable/", "/comparatifs/station-electrique-portable-compacte/"],
+    "guides": ["/guides/recharge-rapide-station-electrique/", "/guides/ups-eps-station-electrique/"],
+    "usages": ["/usages/station-electrique-van/", "/usages/station-electrique-teletravail/", "/usages/station-electrique-coupure-courant/"],
+    "services": ["/calculateur-autonomie/"]
   },
-  "known_exceptions": []
+  "known_exceptions": [
+    "Sold-out status is dated and should not be treated as permanent discontinuation.",
+    "Manufacturer recharge times are documented claims, not independent measurements by this site."
+  ]
 }
