@@ -1,0 +1,400 @@
+{
+  "slug": "generateur-solaire",
+  "research_date": "2026-09-09",
+  "intent": {
+    "query": "générateur solaire portable",
+    "comparison_type": "BEST_FOR_USE_CASE",
+    "dominant_intent": "Choisir un système station + panneaux capable de soutenir une utilisation hors réseau plus longue qu’un simple kit de camping.",
+    "main_constraint": "Le système doit être vendu ou documenté comme bundle solaire officiel ; capacité et panneau inclus comptent ensemble."
+  },
+  "product_universe": [
+    {
+      "id": "jackery2000v2_solar",
+      "name": "Jackery Générateur Solaire 2000 v2 + 2×SolarSaga 200 W",
+      "brand": "Jackery",
+      "status": "ELIGIBLE",
+      "internal_url": "/modeles/jackery-explorer-2000-v2/",
+      "source_url": "https://fr.jackery.com/products/solar-generator-2000-v2",
+      "facts": {
+        "capacity_wh": 2042,
+        "output_w": 2200,
+        "station_weight_kg": 17.5,
+        "panel_w": 400,
+        "cycles": "4 000 cycles annoncés",
+        "price_eur": 1499,
+        "solar_charge": "2×200 W ≈ 7,5 h annoncé dans la configuration officielle"
+      }
+    },
+    {
+      "id": "aferiy_p210_solar",
+      "name": "AFERIY P210 + panneau solaire 400 W",
+      "brand": "AFERIY",
+      "status": "ELIGIBLE",
+      "internal_url": "/modeles/aferiy-p210/",
+      "source_url": "https://fr.aferiy.com/products/aferiy-p210-2400w-generateur-solaire",
+      "facts": {
+        "capacity_wh": 2048,
+        "output_w": 2400,
+        "station_weight_kg": 22.0,
+        "panel_w": 400,
+        "solar_input_w": 500,
+        "cycles": "3 500+ cycles à 85 % dans la table technique",
+        "price_eur": 1081
+      }
+    },
+    {
+      "id": "delta3plus_solar",
+      "name": "EcoFlow DELTA 3 Plus + panneau bifacial 220 W",
+      "brand": "EcoFlow",
+      "status": "ELIGIBLE",
+      "internal_url": "/modeles/ecoflow-delta-3-plus/",
+      "source_url": "https://fr.ecoflow.com/products/delta-3-series-solar-generator-pv220w",
+      "facts": {
+        "capacity_wh": 1024,
+        "output_w": 1800,
+        "station_weight_kg": 12.5,
+        "panel_w": 220,
+        "panel_weight_kg": 9.5,
+        "solar_input_w": 1000,
+        "cycles": "4 000 cycles à 80 %",
+        "price_eur": 1098
+      }
+    },
+    {
+      "id": "station_sans_panneau",
+      "name": "Station seule",
+      "status": "NOT_COMPARABLE",
+      "exclusion_reason": "Un générateur solaire au sens commercial de cette page inclut une station et au moins un panneau dans la configuration comparée."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "offgrid_capacity",
+      "label": "Capacité hors réseau",
+      "weight": 25,
+      "hard_gate": true,
+      "basis": "énergie stockée et adéquation à plusieurs appareils",
+      "hard_gate_min": 6
+    },
+    {
+      "id": "solar_bundle",
+      "label": "Bundle solaire",
+      "weight": 25,
+      "hard_gate": true,
+      "basis": "puissance de panneaux incluse et cohérence de recharge",
+      "hard_gate_min": 6
+    },
+    {
+      "id": "power",
+      "label": "Puissance de sortie",
+      "weight": 20,
+      "hard_gate": false,
+      "basis": "puissance continue pour appareils courants"
+    },
+    {
+      "id": "portability",
+      "label": "Portabilité",
+      "weight": 10,
+      "hard_gate": false,
+      "basis": "poids de la station et logistique des panneaux"
+    },
+    {
+      "id": "charging",
+      "label": "Recharge",
+      "weight": 10,
+      "hard_gate": false,
+      "basis": "temps secteur et flexibilité de recharge"
+    },
+    {
+      "id": "longevity",
+      "label": "Longévité",
+      "weight": 10,
+      "hard_gate": false,
+      "basis": "chimie et cycles documentés"
+    }
+  ],
+  "evidence_ledger": [
+    {
+      "product_id": "jackery2000v2_solar",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 2042 Wh / 2200 W.",
+      "source": "https://fr.jackery.com/products/solar-generator-2000-v2",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery2000v2_solar",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 4 000 cycles annoncés.",
+      "source": "https://fr.jackery.com/products/solar-generator-2000-v2",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery2000v2_solar",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 400 W; 2×200 W ≈ 7,5 h annoncé dans la configuration officielle.",
+      "source": "https://fr.jackery.com/products/solar-generator-2000-v2",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "jackery2000v2_solar",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 17.5 kg; UPS/ASI selon fiche; garantie selon offre.",
+      "source": "https://fr.jackery.com/products/solar-generator-2000-v2",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "aferiy_p210_solar",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 2048 Wh / 2400 W.",
+      "source": "https://fr.aferiy.com/products/aferiy-p210-2400w-generateur-solaire",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "aferiy_p210_solar",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 3 500+ cycles à 85 % dans la table technique.",
+      "source": "https://fr.aferiy.com/products/aferiy-p210-2400w-generateur-solaire",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "aferiy_p210_solar",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 500 W; voir fiche officielle.",
+      "source": "https://fr.aferiy.com/products/aferiy-p210-2400w-generateur-solaire",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "aferiy_p210_solar",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 22.0 kg; UPS/ASI selon fiche; garantie selon offre.",
+      "source": "https://fr.aferiy.com/products/aferiy-p210-2400w-generateur-solaire",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "delta3plus_solar",
+      "criterion": "core_specs",
+      "claim": "Capacité et puissance nominale : 1024 Wh / 1800 W.",
+      "source": "https://fr.ecoflow.com/products/delta-3-series-solar-generator-pv220w",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "delta3plus_solar",
+      "criterion": "battery",
+      "claim": "Batterie et durée de vie : 4 000 cycles à 80 %.",
+      "source": "https://fr.ecoflow.com/products/delta-3-series-solar-generator-pv220w",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "delta3plus_solar",
+      "criterion": "charging",
+      "claim": "Recharge / solaire : 1000 W; voir fiche officielle.",
+      "source": "https://fr.ecoflow.com/products/delta-3-series-solar-generator-pv220w",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    },
+    {
+      "product_id": "delta3plus_solar",
+      "criterion": "mobility_features",
+      "claim": "Mobilité et fonctions : poids 12.5 kg; UPS/ASI selon fiche; garantie selon offre.",
+      "source": "https://fr.ecoflow.com/products/delta-3-series-solar-generator-pv220w",
+      "date": "2026-09-09",
+      "evidence_class": "VERIFIED"
+    }
+  ],
+  "scores": {
+    "aferiy_p210_solar": {
+      "offgrid_capacity": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Capacité hors réseau évalué selon énergie stockée et adéquation à plusieurs appareils. Données de référence : Kit officiel P210 2 048 Wh / 2 400 W + panneau 400 W, station de 22 kg, entrée PV 500 W; prix fabricant observé 1 081 € le 09/09/2026."
+      },
+      "solar_bundle": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Bundle solaire évalué selon puissance de panneaux incluse et cohérence de recharge. Données de référence : Kit officiel P210 2 048 Wh / 2 400 W + panneau 400 W, station de 22 kg, entrée PV 500 W; prix fabricant observé 1 081 € le 09/09/2026."
+      },
+      "power": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Puissance de sortie évalué selon puissance continue pour appareils courants. Données de référence : Kit officiel P210 2 048 Wh / 2 400 W + panneau 400 W, station de 22 kg, entrée PV 500 W; prix fabricant observé 1 081 € le 09/09/2026."
+      },
+      "portability": {
+        "score": 7,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids de la station et logistique des panneaux. Données de référence : Kit officiel P210 2 048 Wh / 2 400 W + panneau 400 W, station de 22 kg, entrée PV 500 W; prix fabricant observé 1 081 € le 09/09/2026."
+      },
+      "charging": {
+        "score": 7.5,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge évalué selon temps secteur et flexibilité de recharge. Données de référence : Kit officiel P210 2 048 Wh / 2 400 W + panneau 400 W, station de 22 kg, entrée PV 500 W; prix fabricant observé 1 081 € le 09/09/2026."
+      },
+      "longevity": {
+        "score": 8.2,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité évalué selon chimie et cycles documentés. Données de référence : Kit officiel P210 2 048 Wh / 2 400 W + panneau 400 W, station de 22 kg, entrée PV 500 W; prix fabricant observé 1 081 € le 09/09/2026."
+      }
+    },
+    "jackery2000v2_solar": {
+      "offgrid_capacity": {
+        "score": 9.8,
+        "evidence_class": "INFERRED",
+        "justification": "Capacité hors réseau évalué selon énergie stockée et adéquation à plusieurs appareils. Données de référence : Kit officiel Explorer 2000 v2 2 042 Wh / 2 200 W + 2×SolarSaga 200 W, station de 17,5 kg, LFP 4 000 cycles annoncés; prix fabricant observé 1 499 € le 09/09/2026."
+      },
+      "solar_bundle": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Bundle solaire évalué selon puissance de panneaux incluse et cohérence de recharge. Données de référence : Kit officiel Explorer 2000 v2 2 042 Wh / 2 200 W + 2×SolarSaga 200 W, station de 17,5 kg, LFP 4 000 cycles annoncés; prix fabricant observé 1 499 € le 09/09/2026."
+      },
+      "power": {
+        "score": 8.8,
+        "evidence_class": "INFERRED",
+        "justification": "Puissance de sortie évalué selon puissance continue pour appareils courants. Données de référence : Kit officiel Explorer 2000 v2 2 042 Wh / 2 200 W + 2×SolarSaga 200 W, station de 17,5 kg, LFP 4 000 cycles annoncés; prix fabricant observé 1 499 € le 09/09/2026."
+      },
+      "portability": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids de la station et logistique des panneaux. Données de référence : Kit officiel Explorer 2000 v2 2 042 Wh / 2 200 W + 2×SolarSaga 200 W, station de 17,5 kg, LFP 4 000 cycles annoncés; prix fabricant observé 1 499 € le 09/09/2026."
+      },
+      "charging": {
+        "score": 8.5,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge évalué selon temps secteur et flexibilité de recharge. Données de référence : Kit officiel Explorer 2000 v2 2 042 Wh / 2 200 W + 2×SolarSaga 200 W, station de 17,5 kg, LFP 4 000 cycles annoncés; prix fabricant observé 1 499 € le 09/09/2026."
+      },
+      "longevity": {
+        "score": 8.8,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité évalué selon chimie et cycles documentés. Données de référence : Kit officiel Explorer 2000 v2 2 042 Wh / 2 200 W + 2×SolarSaga 200 W, station de 17,5 kg, LFP 4 000 cycles annoncés; prix fabricant observé 1 499 € le 09/09/2026."
+      }
+    },
+    "delta3plus_solar": {
+      "offgrid_capacity": {
+        "score": 7.5,
+        "evidence_class": "INFERRED",
+        "justification": "Capacité hors réseau évalué selon énergie stockée et adéquation à plusieurs appareils. Données de référence : Kit officiel DELTA 3 Plus 1 024 Wh / 1 800 W + panneau bifacial 220 W. La station accepte jusqu’à 1 000 W de PV; prix fabricant du kit observé 1 098 € le 09/09/2026."
+      },
+      "solar_bundle": {
+        "score": 7.5,
+        "evidence_class": "INFERRED",
+        "justification": "Bundle solaire évalué selon puissance de panneaux incluse et cohérence de recharge. Données de référence : Kit officiel DELTA 3 Plus 1 024 Wh / 1 800 W + panneau bifacial 220 W. La station accepte jusqu’à 1 000 W de PV; prix fabricant du kit observé 1 098 € le 09/09/2026."
+      },
+      "power": {
+        "score": 8.2,
+        "evidence_class": "INFERRED",
+        "justification": "Puissance de sortie évalué selon puissance continue pour appareils courants. Données de référence : Kit officiel DELTA 3 Plus 1 024 Wh / 1 800 W + panneau bifacial 220 W. La station accepte jusqu’à 1 000 W de PV; prix fabricant du kit observé 1 098 € le 09/09/2026."
+      },
+      "portability": {
+        "score": 8,
+        "evidence_class": "INFERRED",
+        "justification": "Portabilité évalué selon poids de la station et logistique des panneaux. Données de référence : Kit officiel DELTA 3 Plus 1 024 Wh / 1 800 W + panneau bifacial 220 W. La station accepte jusqu’à 1 000 W de PV; prix fabricant du kit observé 1 098 € le 09/09/2026."
+      },
+      "charging": {
+        "score": 10,
+        "evidence_class": "INFERRED",
+        "justification": "Recharge évalué selon temps secteur et flexibilité de recharge. Données de référence : Kit officiel DELTA 3 Plus 1 024 Wh / 1 800 W + panneau bifacial 220 W. La station accepte jusqu’à 1 000 W de PV; prix fabricant du kit observé 1 098 € le 09/09/2026."
+      },
+      "longevity": {
+        "score": 9.5,
+        "evidence_class": "INFERRED",
+        "justification": "Longévité évalué selon chimie et cycles documentés. Données de référence : Kit officiel DELTA 3 Plus 1 024 Wh / 1 800 W + panneau bifacial 220 W. La station accepte jusqu’à 1 000 W de PV; prix fabricant du kit observé 1 098 € le 09/09/2026."
+      }
+    }
+  },
+  "notes": {
+    "affiliate_commission_used_in_ranking": false,
+    "first_hand_test": false,
+    "prices_are_dated": true,
+    "human_validation_required": true
+  },
+  "page": {
+    "title": "Meilleur générateur solaire portable — Comparatif 2026",
+    "description": "Comparatif 2026 des générateurs solaires portables 1–2 kWh avec panneaux : Jackery 2000 v2, AFERIY P210 et EcoFlow DELTA 3 Plus.",
+    "answer": "Pour un vrai usage hors réseau, le <strong>Jackery Générateur Solaire 2000 v2 avec 2×200 W</strong> est notre choix n°1 : 2 042 Wh, 2 200 W et une station de seulement 17,5 kg. L’<strong>AFERIY P210 + 400 W</strong> fournit 2 048 Wh / 2 400 W et un kit très compétitif, mais la station pèse 22 kg. L’<strong>EcoFlow DELTA 3 Plus + 220 W</strong> est plus évolutive côté entrée PV mais stocke seulement 1 024 Wh dans le kit de base.",
+    "method_context": "Nous différencions cette page du comparatif « station avec panneau » : ici, la priorité est l’autonomie hors réseau. Le hard gate favorise donc des configurations avec une vraie capacité énergétique et un panneau suffisamment dimensionné pour contribuer à la recharge quotidienne.",
+    "decision_paragraphs": [
+      "Jackery gagne parce que son kit combine 2 kWh et 400 W de panneaux avec une station de 17,5 kg. Cette densité de capacité par kilo simplifie nettement le transport par rapport aux autres solutions 2 kWh.",
+      "AFERIY propose un ensemble 2 048 Wh / 2 400 W + 400 W solaire à un tarif fabricant agressif. Son point faible n’est pas la puissance mais la mobilité et la limite d’entrée solaire de 500 W, qui laisse moins de marge d’évolution.",
+      "EcoFlow part avec deux fois moins de capacité dans le kit comparé, mais sa station accepte jusqu’à 1 000 W de PV et peut être étendue en capacité. Elle convient mieux à celui qui veut construire progressivement un système qu’à celui qui cherche immédiatement 2 kWh."
+    ],
+    "cost_note": "Prix fabricant observés le 09/09/2026 : Jackery 2000 v2 + 2×200 W autour de 1 499 €, AFERIY P210 + 400 W autour de 1 081 €, EcoFlow DELTA 3 Plus + 220 W autour de 1 098 €. Le prix est daté et n’est pas intégré comme critère principal, mais l’écart AFERIY est suffisamment important pour être signalé.",
+    "limits_note": "Un « générateur solaire » ne produit pas d’énergie sans soleil : c’est une station de stockage associée à des panneaux. Les temps de recharge théoriques supposent de bonnes conditions ; en pratique, saison, angle, nuages et ombrage réduisent la production.",
+    "choose_note": "Jackery pour le meilleur compromis 2 kWh / poids, AFERIY pour la capacité et la puissance à coût plus bas, EcoFlow pour une architecture évolutive en solaire et en batteries. Pour un kit plus léger d’environ 1 kWh, utilisez plutôt le comparatif station + panneau solaire.",
+    "related": [
+      [
+        "/solaire/generateur-solaire/",
+        "Guide générateur solaire"
+      ],
+      [
+        "/solaire/mppt/",
+        "MPPT"
+      ],
+      [
+        "/solaire/recharger-station-electrique-panneau-solaire/",
+        "Recharge solaire"
+      ],
+      [
+        "/comparatifs/station-electrique-portable-avec-panneau-solaire/",
+        "Station + panneau"
+      ],
+      [
+        "/usages/station-electrique-van/",
+        "Van"
+      ]
+    ],
+    "product_notes": {
+      "jackery2000v2_solar": [
+        "2 kWh, 400 W de panneaux et station de seulement 17,5 kg",
+        "entrée solaire moins ambitieuse qu’une architecture EcoFlow fortement étendue",
+        "hors réseau mobile, van et secours transportable",
+        "si vous voulez faire grossir le champ solaire bien au-delà de 400 W"
+      ],
+      "aferiy_p210_solar": [
+        "2 048 Wh, 2 400 W et panneau 400 W à un prix fabricant agressif",
+        "22 kg et entrée PV plafonnée à 500 W",
+        "base hors réseau à budget maîtrisé",
+        "si la mobilité et l’évolution solaire sont prioritaires"
+      ],
+      "delta3plus_solar": [
+        "entrée PV jusqu’à 1 000 W et capacité extensible",
+        "kit de base limité à 1 024 Wh et panneau 220 W",
+        "système progressif que vous enrichirez plus tard",
+        "si vous voulez immédiatement 2 kWh et 400 W de panneaux"
+      ]
+    }
+  },
+  "ranking": [
+    {
+      "product_id": "jackery2000v2_solar",
+      "name": "Jackery Générateur Solaire 2000 v2 + 2×SolarSaga 200 W",
+      "raw_score": 92.65,
+      "confidence_adjusted_score": 78.75,
+      "hard_gate_failed": false,
+      "rank": 1
+    },
+    {
+      "product_id": "aferiy_p210_solar",
+      "name": "AFERIY P210 + panneau solaire 400 W",
+      "raw_score": 90.45,
+      "confidence_adjusted_score": 76.88,
+      "hard_gate_failed": false,
+      "rank": 2
+    },
+    {
+      "product_id": "delta3plus_solar",
+      "name": "EcoFlow DELTA 3 Plus + panneau bifacial 220 W",
+      "raw_score": 81.4,
+      "confidence_adjusted_score": 69.19,
+      "hard_gate_failed": false,
+      "rank": 3
+    }
+  ]
+}

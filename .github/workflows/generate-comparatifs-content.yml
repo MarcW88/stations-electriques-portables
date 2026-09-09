@@ -1,0 +1,121 @@
+name: Generate comparison content
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - content/comparatifs-workflow
+    paths:
+      - '_generate.py'
+      - '_generate_guides.py'
+      - '_generate_comparatifs.py'
+      - '_validate_comparatifs.py'
+      - 'comparison-workflow.config.yaml'
+      - '.content/comparisons/**'
+      - '.content/briefs/comparatifs-production-2026-09-09.md'
+      - '.content/reviews/comparatifs-production-qa.md'
+      - '.agents/skills/comparison-content-workflow/**'
+      - '.github/workflows/generate-comparatifs-content.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate site shell
+        run: python _generate.py
+
+      - name: Restore researched guides
+        run: python _generate_guides.py
+
+      - name: Generate seven researched comparisons
+        run: python _generate_comparatifs.py
+
+      - name: Validate comparison datasets
+        run: |
+          for f in .content/comparisons/*.json; do
+            python .agents/skills/comparison-content-workflow/scripts/validate_comparison_data.py "$f"
+          done
+
+      - name: Recalculate scores independently
+        run: |
+          for f in .content/comparisons/*.json; do
+            python .agents/skills/comparison-content-workflow/scripts/score_comparison.py "$f" > /tmp/score.json
+          done
+          echo 'PASS: independent scoring completed for all comparison datasets'
+
+      - name: Run repo-specific comparison QA
+        run: python _validate_comparatifs.py
+
+      - name: Check idempotence
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, subprocess
+          pages = sorted(Path('comparatifs').glob('*/index.html'))
+          before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          subprocess.run(['python', '_generate_comparatifs.py'], check=True)
+          after = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          changed = [p for p in before if before[p] != after[p]]
+          if changed:
+              raise SystemExit('Non-idempotent comparison generation: ' + ', '.join(changed))
+          print(f'PASS: idempotent across {len(pages)} comparison pages')
+          PY
+
+      - name: Preserve noindex
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          expected = {
+              'meilleure-station-electrique-portable',
+              'station-electrique-portable-pas-chere',
+              'station-electrique-portable-puissante',
+              'station-electrique-portable-avec-panneau-solaire',
+              'station-electrique-lifepo4',
+              'station-electrique-portable-compacte',
+              'generateur-solaire',
+          }
+          bad=[]
+          for slug in expected:
+              p=Path('comparatifs')/slug/'index.html'
+              s=p.read_text(encoding='utf-8')
+              if 'name="robots" content="noindex, follow"' not in s:
+                  bad.append(str(p))
+          if bad:
+              raise SystemExit('noindex missing: ' + ', '.join(bad))
+          print('PASS: noindex, follow preserved on seven comparisons')
+          PY
+
+      - name: Check unrelated rendered pages unchanged
+        run: |
+          git diff --exit-code -- guides/ || {
+            echo 'Guide pages changed unexpectedly after shell restoration.'
+            exit 1
+          }
+
+      - name: Check whitespace
+        run: git diff --check
+
+      - name: Commit generated comparison HTML and ranking data
+        run: |
+          if git diff --quiet -- comparatifs/ .content/comparisons/; then
+            echo 'No rendered comparison changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add comparatifs/ .content/comparisons/
+          git commit -m '[skip ci] Generate researched comparison content'
+          git push
