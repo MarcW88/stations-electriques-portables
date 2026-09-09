@@ -7,6 +7,7 @@ on:
       - content/comparatifs-workflow
     paths:
       - '.github/workflows/bootstrap-comparatifs.yml'
+      - '.bootstrap/**'
 
 permissions:
   contents: write
