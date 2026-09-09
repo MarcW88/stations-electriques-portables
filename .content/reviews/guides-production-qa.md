@@ -2,12 +2,14 @@
 
 ```yaml
 scope: /guides/
-status: QA_COMPLETE_AWAITING_HUMAN_VALIDATION
+status: APPROVED_FOR_MERGE
 structural_gate: PASS
 editorial_gate: PASS
 indexing_status: noindex
 publishable: false
+mergeable: true
 human_validation_required: true
+human_validation_completed: true
 workflow_run: 34319164391
 ```
 
@@ -61,8 +63,12 @@ Validé :
 - maintien de `noindex, follow` ;
 - `git diff --check`.
 
+## Validation humaine
+
+Validation explicite reçue le 09/09/2026 pour finaliser et merger la PR #1.
+
 ## Verdict final
 
-`QA_COMPLETE_AWAITING_HUMAN_VALIDATION`.
+`APPROVED_FOR_MERGE`.
 
-Le contenu est prêt pour revue dans une PR. Conformément au workflow, un CI vert ne suffit pas pour merger ou rendre le site indexable : validation humaine explicite requise.
+Le contenu est validé pour fusion dans `main`. Le `noindex, follow` reste volontairement conservé : la fusion ne constitue pas une demande d’indexation.
