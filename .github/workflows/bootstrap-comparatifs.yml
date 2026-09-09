@@ -84,15 +84,15 @@ jobs:
       - name: Check whitespace
         run: git diff --check
 
-      - name: Commit workflow, data and rendered comparisons
+      - name: Commit comparison workflow payload
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git rm -r .bootstrap .github/workflows/bootstrap-comparatifs.yml
+          git rm -r .bootstrap
+          rm -f .github/workflows/generate-comparatifs-content.yml
           git add .agents/skills/comparison-content-workflow/ comparison-workflow.config.yaml \
             _generate_comparatifs.py _validate_comparatifs.py \
             .content/comparisons/ .content/briefs/comparatifs-production-2026-09-09.md \
-            .content/reviews/comparatifs-production-qa.md \
-            .github/workflows/generate-comparatifs-content.yml comparatifs/
+            .content/reviews/comparatifs-production-qa.md comparatifs/
           git commit -m '[skip ci] Install comparison workflow and generate 2026 comparisons'
           git push
