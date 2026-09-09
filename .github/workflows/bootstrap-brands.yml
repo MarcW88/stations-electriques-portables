@@ -1,0 +1,98 @@
+name: Bootstrap brand content workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - content/marques-workflow
+    paths:
+      - '.github/workflows/bootstrap-brands.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install brand workflow payload
+        run: |
+          cat .bootstrap/brands-payload-*.txt > /tmp/brands-payload.b64
+          base64 --decode /tmp/brands-payload.b64 > /tmp/brands-payload.tar.gz
+          echo 'dea2a0eab87bbbca447bb3ab58b76b58e2e5db3ae16c6180556019836b46c154  /tmp/brands-payload.tar.gz' | sha256sum -c -
+          tar -xzf /tmp/brands-payload.tar.gz -C .
+          echo 'PASS: brand workflow payload installed'
+
+      - name: Generate site shell
+        run: python _generate.py
+
+      - name: Restore researched guides
+        run: python _generate_guides.py
+
+      - name: Restore researched comparisons
+        run: python _generate_comparatifs.py
+
+      - name: Generate researched brand hubs
+        run: python _generate_brands.py
+
+      - name: Run generic brand skill QA
+        run: |
+          python .agents/skills/brand-content-workflow/scripts/validate_brand_quality.py marques \
+            --min-h2 9 \
+            --min-internal-links 8 \
+            --min-unique-targets 6 \
+            --min-sources 3 \
+            --require-noindex \
+            --require-limits \
+            --require-choose-avoid
+
+      - name: Run repo-specific brand QA
+        run: python _validate_brands.py
+
+      - name: Check idempotence and noindex
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, subprocess
+          pages = sorted(Path('marques').glob('*/index.html'))
+          before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          subprocess.run(['python', '_generate_brands.py'], check=True)
+          after = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          changed = [p for p in before if before[p] != after[p]]
+          if changed:
+              raise SystemExit('Non-idempotent: ' + ', '.join(changed))
+          for p in pages:
+              s = p.read_text(encoding='utf-8')
+              assert 'name="robots" content="noindex, follow"' in s
+          print('PASS: idempotence and noindex')
+          PY
+
+      - name: Check validated guides and comparisons unchanged
+        run: git diff --exit-code -- guides/ comparatifs/
+
+      - name: Check whitespace
+        run: git diff --check
+
+      - name: Commit skill, data and rendered brand hubs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -r .bootstrap
+          git add .agents/skills/brand-content-workflow/ brand-workflow.config.yaml \
+            _generate_brands.py _validate_brands.py \
+            .content/brand-pages/ .content/brands/ \
+            .content/briefs/marques-production-2026-09-09.md \
+            .content/reviews/marques-production-qa.md \
+            marques/*/index.html
+          git commit -m '[skip ci] Install brand workflow and generate 2026 brand hubs'
+          git push
