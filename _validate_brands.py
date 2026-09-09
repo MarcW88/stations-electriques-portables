@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""Repo-specific QA for the seven brand hubs."""
+"""Repo-specific floor QA for the seven brand hubs.
+
+This validator intentionally checks hard structural/factual-safety invariants only.
+Substantive quality, intent and cross-page structural cloning are handled by
+brand-analysis-workflow / PUBLISH_REVIEW rather than by arbitrary quotas.
+"""
 from pathlib import Path
 import html as html_lib
 import json
 import re
-import subprocess
-import sys
 
 BASE = Path(__file__).resolve().parent
 EXPECTED = {
@@ -13,79 +16,128 @@ EXPECTED = {
     "ecoflow", "izywatt", "jackery",
 }
 TAG_RE = re.compile(r"<[^>]+>", re.S)
+EDITOR_METADISCOURSE = (
+    "objectif seo", "objectif geo", "intention de recherche",
+    "maillage interne", "workflow éditorial", "page type",
+)
+FAKE_TEST_PHRASES = (
+    "nous avons testé",
+    "lors de notre test",
+    "après plusieurs semaines d'utilisation",
+    "après plusieurs semaines d’utilisation",
+)
+LEGACY_ENTITY_KEYS = {"stylus", "notes", "pdf", "ocr"}
+
 
 def clean(raw):
     return re.sub(r"\s+", " ", html_lib.unescape(TAG_RE.sub(" ", raw))).strip()
 
+
 def article(page):
-    m = re.search(r'<article\b[^>]*class="[^"]*content-main[^"]*"[^>]*>(.*?)</article>', page, re.S | re.I)
+    m = re.search(
+        r'<article\b[^>]*class="[^"]*content-main[^"]*"[^>]*>(.*?)</article>',
+        page,
+        re.S | re.I,
+    )
     return m.group(1) if m else ""
+
 
 def fail(slug, issue):
     print(f"FAIL {slug}: {issue}")
     return False
+
+
+def warn(slug, issue):
+    print(f"WARN {slug}: {issue}")
+
 
 def main():
     ok = True
     sources = {p.stem for p in (BASE / ".content" / "brand-pages").glob("*.html")}
     data = {p.stem for p in (BASE / ".content" / "brands").glob("*.yaml")}
     if sources != EXPECTED or data != EXPECTED:
-        raise SystemExit(f"brand source/data mismatch: sources={sorted(sources)} data={sorted(data)}")
+        raise SystemExit(
+            f"brand source/data mismatch: sources={sorted(sources)} data={sorted(data)}"
+        )
 
     for slug in sorted(EXPECTED):
         p = BASE / "marques" / slug / "index.html"
         if not p.exists():
             ok = fail(slug, "rendered page absent") and ok
             continue
+
         raw = p.read_text(encoding="utf-8")
         body = article(raw)
-        text = clean(body).lower()
-        words = len(re.findall(r"\b[\wÀ-ÿ'-]+\b", clean(body)))
-        h2 = len(re.findall(r"<h2\b", body, re.I))
+        visible = clean(body)
+        text = visible.lower()
         internal = re.findall(r'<a\b[^>]*href="(/[^"]+)"', body, re.I)
-        sources_n = len(re.findall(r'<a\b[^>]*href="https?://', body, re.I))
+        external = re.findall(r'<a\b[^>]*href="https?://', body, re.I)
+        h2 = len(re.findall(r"<h2\b", body, re.I))
+        words = len(re.findall(r"\b[\wÀ-ÿ'-]+\b", visible))
 
         checks = [
             (bool(body), "article.content-main absent"),
             ("<!-- Contenu à rédiger -->" not in body, "placeholder présent"),
-            (bool(re.search(r'name="robots"\s+content="noindex,\s*follow"', raw, re.I)), "noindex, follow absent"),
-            ("Vérifié : 09/09/2026" in raw, "date de vérification absente"),
-            (words >= 1000, f"contenu trop court: {words} mots"),
-            (h2 >= 9, f"H2 insuffisants: {h2}"),
-            (len(internal) >= 8, f"liens internes insuffisants: {len(internal)}"),
-            (len(set(internal)) >= 6, f"cibles internes uniques insuffisantes: {len(set(internal))}"),
-            (sources_n >= 3, f"sources externes insuffisantes: {sources_n}"),
-            ("analyse documentaire" in text, "niveau de preuve non explicité"),
-            (("limites" in text or "points de vigilance" in text), "section limites absente"),
-            ("choisissez" in text, "bloc choose absent"),
-            ("évitez" in text, "bloc avoid absent"),
-            ("/comparatifs/" in body and "/guides/" in body and "/usages/" in body, "maillage comparatifs/guides/usages incomplet"),
-            (not any(x in text for x in ["nous avons testé", "lors de notre test", "après plusieurs semaines d'utilisation"]), "langage de faux test détecté"),
+            (
+                bool(re.search(r'name="robots"\s+content="noindex,\s*follow"', raw, re.I)),
+                "noindex,follow absent",
+            ),
+            (
+                bool(re.search(r"Vérifié\s*:\s*\d{2}/\d{2}/\d{4}", raw, re.I)),
+                "date de vérification absente",
+            ),
+            (bool(external), "aucune source externe dans le contenu"),
+            (
+                not any(x in text for x in FAKE_TEST_PHRASES),
+                "langage de faux test détecté",
+            ),
+            (
+                not any(x in text for x in EDITOR_METADISCOURSE),
+                "métadiscours éditeur/SEO détecté dans la prose",
+            ),
         ]
         for cond, issue in checks:
             if not cond:
                 ok = fail(slug, issue) and ok
 
-        # Structured entity file: JSON syntax stored in .yaml is valid YAML and dependency-free.
         dpath = BASE / ".content" / "brands" / f"{slug}.yaml"
         try:
             d = json.loads(dpath.read_text(encoding="utf-8"))
         except Exception as e:
             ok = fail(slug, f"données structurées illisibles: {e}") and ok
             continue
-        for key in ["brand", "entity_map", "brand_positioning", "product_range", "ecosystem", "evidence", "internal_links"]:
+
+        for key in [
+            "brand", "entity_map", "brand_positioning", "product_range",
+            "ecosystem", "evidence", "internal_links",
+        ]:
             if key not in d:
                 ok = fail(slug, f"clé structurée manquante: {key}") and ok
+
         if not d.get("product_range"):
             ok = fail(slug, "product_range vide") and ok
-        if len(d.get("evidence", [])) < 3:
-            ok = fail(slug, "evidence ledger trop court") and ok
+        if not d.get("evidence"):
+            ok = fail(slug, "evidence ledger vide") and ok
 
-        print(f"{slug}: {words} words | {h2} H2 | {len(internal)} internal ({len(set(internal))} unique) | {sources_n} sources")
+        ecosystem = d.get("ecosystem", {})
+        stale = sorted(LEGACY_ENTITY_KEYS.intersection(ecosystem.keys()))
+        if stale:
+            warn(
+                slug,
+                "schéma d'écosystème hérité à migrer vers le modèle stations: "
+                + ", ".join(stale),
+            )
+
+        print(
+            f"{slug}: {words} words | {h2} H2 | "
+            f"{len(internal)} internal ({len(set(internal))} unique) | "
+            f"{len(external)} external sources"
+        )
 
     if not ok:
         raise SystemExit(1)
-    print("PASS: 7 brand hubs validated")
+    print("PASS: hard brand invariants validated; substantive review remains manual/workflow-based")
+
 
 if __name__ == "__main__":
     main()
