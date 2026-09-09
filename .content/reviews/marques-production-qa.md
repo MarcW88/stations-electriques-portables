@@ -2,15 +2,16 @@
 
 ```yaml
 scope: /marques/
-status: QA_COMPLETE_AWAITING_HUMAN_VALIDATION
+status: APPROVED_FOR_MERGE
 entity_gate: PASS
 range_gate: PASS
 ecosystem_gate: PASS
 editorial_gate: PASS
 indexing_status: noindex
 publishable: false
-human_validation_required: true
-workflow_run: 34325946244
+human_validation_required: false
+human_validation: APPROVED_2026-09-09
+workflow_run: 34326072283
 ```
 
 ## Contrôles éditoriaux
@@ -55,6 +56,8 @@ Bootstrap `34325853779` : `PASS`.
 
 Workflow permanent `34325946244` : `PASS`.
 
+Validation PR `34326072283` : `PASS`.
+
 Validé :
 1. reconstruction du shell via `_generate.py` ;
 2. restauration des 12 guides recherchés ;
@@ -69,6 +72,6 @@ Validé :
 
 ## Verdict final
 
-`QA_COMPLETE_AWAITING_HUMAN_VALIDATION`.
+`APPROVED_FOR_MERGE`.
 
-Le skill, les datasets de marque, les contenus et le workflow permanent sont prêts pour revue en PR. Un CI vert ne déclenche ni merge ni passage en index : validation humaine explicite requise.
+Validation humaine explicite reçue le 09/09/2026. Le skill, les datasets de marque, les contenus et le workflow permanent sont approuvés pour merge. Le `noindex, follow` reste volontairement en place : cette validation n’active pas l’indexation du site.
