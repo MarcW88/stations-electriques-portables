@@ -1,0 +1,110 @@
+name: Generate brand content
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - content/marques-workflow
+    paths:
+      - '.agents/skills/brand-content-workflow/**'
+      - '.content/brands/**'
+      - '.content/brand-pages/**'
+      - '.content/briefs/marques-production-2026-09-09.md'
+      - '.content/reviews/marques-production-qa.md'
+      - 'brand-workflow.config.yaml'
+      - '_generate_brands.py'
+      - '_validate_brands.py'
+      - '.github/workflows/generate-brands-content.yml'
+  pull_request:
+    paths:
+      - '.content/brands/**'
+      - '.content/brand-pages/**'
+      - '_generate_brands.py'
+      - '_validate_brands.py'
+      - 'marques/**'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate site shell
+        run: python _generate.py
+
+      - name: Restore researched guides
+        run: python _generate_guides.py
+
+      - name: Restore researched comparisons
+        run: python _generate_comparatifs.py
+
+      - name: Generate seven brand hubs
+        run: python _generate_brands.py
+
+      - name: Run generic brand workflow gate
+        run: |
+          python .agents/skills/brand-content-workflow/scripts/validate_brand_quality.py marques \
+            --min-h2 9 \
+            --min-internal-links 8 \
+            --min-unique-targets 6 \
+            --min-sources 3 \
+            --require-noindex \
+            --require-limits \
+            --require-choose-avoid
+
+      - name: Run repo-specific brand QA
+        run: python _validate_brands.py
+
+      - name: Check idempotence
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, subprocess
+          pages = sorted(Path('marques').glob('*/index.html'))
+          before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          subprocess.run(['python', '_generate_brands.py'], check=True)
+          after = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          changed = [p for p in before if before[p] != after[p]]
+          if changed:
+              raise SystemExit('Non-idempotent: ' + ', '.join(changed))
+          print('PASS: brand generation is idempotent')
+          PY
+
+      - name: Preserve noindex
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          for p in Path('marques').glob('*/index.html'):
+              s=p.read_text(encoding='utf-8')
+              assert re.search(r'name="robots"\s+content="noindex,\s*follow"', s, re.I), p
+          print('PASS: noindex, follow preserved')
+          PY
+
+      - name: Check guides and comparisons unchanged
+        run: git diff --exit-code -- guides/ comparatifs/
+
+      - name: Check whitespace
+        run: git diff --check
+
+      - name: Commit generated brand HTML
+        if: github.event_name == 'push'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add marques/*/index.html
+          if git diff --cached --quiet; then
+            echo 'No rendered changes to commit'
+          else
+            git commit -m '[skip ci] Render researched brand hubs'
+            git push
+          fi
