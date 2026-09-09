@@ -1,0 +1,97 @@
+name: Bootstrap comparison workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - content/comparatifs-workflow
+    paths:
+      - '.github/workflows/bootstrap-comparatifs.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install comparison workflow payload
+        run: |
+          cat .bootstrap/comparatifs-payload-*.txt > /tmp/comparatifs-payload.b64
+          base64 --decode /tmp/comparatifs-payload.b64 > /tmp/comparatifs-payload.tar.gz
+          tar -xzf /tmp/comparatifs-payload.tar.gz -C .
+          echo 'PASS: comparison workflow payload installed'
+
+      - name: Generate site shell
+        run: python _generate.py
+
+      - name: Restore researched guides
+        run: python _generate_guides.py
+
+      - name: Generate researched comparisons
+        run: python _generate_comparatifs.py
+
+      - name: Validate comparison datasets
+        run: |
+          for f in .content/comparisons/*.json; do
+            python .agents/skills/comparison-content-workflow/scripts/validate_comparison_data.py "$f"
+          done
+
+      - name: Run repo comparison QA
+        run: python _validate_comparatifs.py
+
+      - name: Check idempotence and noindex
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, subprocess
+          pages = sorted(Path('comparatifs').glob('*/index.html'))
+          before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          subprocess.run(['python', '_generate_comparatifs.py'], check=True)
+          after = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
+          changed = [p for p in before if before[p] != after[p]]
+          if changed:
+              raise SystemExit('Non-idempotent: ' + ', '.join(changed))
+          expected = {
+              'meilleure-station-electrique-portable',
+              'station-electrique-portable-pas-chere',
+              'station-electrique-portable-puissante',
+              'station-electrique-portable-avec-panneau-solaire',
+              'station-electrique-lifepo4',
+              'station-electrique-portable-compacte',
+              'generateur-solaire',
+          }
+          for slug in expected:
+              s=(Path('comparatifs')/slug/'index.html').read_text(encoding='utf-8')
+              assert 'name="robots" content="noindex, follow"' in s
+          print('PASS: idempotence and noindex')
+          PY
+
+      - name: Check guide pages restored
+        run: git diff --exit-code -- guides/
+
+      - name: Check whitespace
+        run: git diff --check
+
+      - name: Commit workflow, data and rendered comparisons
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -r .bootstrap .github/workflows/bootstrap-comparatifs.yml
+          git add .agents/skills/comparison-content-workflow/ comparison-workflow.config.yaml \
+            _generate_comparatifs.py _validate_comparatifs.py \
+            .content/comparisons/ .content/briefs/comparatifs-production-2026-09-09.md \
+            .content/reviews/comparatifs-production-qa.md \
+            .github/workflows/generate-comparatifs-content.yml comparatifs/
+          git commit -m '[skip ci] Install comparison workflow and generate 2026 comparisons'
+          git push
