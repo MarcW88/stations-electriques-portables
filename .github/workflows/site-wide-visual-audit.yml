@@ -1,0 +1,32 @@
+name: Audit visuel complet (82 pages)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/site-wide-visual-audit.yml'
+      - 'scripts/site-wide-visual-audit.mjs'
+jobs:
+  design-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Installer Playwright sans modifier le projet
+        run: |
+          npm install --no-save --package-lock=false @playwright/test
+          npx playwright install --with-deps chromium
+      - name: Vérifier les 82 pages publiques (desktop + mobile)
+        run: node scripts/site-wide-visual-audit.mjs
+      - name: Publier captures et rapport (14 jours)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-visuel-global
+          path: .artifacts/design-review/site-wide/
+          retention-days: 14
+          if-no-files-found: warn
