@@ -602,3 +602,10 @@ p  { font-size: 0.9375rem; line-height: 1.7; }
 
 /* Keep long brand content and unbreakable strings within mobile viewport. */
 @media(max-width:768px){.content-layout,.content-main,.content-sidebar,.container{min-width:0}.content-main,.content-main p,.content-main a{overflow-wrap:anywhere}.content-main img,.content-main table{max-width:100%}.content-main table{display:block;overflow-x:auto}}
+
+/* Design QA: tables with many columns must scroll inside their wrapper on narrow screens. */
+@media (max-width: 768px) {
+  .content-main .table-wrap, .content-main .table-wrapper { display: block; max-width: 100%; min-width: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .content-main .table-wrap > table, .content-main .table-wrapper > table { max-width: none; width: max-content; min-width: 100%; }
+  .content-layout > *, .content-main > * { min-width: 0; }
+}
