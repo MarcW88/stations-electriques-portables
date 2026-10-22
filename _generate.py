@@ -43,27 +43,27 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         from usage_camping_content import CONTENT as camping_content
         ans = camping_content
         title = "Quelle station électrique pour le camping ? Capacité, autonomie et recharge"
-        desc = "Dimensionner la capacité, prévoir la recharge et éviter les erreurs pour camper avec une station électrique."
+        desc = "Quelle capacité pour camper ? Calculez vos besoins en Wh, vérifiez la glacière et choisissez une recharge adaptée au séjour."
     elif canonical == "/usages/station-electrique-van/":
         from usage_van_content import CONTENT as van_content
         ans = van_content
         title = "Station électrique pour van : capacité, autonomie et recharge"
-        desc = "Calculer les besoins de votre van et choisir entre station portable, solaire et batterie auxiliaire."
+        desc = "Dimensionnez la batterie de votre van selon la consommation quotidienne, les nuits sans prise et la recharge solaire ou en roulant."
     elif canonical == "/usages/station-electrique-coupure-courant/":
         from usage_coupure_content import CONTENT as outage_content
         ans = outage_content
         title = "Station électrique pour coupure de courant : besoins et autonomie"
-        desc = "Prévoir une alimentation de secours adaptée aux appareils essentiels."
+        desc = "Prévoir une station électrique de secours : calcul des besoins, autonomie, limites UPS/EPS et précautions en cas de panne."
     elif canonical == "/usages/station-electrique-chantier/":
         from usage_chantier_content import CONTENT as chantier_content
         ans = chantier_content
         title = "Station électrique pour chantier : puissance et autonomie des outils"
-        desc = "Dimensionner une alimentation mobile pour ses outils sans négliger la sécurité."
+        desc = "Comment dimensionner une station électrique pour vos outils de chantier : puissance, démarrage, autonomie et sécurité."
     elif canonical == "/usages/station-electrique-cpap/":
         from usage_cpap_content import CONTENT as cpap_content
         ans = cpap_content
         title = "Station électrique pour CPAP : autonomie et compatibilité"
-        desc = "Calculer les besoins de votre CPAP et vérifier la sécurité du branchement."
+        desc = "Alimenter une CPAP sur batterie : calcul d’autonomie, compatibilité électrique, humidificateur et précautions avant de choisir."
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
