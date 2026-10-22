@@ -1,0 +1,25 @@
+{
+  "url": "/usages/station-electrique-camping/",
+  "status": "QA_IN_PROGRESS",
+  "updated_at": "2026-10-22",
+  "primary_intent": "Dimensionner une solution électrique pour le camping selon appareils, durée et recharge",
+  "jtbd": "Pendant un séjour sans prise fiable, alimenter les appareils nécessaires jusqu'à la prochaine recharge sans porter une batterie inutilement lourde.",
+  "decision": "DEEP_REWRITE",
+  "evidence": [
+    {
+      "claim": "Dimensionnement selon appareils, durée, puissance et pertes",
+      "source": "https://www.ecoflow.com/au/blog/what-size-portable-power-station-do-i-need",
+      "class": "SUPPORTED"
+    },
+    {
+      "claim": "Pic de démarrage des compresseurs",
+      "source": "https://faq.jackery.com/hc/en-us/articles/52357013755163-Can-I-run-a-refrigerator-with-a-portable-power-station",
+      "class": "SUPPORTED"
+    }
+  ],
+  "unknowns": [
+    "Consommation exacte des appareils du lecteur",
+    "Vérification du rendu Playwright et du build"
+  ],
+  "indexation": "noindex, follow"
+}
