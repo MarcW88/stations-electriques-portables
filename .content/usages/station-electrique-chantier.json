@@ -1,0 +1,28 @@
+{
+  "url": "/usages/station-electrique-chantier/",
+  "decision": "DEEP_REWRITE",
+  "status": "QA_IN_PROGRESS",
+  "updated_at": "2026-10-22",
+  "primary_intent": "Alimenter des outils lors de travaux sans réseau électrique",
+  "jtbd": "Faire fonctionner ou recharger les outils nécessaires sur un chantier mobile en assurant une alimentation compatible et sûre",
+  "evidence": [
+    {
+      "url": "https://www.hse.gov.uk/construction/safetytopics/systems.htm",
+      "class": "SUPPORTED"
+    },
+    {
+      "url": "https://www.hse.gov.uk/ELECTRICITY/electricequip.htm",
+      "class": "SUPPORTED"
+    },
+    {
+      "url": "https://www.osha.gov/etools/construction/electrical-incidents/power-tools",
+      "class": "SUPPORTED"
+    }
+  ],
+  "unknowns": [
+    "Caractéristiques et pointes de démarrage des outils concernés",
+    "Build Python et navigateur non exécutés",
+    "Conformité électrique locale à confirmer par professionnel"
+  ],
+  "robots": "noindex, follow"
+}
