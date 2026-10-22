@@ -109,6 +109,11 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = solar_portable_panel_content
         title = "Panneau solaire portable : choisir puissance, format et compatibilité"
         desc = "Panneau pliable 100, 200 ou 400 W ? Comparez formats, production réelle, tension et compatibilité avec votre station."
+    elif canonical == "/solaire/quel-panneau-solaire-pour-station-electrique/":
+        from solar_panel_compatibility_content import CONTENT as solar_panel_compatibility_content
+        ans = solar_panel_compatibility_content
+        title = "Quel panneau solaire pour une station électrique ? Compatibilité"
+        desc = "Vérifiez Voc, Vmp, courant, puissance MPPT et connecteurs avant de relier un panneau solaire à votre station électrique."
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
