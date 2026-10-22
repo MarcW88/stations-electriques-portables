@@ -141,6 +141,9 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
             ans += "<!-- Contenu à rédiger -->"
     elif canonical == "/puissance-capacite/station-electrique-500wh/":
         ans = "<figure class=\"technical-figure\" style=\"margin:24px 0\"><img src=\"/assets/generated/schema-capacites-wh.svg\" width=\"1100\" height=\"420\" loading=\"lazy\" decoding=\"async\" alt=\"Comparaison d’une capacité nominale 500 Wh avec des stations 1 000 et 2 000 Wh\" style=\"max-width:100%;height:auto;border-radius:12px\"><figcaption>Hypothèse illustrative : 85 % de la capacité nominale utilisables en sortie ; rendement réel variable.</figcaption></figure>" + "<!-- Contenu à rédiger -->"
+    elif canonical == "/usages/station-electrique-teletravail/":
+        ans += "<figure class=\"editorial-photo\" style=\"margin:24px 0\"><img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Goal_Zero_Yeti_1400_Lithium_Portable_Power_Station_with_WiFi_Battery_Pack_with_MacBook_Pro_-_USB-C_Power_Delivery_Specification_(PD_spec)_(43467687445).jpg?width=960\" alt=\"Photographie d'une station Goal Zero Yeti 1400 et d'un ordinateur portable alimenté par USB-C\" width=\"960\" height=\"707\" loading=\"lazy\" decoding=\"async\" style=\"display:block;max-width:100%;height:auto;border-radius:12px\"><figcaption style=\"font-size:.82rem;color:#64748b\">Photographie documentaire : Tony Webster, <a href=\"https://commons.wikimedia.org/wiki/File:Goal_Zero_Yeti_1400_Lithium_Portable_Power_Station_with_WiFi_Battery_Pack_with_MacBook_Pro_-_USB-C_Power_Delivery_Specification_(PD_spec)_(43467687445).jpg\" rel=\"nofollow noopener\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" rel=\"license\">CC BY-SA 2.0</a>. Illustration d'une configuration possible, sans test de ce site.</figcaption></figure>"
+        ans += "<!-- Contenu à rédiger -->"
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
