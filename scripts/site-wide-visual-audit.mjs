@@ -33,6 +33,7 @@ for (const viewport of viewports) {
           missingH2Ids:[...document.querySelectorAll('h2')].filter(x=>!x.id).map(x=>x.textContent.trim().slice(0,80)),
           tocLinks:links.length,invalidToc:links.filter(a=>a.hash&&!document.getElementById(decodeURIComponent(a.hash.slice(1)))).length,
           horizontalOverflow:scroll>client,scrollWidth:scroll,clientWidth:client,
+          overflowElements:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.right>window.innerWidth+2||r.left< -2)&&getComputedStyle(e).position!=='fixed'}).slice(0,12).map(e=>({tag:e.tagName,cls:String(e.className||'').slice(0,100),width:Math.round(e.getBoundingClientRect().width),right:Math.round(e.getBoundingClientRect().right)})),
           images:imgs.length,brokenImages:imgs.filter(img=>!img.complete||img.naturalWidth===0).map(img=>img.src).slice(0,12),
           missingAlts:imgs.filter(img=>!img.hasAttribute('alt')).length,
           headerHeight:header?.getBoundingClientRect().height??null,
