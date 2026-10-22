@@ -37,7 +37,7 @@ def hub(title,desc,canonical,bc_items,intro,links):
     def thumbnail(u,l):
         if canonical not in ("/marques/", "/modeles/", "/comparatifs/", "/accessoires/") or u not in hub_images or hub_images[u].startswith("/modeles/"):
             return ""
-        return '<img src="%s" alt="Photographie représentative de %s" width="88" height="88" loading="lazy" style="width:88px;height:88px;object-fit:contain;background:white;margin-right:12px">' % (esc(hub_images[u], quote=True), esc(l, quote=True))
+        return '<img onerror="this.remove()" src="%s" alt="Photographie représentative de %s" width="88" height="88" loading="lazy" style="width:88px;height:88px;object-fit:contain;background:white;margin-right:12px">' % (esc(hub_images[u], quote=True), esc(l, quote=True))
     items="".join(f'<a href="{u}" class="hub-link">{thumbnail(u,l)}<div><div>{l}</div><div class="hub-link-meta">{m}</div></div><span>→</span></a>' for l,u,m in links)
     diagram_map = {"/solaire/": ("schema-flux-solaire.svg", "Panneau solaire, régulateur MPPT, batterie, onduleur et appareils", 360), "/puissance-capacite/": ("schema-watts-wattheures.svg", "Différence entre les W et les Wh", 370)}
     figure = ""
