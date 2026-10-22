@@ -36,6 +36,18 @@ Date : 2026-10-22 · Inventaire GitHub : branche main
 
 **Le travail n'est pas validé à 100 %.** Les images Commons sont liées à distance dans le HTML et non hébergées localement ; leurs licences et attributions doivent rester affichées. Un audit des rendus desktop/mobile et du déploiement GitHub Pages demeure indispensable avant clôture. Ne pas attribuer le statut terminé aux 39 images distantes sans contrôle.
 
+## Clôture de la phase d'implémentation éditoriale — 22 octobre 2026
+
+**82/82 décisions du backlog ont un choix d'implémentation explicite** (ajout de visuel, réutilisation d'une image existante ou décision de ne rien ajouter). Ce résultat n'est **pas** une certification d'affichage des 82 pages sur le domaine public.
+
+- 22 schémas techniques référencés dans les fichiers HTML.
+- 39 pages produits, marques, comparatifs et accessoires avec photographies distantes référencées par le générateur ; licence, correspondance exacte et chargement réel restent à contrôler pour chaque URL.
+- 12 pages à photo éditoriale ou documentaire ajoutée (dont les 4 dernières : hub usages, coupure de courant, maison, photo/vidéo) ; crédits visibles, sources distantes à tester.
+- 4 pages pour lesquelles aucune image n'est indiquée.
+- 5 pages initialement OPTIONNELLES : décision de ne pas ajouter de photo générique simplement décorative.
+
+**Contrôles bloquants pour une clôture qualité complète :** requêtes HTTP vers toutes les images distantes ; licence et droits de réutilisation ; contrôles de correspondance de chaque produit ; navigateur desktop/mobile sur site publié ; évaluation des risques de ressources Wikimedia Commons inexistantes ou bloquées. Une référence dans le HTML ne prouve pas que l'image charge réellement. Aucun test visuel Playwright ni audit systématique de ces liens n'a été réalisé dans cette passe. Ne pas qualifier ces contrôles de PASS.
+
 ## Synthèse
 
 - VRAIE_IMAGE : 39 pages
