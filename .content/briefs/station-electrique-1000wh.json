@@ -1,0 +1,18 @@
+{
+  "url": "/puissance-capacite/station-electrique-1000wh/",
+  "decision": "DEEP_REWRITE",
+  "status": "QA_IN_PROGRESS",
+  "updated_at": "2026-10-22",
+  "intent": "Autonomie réelle, dimensionnement et critères des stations proches de 1000 Wh",
+  "notes": [
+    "Ne pas confondre W/Wh",
+    "Exemples chiffrés hypothétiques",
+    "Aucune mesure de performance"
+  ],
+  "robots": "noindex, follow",
+  "pending": [
+    "Build",
+    "Playwright",
+    "Relecture éditoriale"
+  ]
+}
