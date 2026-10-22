@@ -31,8 +31,7 @@ FTR='<footer class="site-footer"><div class="container"><div class="footer-main"
 def doc(title, desc, canonical, body):
     # An unavailable hotlinked product photo must not obscure the page with a broken-image icon.
     # Preserve descriptive captions and editorial content rather than substituting a fake product.
-    import re
-    body = re.sub(r'<img\\b(?![^>]*\\bonerror=)', '<img onerror="this.hidden=true;this.parentElement.classList.add(\\\'media-unavailable\\\')"', body)
+    body = body.replace('<img src=', '<img onerror="this.hidden=true" src=')
     return f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>{title}</title><meta name="description" content="{desc}"><meta name="robots" content="noindex, follow"><link rel="canonical" href="https://stations-electriques-portables.fr{canonical}"><link rel="stylesheet" href="{cp(canonical)}"><link rel="preconnect" href="https://fonts.googleapis.com"></head><body>{HDR}<main>{body}</main>{FTR}</body></html>'
 
 def hub(title,desc,canonical,bc_items,intro,links):
