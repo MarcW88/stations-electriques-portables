@@ -23,6 +23,19 @@ Date : 2026-10-22 · Inventaire GitHub : branche main
 - **Pages modèles restantes :** sans photographie non vérifiée, conformément au statut `VRAIE_IMAGE`; les images IA et les SVG génériques ne satisfont pas la décision.
 - **Pages candidates IA :** créations photographiques non téléversées sur le domaine, donc **non terminées**. **L'ensemble des 82 décisions n'est pas encore implémenté.**
 
+## Relevé d'exécution actualisé — 22 octobre 2026
+
+**82 pages suivies, dont :**
+
+- 22 pages avec schéma référencé dans leur HTML et/ou source ; **rendu et exactitude finale à valider**.
+- 39 pages produits, marques, comparatifs et accessoires pour lesquelles le générateur référence déjà une photo distante ; **contrôle HTTP, correspondance produit, droits d'utilisation et affichage non réalisés pour chacune**.
+- 8 pages candidates avec photographie documentaire insérée : `/solaire/panneau-solaire-portable/`, `/usages/station-electrique-camping/`, `/usages/station-electrique-van/`, `/usages/station-electrique-chantier/`, `/usages/station-electrique-camping-car/`, `/usages/station-electrique-glaciere/`, `/usages/station-electrique-cpap/`, `/usages/station-electrique-teletravail/`. Toutes doivent être contrôlées sur le domaine et la pertinence de la photo confirmée.
+- 4 pages explicitement sans image : décision respectée.
+- 4 photographies éditoriales encore absentes : `/usages/`, `/usages/station-electrique-coupure-courant/`, `/usages/station-electrique-maison/`, `/usages/station-electrique-photo-video/`.
+- 5 cas optionnels restent à trancher après inspection du contenu réel.
+
+**Le travail n'est pas validé à 100 %.** Les images Commons sont liées à distance dans le HTML et non hébergées localement ; leurs licences et attributions doivent rester affichées. Un audit des rendus desktop/mobile et du déploiement GitHub Pages demeure indispensable avant clôture. Ne pas attribuer le statut terminé aux 39 images distantes sans contrôle.
+
 ## Synthèse
 
 - VRAIE_IMAGE : 39 pages
