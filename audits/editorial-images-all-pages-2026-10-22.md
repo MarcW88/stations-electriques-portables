@@ -9,6 +9,13 @@ Date : 2026-10-22 · Inventaire GitHub : branche main
 - Il s'agit d'un **pré-audit éditorial page par page établi à partir de l'inventaire, des intentions par URL et des règles de l'agent**. L'inspection exhaustive des 82 HTML et leur rendu desktop/mobile ne sont **pas encore effectués**. Les recommandations individuelles restent à confirmer sur la page réelle.
 - Aucune image générée, aucun prompt PENDING, aucun marqueur ajouté. Respecter 0–1 image IA par page et le refus des fausses photos produit ou faux tests.
 
+## Exécution — 22 octobre 2026
+
+- Illustrations techniques réellement intégrées (HTML et source) : `/solaire/generateur-solaire/`, `/solaire/mppt/`, `/solaire/quel-panneau-solaire-pour-station-electrique/`, `/solaire/recharger-station-electrique-panneau-solaire/`, `/guides/watt-ou-watt-heure/`, `/puissance-capacite/station-electrique-1000wh/`, `/puissance-capacite/station-electrique-2000wh/`.
+- Visuels contextuels SVG déjà intégrés : `/usages/station-electrique-camping/` et `/usages/station-electrique-van/`. Ces dessins ne remplissent pas entièrement la recommandation de photographie éditoriale ; **à remplacer par de vraies photos génériques adaptées**, sans prétendre représenter des tests.
+- Autres pages : non modifiées par cette passe ; les pages modèles, marques et comparatifs exigent des photographies officielles authentiques. Aucun visuel produit IA inventé.
+- Génération/récupération des photos requises, QA visuelle et vérification du domaine public : **non terminées**. Ne pas assimiler les fichiers GitHub à une validation du site en ligne.
+
 ## Synthèse
 
 - VRAIE_IMAGE : 39 pages
