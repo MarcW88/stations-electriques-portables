@@ -1,0 +1,18 @@
+{
+  "url": "/puissance-capacite/station-electrique-3000w/",
+  "updated_at": "2026-10-22",
+  "decision": "DEEP_REWRITE",
+  "status": "QA_IN_PROGRESS",
+  "intent": "Dimensionner 3000 W de puissance continue pour charges exigeantes",
+  "sources": [
+    "https://helpcenter.eu.jackery.com/hc/en-gb/articles/52682971076379-Explorer-3000-Pro-Basic-Information",
+    "https://websiteoss.ecoflow.com/cms/upload/2022/10/27/1219258125_1666850224842.pdf",
+    "https://www.osha.gov/sites/default/files/publications/OSHA4495.pdf"
+  ],
+  "pending": [
+    "Tests de build",
+    "Playwright",
+    "Validation éditoriale humaine"
+  ],
+  "robots": "noindex, follow"
+}
