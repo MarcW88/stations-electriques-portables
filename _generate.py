@@ -74,6 +74,11 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = power_1000w_content
         title = "Station électrique 1 000 W : quels appareils alimenter ?"
         desc = "Quels appareils fonctionnent sur 1 000 W ? Vérifiez la puissance absorbée, les charges simultanées et les appels au démarrage."
+    elif canonical == "/puissance-capacite/station-electrique-2000w/":
+        from power_2000w_content import CONTENT as power_2000w_content
+        ans = power_2000w_content
+        title = "Station électrique 2 000 W : quels appareils et quelles limites ?"
+        desc = "Quels appareils brancher sur 2 000 W ? Puissance continue, crête, consommation simultanée et autonomie en Wh."
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
