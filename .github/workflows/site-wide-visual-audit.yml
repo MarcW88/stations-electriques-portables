@@ -11,6 +11,9 @@ on:
       - '_generate.py'
       - 'marques/index.html'
       - 'usages/station-electrique-coupure-courant/index.html'
+concurrency:
+  group: site-wide-visual-audit-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   design-review:
     runs-on: ubuntu-latest
