@@ -36,8 +36,8 @@ def inspect(page, args):
     if not body:
         return ["article.content-main absent"]
 
-    if args.require_noindex and not re.search(r'name="robots"\s+content="noindex,\s*follow"', html, re.I):
-        issues.append("noindex, follow absent")
+    if args.require_noindex and re.search(r'name="robots"\s+content="noindex,\s*follow"', html, re.I) is None:
+        issues.append("noindex,follow absent")
 
     if "<!-- Contenu à rédiger -->" in body:
         issues.append("placeholder présent")

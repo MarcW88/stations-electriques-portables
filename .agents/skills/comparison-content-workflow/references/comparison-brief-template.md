@@ -29,7 +29,7 @@ quality_reference: {{quality_reference}}
 Somme : 100
 
 ## 4. Evidence ledger
-Voir `.content/comparisons/<slug>.yaml`
+Voir `.content/comparisons/<slug>.json`
 
 ## 5. Hypothèses / inconnues
 -

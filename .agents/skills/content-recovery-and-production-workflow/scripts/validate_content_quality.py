@@ -11,16 +11,13 @@ TABLE_RE = re.compile(r"<table\b.*?</table>", re.S | re.I)
 LINK_RE = re.compile(r'<a\b[^>]*href="(/[^\"]+)"', re.I)
 SOURCE_LINK_RE = re.compile(r'<a\b[^>]*href="https?://', re.I)
 
-
 def clean_text(raw):
     raw = TAG_RE.sub(" ", raw)
     raw = html_lib.unescape(raw)
     return re.sub(r"\s+", " ", raw).strip()
 
-
 def word_count(raw):
     return len(re.findall(r"\b[\wÀ-ÿ'-]+\b", clean_text(raw)))
-
 
 def article_html(page_html):
     m = re.search(
@@ -28,7 +25,6 @@ def article_html(page_html):
         page_html, re.S | re.I
     )
     return m.group(1) if m else ""
-
 
 def split_sections(article):
     matches = list(H2_RE.finditer(article))
@@ -38,7 +34,6 @@ def split_sections(article):
         end = matches[i+1].start() if i+1 < len(matches) else len(article)
         result.append((clean_text(m.group(1)), article[start:end]))
     return result
-
 
 def inspect_page(page, args):
     html = page.read_text(encoding="utf-8")
@@ -51,9 +46,7 @@ def inspect_page(page, args):
     if "<!-- Contenu à rédiger -->" in article:
         issues.append("placeholder présent")
 
-    if args.require_noindex and not re.search(
-        r'name="robots"\s+content="noindex,\s*follow"', html, re.I
-    ):
+    if args.require_noindex and 'name="robots" content="noindex,follow"' not in html:
         issues.append("noindex,follow absent")
 
     if 'class="article-answer"' not in article:
@@ -106,7 +99,6 @@ def inspect_page(page, args):
 
     return issues
 
-
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("content_dir")
@@ -135,7 +127,6 @@ def main():
         raise SystemExit(1)
 
     print("PASS: structural quality floor met")
-
 
 if __name__ == "__main__":
     main()

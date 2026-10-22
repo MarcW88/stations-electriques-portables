@@ -1,0 +1,58 @@
+{
+  "repository": "stations-electriques-portables",
+  "base_commit": "4fd95569d65666ceb004f525da56596b1706b45d",
+  "files": {
+    ".agents/skills/brand-analysis-workflow/SKILL.md": {
+      "backup": ".agents/local-before-shared/.agents/skills/brand-analysis-workflow/SKILL.md",
+      "sha256": "2aa255ee43c92426cb5e9aae35812a46a3b66fdf4bb95b058517e865b214eaf6"
+    },
+    ".agents/skills/brand-content-workflow/SKILL.md": {
+      "backup": ".agents/local-before-shared/.agents/skills/brand-content-workflow/SKILL.md",
+      "sha256": "5bd830b4f9d003599b4a8bad7f8e038bd2c8316eacbf539b8f3d6b599910c04d"
+    },
+    ".agents/skills/comparison-content-workflow/README.md": {
+      "backup": ".agents/local-before-shared/.agents/skills/comparison-content-workflow/README.md",
+      "sha256": "8ac503207697af68f5fc742360daad1630f4c9b9a7faefd1566f38cecb097aaf"
+    },
+    ".agents/skills/comparison-content-workflow/SKILL.md": {
+      "backup": ".agents/local-before-shared/.agents/skills/comparison-content-workflow/SKILL.md",
+      "sha256": "e0f723565629d9f6518e23825ee2f8afe91354bb2b68e42c9b8b028170a51602"
+    },
+    ".agents/skills/comparison-content-workflow/comparison-workflow.config.example.yaml": {
+      "backup": ".agents/local-before-shared/.agents/skills/comparison-content-workflow/comparison-workflow.config.example.yaml",
+      "sha256": "3d7a94f6334008ccaca4d5703a10abeb222bd5d20725dcd6e7e24fdff8b63489"
+    },
+    ".agents/skills/comparison-content-workflow/references/comparison-brief-template.md": {
+      "backup": ".agents/local-before-shared/.agents/skills/comparison-content-workflow/references/comparison-brief-template.md",
+      "sha256": "fb24bd9397d507cd1eb74149829d96baf0ee7176274e6604668c6ac8fe8a04eb"
+    },
+    ".agents/skills/comparison-content-workflow/references/comparison-data-template.yaml": {
+      "backup": ".agents/local-before-shared/.agents/skills/comparison-content-workflow/references/comparison-data-template.yaml",
+      "sha256": "57739315753a9af5216ca954ecf5b885e89e19cdb05718f069981f0722579146"
+    },
+    ".agents/skills/comparison-content-workflow/scripts/score_comparison.py": {
+      "backup": ".agents/local-before-shared/.agents/skills/comparison-content-workflow/scripts/score_comparison.py",
+      "sha256": "f4413cfae7d73a853ec64a739082fb451fa083bc11477e0bd903433613b4cdee"
+    },
+    ".agents/skills/comparison-content-workflow/scripts/validate_comparison_data.py": {
+      "backup": ".agents/local-before-shared/.agents/skills/comparison-content-workflow/scripts/validate_comparison_data.py",
+      "sha256": "1d8d9716d8d7117ff5d226287f849a4067614fec5449289b49ff4bc01191e207"
+    },
+    ".agents/skills/brand-content-workflow/README.md": {
+      "backup": ".agents/local-before-shared/.agents/skills/brand-content-workflow/README.md",
+      "sha256": "a4d5ad16e9c85637f60fe454cf5689bd93cf40af050b6d2e41cbfe64eb1854fd"
+    },
+    ".agents/skills/brand-content-workflow/brand-workflow.config.example.yaml": {
+      "backup": ".agents/local-before-shared/.agents/skills/brand-content-workflow/brand-workflow.config.example.yaml",
+      "sha256": "918437c62399b3812cae46ce839e9e23c6e29f08e2d8e79321bf863353151fa2"
+    },
+    ".agents/skills/brand-content-workflow/scripts/validate_brand_quality.py": {
+      "backup": ".agents/local-before-shared/.agents/skills/brand-content-workflow/scripts/validate_brand_quality.py",
+      "sha256": "0718443aee53dcf6590b15b1056a755d1210b94dcdce0e2313ccd0f9ef6eb097"
+    },
+    ".agents/skills/content-recovery-and-production-workflow/scripts/validate_content_quality.py": {
+      "backup": ".agents/local-before-shared/.agents/skills/content-recovery-and-production-workflow/scripts/validate_content_quality.py",
+      "sha256": "ee5e47e438ce860b7179c6c52b5f65b3001de90c4090649c3d6a478bba277594"
+    }
+  }
+}

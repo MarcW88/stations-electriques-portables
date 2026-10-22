@@ -1,35 +1,69 @@
-# Brand workflows — stations-electriques-portables.fr
+# Brand Content Workflow
 
-Le cluster `/marques/` utilise désormais deux workflows complémentaires :
+Workflow portable pour créer et maintenir des pages marque SEO/GEO à forte valeur commerciale.
 
-- `brand-analysis-workflow` pour auditer une page ou le cluster et décider `KEEP`, `LIGHT_UPDATE`, `DEEP_REWRITE`, `MERGE` ou `NOINDEX` ;
-- `brand-content-workflow` pour produire ou reconstruire une page lorsqu'une réécriture est justifiée.
+## Ce qu'il gère
 
-## Principe
+Le workflow route automatiquement les pages vers :
 
-Le site est traité comme une **base de données indépendante et un comparateur technique**, pas comme un catalogue de marques.
+- `BRAND_HUB`
+- `PRODUCT`
+- `REVIEW`
+- `SERVICE`
+- `ACCESSORY_HUB`
+- `ALTERNATIVES`
 
-Les plans doivent découler de l'intention et des preuves. Il n'y a plus de minimum obligatoire de mots, H2 ou liens, ni de structure fixe `forces / limites / choisir / éviter`.
+## Différence avec les autres workflows
 
-Les dimensions spécifiques au marché — W, Wh, poids, batterie, MPPT, solaire, UPS/EPS, recharge, extension et compatibilités — sont utilisées lorsqu'elles changent réellement la décision.
+### Guide workflow
+Part d'une question ou d'un besoin informationnel.
 
-## Données du repo
+### Comparison workflow
+Part d'un univers produit, de critères, de poids et d'un scoring.
 
-- contenu éditorial : `.content/brand-pages/`
-- données / preuves : `.content/brands/`
-- audits : `.content/brand-audits/`
-- configuration : `brand-workflow.config.yaml`
-- rendu : `_generate_brands.py`
-- validation machine : `_validate_brands.py`
+### Brand workflow
+Part d'une **entité**, de sa **gamme actuelle**, de son **écosystème** et de son **maillage**.
 
-## Publication
+## Installation
 
-La validation machine ne prouve pas la qualité éditoriale. Le gate substantiel est :
+Copier dans :
 
-`brand-analysis-workflow / PUBLISH_REVIEW`
+`.agents/skills/brand-content-workflow/`
 
-Les pages restent `noindex,follow` jusqu'à validation humaine et instruction explicite d'indexation.
+Puis copier :
 
-## Legacy
+`brand-workflow.config.example.yaml`
 
-Le script `scripts/validate_brand_quality.py` provient de l'ancien workflow générique à quotas. Il n'est plus utilisé par la CI ni comme gate de publication ; `_validate_brands.py` contrôle uniquement les invariants machine, tandis que `brand-analysis-workflow` porte la QA substantielle et inter-pages.
+à la racine sous :
+
+`brand-workflow.config.yaml`
+
+## Fichier de données par marque
+
+Créer :
+
+`.content/brands/<brand>.yaml`
+
+à partir de :
+
+`references/brand-data-template.yaml`
+
+## Utilisation
+
+Exemple :
+
+> Applique `brand-content-workflow` à toutes les pages `/marques/remarkable/`.
+> Route automatiquement chaque URL selon son type.
+> Vérifie la gamme actuelle avant rédaction.
+> Distingue analyse documentaire et test réel.
+> Garde les pages noindex jusqu'à validation.
+
+## Important
+
+Le validator structurel ne prouve jamais :
+- que les faits sont corrects ;
+- qu'un produit a été réellement testé ;
+- que le GEO est bon ;
+- que le positionnement est juste.
+
+Ces points restent des passes éditoriales séparées.

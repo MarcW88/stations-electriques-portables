@@ -1,12 +1,10 @@
-# Replace values for each comparison.
-
 slug: "meilleur-produit"
 url: "/comparatifs/meilleur-produit/"
 updated_at: "YYYY-MM-DD"
 
 intent:
   query: "meilleur produit"
-  type: "best_overall"  # best_overall | best_for_use_case | budget | feature_specific | head_to_head
+  type: "best_overall"
   user_job: ""
   primary_constraint: ""
 
@@ -16,7 +14,6 @@ product_universe:
     status: "ELIGIBLE"
     equivalence: "FUNCTIONALLY_COMPARABLE"
     exclusion_reason: null
-
   - id: "product-b"
     name: "Product B"
     status: "ELIGIBLE"
@@ -29,25 +26,21 @@ criteria:
     weight: 30
     hard_gate: false
     rationale: ""
-
   - id: "criterion-2"
     label: "Criterion 2"
     weight: 25
     hard_gate: false
     rationale: ""
-
   - id: "criterion-3"
     label: "Criterion 3"
     weight: 20
     hard_gate: false
     rationale: ""
-
   - id: "criterion-4"
     label: "Criterion 4"
     weight: 15
     hard_gate: false
     rationale: ""
-
   - id: "criterion-5"
     label: "Criterion 5"
     weight: 10
@@ -69,23 +62,13 @@ scores:
       score: 8
       evidence_class: "VERIFIED"
       justification: ""
-    criterion-2:
-      score: 7
-      evidence_class: "SUPPORTED"
-      justification: ""
-
   product-b:
     criterion-1:
       score: 7
       evidence_class: "VERIFIED"
       justification: ""
-    criterion-2:
-      score: 8
-      evidence_class: "VERIFIED"
-      justification: ""
 
 ranking: []
-
 notes:
   total_solution_cost_required: false
   affiliate_commission_used_in_ranking: false
