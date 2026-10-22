@@ -52,5 +52,15 @@ for (const viewport of viewports) {
 await browser.close();
 const summary={routes:routes.length,checks:results.length,failedNavigation:results.filter(x=>x.navigationError||!x.status||x.status>=400).length,overflow:results.filter(x=>x.horizontalOverflow).length,brokenImagePages:results.filter(x=>x.brokenImages?.length).length,missingAltPages:results.filter(x=>x.missingAlts).length,invalidTocPages:results.filter(x=>x.invalidToc).length};
 await writeFile(path.join(dir,'report.json'),JSON.stringify({base,viewports,routes,summary,results},null,2));
+const failedImageMap = new Map();
+for(const result of results) for(const url of result.brokenImages || []){
+  if(!failedImageMap.has(url)) failedImageMap.set(url,new Set());
+  failedImageMap.get(url).add(result.route);
+}
+const quoteCsv = x => '"' + String(x).replaceAll('"','""') + '"';
+await writeFile(path.join(dir,'broken-image-inventory.csv'),
+  ['image_url,affected_route_count,routes',
+   ...[...failedImageMap].sort((a,b)=>b[1].size-a[1].size).map(([url,affected])=>
+      [url,affected.size,[...affected].sort().join(' | ')].map(quoteCsv).join(','))].join('\\n')+'\\n');
 await writeFile(path.join(dir,'summary.md'),['# Audit automatique desktop/mobile', '', 'Attention : les captures nécessitent une revue humaine pour juger du design.','',...Object.entries(summary).map(([k,v])=>'- '+k+': '+v),'', '## Pages avec anomalies','',...results.filter(x=>x.navigationError||x.status>=400||x.horizontalOverflow||x.brokenImages?.length||x.invalidToc).map(x=>'- '+x.route+' '+x.viewport+': HTTP '+x.status+', overflow '+!!x.horizontalOverflow+', images cassées '+(x.brokenImages?.length??'n/a')+', TOC '+(x.invalidToc??'n/a'))].join('\n'));
 console.log(JSON.stringify(summary));
