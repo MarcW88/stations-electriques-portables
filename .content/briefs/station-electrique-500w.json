@@ -1,0 +1,17 @@
+{
+  "url": "/puissance-capacite/station-electrique-500w/",
+  "decision": "DEEP_REWRITE",
+  "status": "QA_IN_PROGRESS",
+  "primary_intent": "Comprendre les appareils compatibles avec une station de 500 W et les limites de puissance",
+  "updated_at": "2026-10-22",
+  "evidence": [
+    "https://community.jackery.com/us/knowledge/portable-power-station/rated-power",
+    "https://faq.jackery.com/hc/en-us/articles/52357086328475-How-should-I-choose-a-portable-power-station",
+    "https://manuals.ecoflow.com/eu/product/e980?lang=en_US"
+  ],
+  "unknowns": [
+    "Pas de mesure des appareils cités",
+    "Build et rendu navigateur non exécutés"
+  ],
+  "robots": "noindex, follow"
+}
