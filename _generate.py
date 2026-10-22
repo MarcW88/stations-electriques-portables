@@ -139,6 +139,8 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
             ans = figure + "<!-- Contenu à rédiger -->"
         else:
             ans += "<!-- Contenu à rédiger -->"
+    elif canonical == "/puissance-capacite/station-electrique-500wh/":
+        ans = "<figure class=\"technical-figure\" style=\"margin:24px 0\"><img src=\"/assets/generated/schema-capacites-wh.svg\" width=\"1100\" height=\"420\" loading=\"lazy\" decoding=\"async\" alt=\"Comparaison d’une capacité nominale 500 Wh avec des stations 1 000 et 2 000 Wh\" style=\"max-width:100%;height:auto;border-radius:12px\"><figcaption>Hypothèse illustrative : 85 % de la capacité nominale utilisables en sortie ; rendement réel variable.</figcaption></figure>" + "<!-- Contenu à rédiger -->"
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
