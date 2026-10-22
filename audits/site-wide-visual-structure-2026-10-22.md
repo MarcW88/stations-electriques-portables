@@ -50,3 +50,28 @@ Les valeurs précédentes proviennent de la lecture du HTML, **pas d'une inspect
 ## Prochain jalon de clôture
 
 Une fois l'artéfact créé : inspecter `report.json` et les captures des gabarits, qualifier les défauts bloquants/majeurs/mineurs, puis publier la matrice finale des 82 pages. Ce document n'affirme ni exécution réussie ni validation mobile à ce stade.
+
+## Résultats Playwright — exécution RÉUSSIE
+
+Exécution GitHub Actions : https://github.com/MarcW88/stations-electriques-portables/actions/runs/39838239865
+
+- **82 routes × desktop/mobile = 164 contrôles réellement effectués** ; 0 échec de navigation HTTP/Playwright.
+- **36 contrôles** (portant sur **24 routes uniques**) rapportent au moins une image non chargée. **22 URL d'images distinctes** apparaissent cassées ; elles sont surtout présentes dans les modèles, comparatifs, marques et accessoires.
+- **1 débordement horizontal** : `/marques/ecoflow/` en mobile 390 px, contenu large de 426 px (**+36 px**).
+- **2 contrôles** avec ancre de sommaire invalide : `/usages/station-electrique-coupure-courant/`, desktop et mobile ; **1 route unique**.
+- 0 page signalée sans attribut `alt` sur les images.
+- Les captures de `/comparatifs/` (desktop) confirment visuellement plusieurs **images cassées et leur texte alternatif affiché en plein milieu des cartes**. Problème de qualité perçue et de présentation, pas seulement diagnostic réseau.
+- La capture mobile de `/marques/ecoflow/` confirme une mise en page très dense, à revoir au-delà du seul débordement mesuré.
+- Les contrôles ont visité le site public ; ils ne garantissent pas le comportement dans tous les navigateurs ou réseaux.
+
+### Corrections prioritaires recommandées (non appliquées dans cet audit de lecture seule)
+
+1. **Majeur — images distantes** : remplacer les URL qui échouent par des ressources autorisées et fiables hébergées avec le site, vérifier chaque visuel produit et les droits de réutilisation ; ne pas réutiliser une illustration approximative. Les erreurs `ERR_BLOCKED_BY_RESPONSE.NotSameOrigin` apparaissent notamment sur des photos tierces.
+2. **Majeur — responsive EcoFlow** : identifier dans les styles calculés l'élément largeur 426 px et corriger son `min-width`, `overflow-wrap`, grille ou tableau ; retester en 390 px et à largeur inférieure.
+3. **Mineur à majeur — navigation intra-page** : corriger le `href="#…"` ne correspondant à aucun `id` sur Coupure de courant, depuis le fichier de contenu source, pas seulement le HTML.
+4. **Qualité éditoriale** : revoir visuellement les templates et l'ergonomie des cartes comparatives lorsque les images sont absentes, et contrôler le reflow à tous les points de rupture.
+
+### Artéfacts disponibles
+
+L'archive `audit-visuel-global` de l'exécution contient `report.json`, `summary.md` et 164 captures. Une revue visuelle ciblée de `/comparatifs/` desktop et `/marques/ecoflow/` mobile a été effectuée ; **l'ensemble des 164 captures n'a pas été examiné manuellement**. Le verdict est donc confirmé sur les anomalies automatiques et ces captures, non sur l'esthétique de chaque page.
+
