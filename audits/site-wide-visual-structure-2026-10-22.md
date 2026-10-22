@@ -75,3 +75,13 @@ Exécution GitHub Actions : https://github.com/MarcW88/stations-electriques-port
 
 L'archive `audit-visuel-global` de l'exécution contient `report.json`, `summary.md` et 164 captures. Une revue visuelle ciblée de `/comparatifs/` desktop et `/marques/ecoflow/` mobile a été effectuée ; **l'ensemble des 164 captures n'a pas été examiné manuellement**. Le verdict est donc confirmé sur les anomalies automatiques et ces captures, non sur l'esthétique de chaque page.
 
+
+## Corrections structurelles supplémentaires — 22 octobre 2026
+
+- Le traitement des images externes en échec est désormais appliqué dans les fichiers HTML des **24 routes identifiées par le premier audit Playwright**. Lors d'un échec réseau, le navigateur masque l'élément image plutôt que d'afficher l'icône brisée et le texte alternatif au milieu des cartes. Les images valides restent affichées ; aucune photographie de marque inventée.
+- Le générateur `_generate.py` applique le même garde-fou pour les nouvelles pages régénérées. Les sources externes en échec **ne sont pas réparées**, il s'agit d'un traitement défensif de l'interface.
+- L'audit Playwright enrichi identifie désormais les éléments DOM dépassant la fenêtre, pas seulement le scroll global, afin de diagnostiquer précisément le débordement mobile.
+- La correction CSS de la table EcoFlow et du sommaire Coupure de courant reste en attente de validation sur une exécution postérieure aux corrections.
+- GitHub a démarré plusieurs nouveaux audits automatiques, encore en file d'attente à la dernière consultation ; **aucune réussite n'est revendiquée** pour cette nouvelle passe.
+
+**Dette ouverte :** remplacer les 22 URLs d'images distantes en échec par des sources réelles autorisées et stables ; examiner les captures desktop/mobile post-correction ; vérifier que les pages restent illustrées et accessibles lorsque les photos échouent. Le fallback seul ne suffit pas à clore la qualité des images.
