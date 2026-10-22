@@ -599,3 +599,6 @@ p  { font-size: 0.9375rem; line-height: 1.7; }
   .model-kpi-row { grid-template-columns: repeat(2, 1fr); }
   .pro-con-grid { grid-template-columns: 1fr; }
 }
+
+/* Keep long brand content and unbreakable strings within mobile viewport. */
+@media(max-width:768px){.content-layout,.content-main,.content-sidebar,.container{min-width:0}.content-main,.content-main p,.content-main a{overflow-wrap:anywhere}.content-main img,.content-main table{max-width:100%}.content-main table{display:block;overflow-x:auto}}
