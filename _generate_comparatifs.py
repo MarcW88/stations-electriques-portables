@@ -135,8 +135,18 @@ def product_sections(data, ranking):
         if facts.get("ups"):
             facts_text.append(f"UPS/ASI {facts['ups']}")
         spec_sentence = ", ".join(facts_text)
+        images = {
+            "Jackery Explorer 1000 v2": ("https://de.jackery.com/cdn/shop/files/1000_v2_423d3646-5772-40dd-a395-3cc66c25bb24_1024x1024.jpg?v=1749713371", "Jackery Allemagne"),
+            "EcoFlow DELTA 2": ("https://www.ecoflow.nl/data/upload/Shop/images/ecoflow-delta-2-power-station-3.jpg", "EcoFlow.nl"),
+            "BLUETTI AC180": ("https://www.cdiscount.com/pdt2/0/9/1/1/550x550/blu1686560566091/rw/bluetti-officiel-station-electrique-portable-blu.jpg", "Cdiscount"),
+        }
+        photo = ""
+        if p["name"] in images:
+            picture, publisher = images[p["name"]]
+            photo = f'<figure class="product-photo" style="margin:1rem 0"><img src="{html.escape(picture, quote=True)}" alt="Photo réelle du modèle {html.escape(p["name"])}" width="550" height="550" loading="lazy" style="max-width:100%;height:auto;border-radius:12px"><figcaption>Photo du produit, source {publisher}.</figcaption></figure>'
         out.append(f"""
 <h3>{row['rank']}. {html.escape(p['name'])}</h3>
+{photo}
 <p><strong>Pourquoi il est classé ici.</strong> {html.escape(p['name'])} obtient un score ajusté de
 <strong>{row['confidence_adjusted_score']:.1f}/100</strong>. Son avantage déterminant est
 <strong>{html.escape(advantage)}</strong>. Les données retenues sont issues de la fiche fabricant actuelle :
