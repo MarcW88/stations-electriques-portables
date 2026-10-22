@@ -89,6 +89,11 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = capacity_2000wh_content
         title = "Station électrique 2 000 Wh : quelle autonomie réelle ?"
         desc = "Combien de temps dure une batterie de 2 000 Wh ? Exemples de calcul, usages, recharge et différence entre W et Wh."
+    elif canonical == "/puissance-capacite/station-electrique-1000wh/":
+        from capacity_1000wh_content import CONTENT as capacity_1000wh_content
+        ans = capacity_1000wh_content
+        title = "Station électrique 1 000 Wh : autonomie et capacité nécessaire"
+        desc = "Combien de temps tient une station de 1 000 Wh ? Tableaux d’autonomie, calculs et différences avec 500 ou 2 000 Wh."
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
