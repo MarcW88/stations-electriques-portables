@@ -1,0 +1,27 @@
+{
+  "url": "/usages/station-electrique-coupure-courant/",
+  "status": "QA_IN_PROGRESS",
+  "decision": "DEEP_REWRITE",
+  "updated_at": "2026-10-22",
+  "intent": "Prévoir une alimentation de secours domestique pour des appareils prioritaires",
+  "jtbd": "Maintenir les fonctions essentielles durant une panne sans surdimensionner la batterie ni compromettre la sécurité",
+  "evidence": [
+    {
+      "url": "https://www.cdc.gov/prepare-your-health/take-action/power-sources.html",
+      "class": "SUPPORTED"
+    },
+    {
+      "url": "https://www.se.com/be/en/faqs/FAQ000268416/",
+      "class": "SUPPORTED"
+    },
+    {
+      "url": "https://www.cdc.gov/natural-disasters/response/what-to-do-protect-yourself-during-a-power-outage.html",
+      "class": "SUPPORTED"
+    }
+  ],
+  "unknowns": [
+    "Consommation et tolérance des appareils de l'utilisateur",
+    "Rendu navigateur et build pas encore vérifiés"
+  ],
+  "robots": "noindex, follow"
+}
