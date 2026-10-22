@@ -1,0 +1,21 @@
+{
+  "url": "/puissance-capacite/station-electrique-2000w/",
+  "updated_at": "2026-10-22",
+  "decision": "DEEP_REWRITE",
+  "status": "QA_IN_PROGRESS",
+  "intent": "Compatibilité des appareils avec 2000 W continus, surcharge et autonomie",
+  "evidence": [
+    "https://www.ankersolix.com/uk/blogs/power-station/what-appliances-can-a-portable-power-station-run",
+    "https://www.vegemac.be/en/e-tech-energy-portable-power-station-ete-s1-2000w"
+  ],
+  "constraints": [
+    "Pas de classement de modèles",
+    "Ne pas confondre W et Wh",
+    "noindex, follow"
+  ],
+  "pending": [
+    "Build",
+    "Playwright",
+    "QA humaine"
+  ]
+}
