@@ -39,7 +39,12 @@ def hub(title,desc,canonical,bc_items,intro,links):
             return ""
         return '<img src="%s" alt="Photographie représentative de %s" width="88" height="88" loading="lazy" style="width:88px;height:88px;object-fit:contain;background:white;margin-right:12px">' % (esc(hub_images[u], quote=True), esc(l, quote=True))
     items="".join(f'<a href="{u}" class="hub-link">{thumbnail(u,l)}<div><div>{l}</div><div class="hub-link-meta">{m}</div></div><span>→</span></a>' for l,u,m in links)
-    body=f'<div class="container"><nav class="breadcrumb">{bc_html(*bc_items)}</nav></div><section class="page-hero"><div class="container"><h1>{title}</h1><p class="lead">{intro}</p></div></section><section class="section"><div class="container"><div class="hub-grid">{items}</div></div></section>'
+    diagram_map = {"/solaire/": ("schema-flux-solaire.svg", "Panneau solaire, régulateur MPPT, batterie, onduleur et appareils", 360), "/puissance-capacite/": ("schema-watts-wattheures.svg", "Différence entre les W et les Wh", 370)}
+    figure = ""
+    if canonical in diagram_map:
+        file_name, alt, image_height = diagram_map[canonical]
+        figure = f'<section class="section"><div class="container"><figure class="technical-figure" style="max-width:900px;margin:0 auto 26px"><img src="/assets/generated/{file_name}" width="1100" height="{image_height}" alt="{alt}" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:12px"><figcaption>Schéma explicatif simplifié.</figcaption></figure></div></section>'
+    body=f'<div class="container"><nav class="breadcrumb">{bc_html(*bc_items)}</nav></div><section class="page-hero"><div class="container"><h1>{title}</h1><p class="lead">{intro}</p></div></section>{figure}<section class="section"><div class="container"><div class="hub-grid">{items}</div></div></section>'
     return doc(title,desc,canonical,body)
 
 def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
