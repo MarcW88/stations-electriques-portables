@@ -1,0 +1,18 @@
+{
+  "url": "/puissance-capacite/station-electrique-1000w/",
+  "date": "2026-10-22",
+  "decision": "DEEP_REWRITE",
+  "status": "QA_IN_PROGRESS",
+  "intent": "Identifier les appareils compatibles avec une puissance continue nominale de 1000 W",
+  "scope": "Puissance disponible, puissance absorbée, simultanéité, pointe de démarrage; pas de classement produit",
+  "sources": [
+    "https://www.ankersolix.com/uk/blogs/power-station/what-appliances-can-a-portable-power-station-run",
+    "https://faq.jackery.com/hc/en-us/articles/52357013755163-Can-I-run-a-refrigerator-with-a-portable-power-station"
+  ],
+  "indexation": "noindex, follow",
+  "blockers": [
+    "Build non exécuté",
+    "Playwright non exécuté",
+    "Revue humaine et fact-check complet en attente"
+  ]
+}
