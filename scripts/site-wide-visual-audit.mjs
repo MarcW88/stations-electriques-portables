@@ -61,6 +61,6 @@ const quoteCsv = x => '"' + String(x).replaceAll('"','""') + '"';
 await writeFile(path.join(dir,'broken-image-inventory.csv'),
   ['image_url,affected_route_count,routes',
    ...[...failedImageMap].sort((a,b)=>b[1].size-a[1].size).map(([url,affected])=>
-      [url,affected.size,[...affected].sort().join(' | ')].map(quoteCsv).join(','))].join('\\n')+'\\n');
+      [url,affected.size,[...affected].sort().join(' | ')].map(quoteCsv).join(','))].join(String.fromCharCode(10))+String.fromCharCode(10));
 await writeFile(path.join(dir,'summary.md'),['# Audit automatique desktop/mobile', '', 'Attention : les captures nécessitent une revue humaine pour juger du design.','',...Object.entries(summary).map(([k,v])=>'- '+k+': '+v),'', '## Pages avec anomalies','',...results.filter(x=>x.navigationError||x.status>=400||x.horizontalOverflow||x.brokenImages?.length||x.invalidToc).map(x=>'- '+x.route+' '+x.viewport+': HTTP '+x.status+', overflow '+!!x.horizontalOverflow+', images cassées '+(x.brokenImages?.length??'n/a')+', TOC '+(x.invalidToc??'n/a'))].join('\n'));
 console.log(JSON.stringify(summary));
