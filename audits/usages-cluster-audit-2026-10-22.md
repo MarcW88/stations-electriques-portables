@@ -34,3 +34,11 @@ Périmètre : camping, van, coupure de courant, chantier, CPAP. Lecture du conte
 2. Réaliser la validation des sources, l'analyse d'intention/SERP et la revue comparative du cluster.
 3. Effectuer Playwright desktop/mobile et produire des captures.
 4. Réexécuter `usage-analysis-workflow / PUBLISH_REVIEW` avec preuves, demander validation humaine avant toute indexation.
+
+## Mise à jour — contrôle exécutable ajouté
+
+- Nouveau script : `scripts/validate_usage_cluster.py`, qui vérifie le contenu, la parité des sources éditoriales, les ancres/TOC, les liens internes, les canonicals, les descriptions et le maintien de `noindex, follow`.
+- Nouveau workflow GitHub Actions : `.github/workflows/usage-audit.yml`, censé exécuter l'intégrité des agents, la compilation Python, la génération et les vérifications statiques à chaque modification concernée sur `main`.
+- Le clone GitHub depuis l'environnement local a échoué (résolution DNS de github.com), donc aucune exécution locale du build n'a été possible.
+- La recherche des exécutions associées au commit de workflow n'a pas retourné de résultat ; ce connecteur ne remonte que les runs déclenchés par une pull request. Par conséquent, **aucune réussite CI n'est attestée**.
+- Les corrections structurelles et les contrôles source sont enregistrés sur `main`, mais le gate publication reste **FAIL — KEEP_NOINDEX**.
