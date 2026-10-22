@@ -1,0 +1,12 @@
+{
+  "url": "/puissance-capacite/station-electrique-2000wh/",
+  "decision": "DEEP_REWRITE",
+  "intent": "Autonomie et dimensionnement d'une station de 2000 Wh",
+  "status": "QA_IN_PROGRESS",
+  "updated_at": "2026-10-22",
+  "indexation": "noindex, follow",
+  "limitations": [
+    "Hypothèse 85 % non mesurée",
+    "Build et Playwright non exécutés"
+  ]
+}
