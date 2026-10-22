@@ -54,6 +54,11 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = outage_content
         title = "Station électrique pour coupure de courant : besoins et autonomie"
         desc = "Prévoir une alimentation de secours adaptée aux appareils essentiels."
+    elif canonical == "/usages/station-electrique-chantier/":
+        from usage_chantier_content import CONTENT as chantier_content
+        ans = chantier_content
+        title = "Station électrique pour chantier : puissance et autonomie des outils"
+        desc = "Dimensionner une alimentation mobile pour ses outils sans négliger la sécurité."
     else:
         ans += "<!-- Contenu à rédiger -->"
     body=f'<div class="container"><nav class="breadcrumb">{bc_html(*bc_items)}</nav></div><section class="page-hero"><div class="container"><span class="ctype ctype-{ctype}">{ctype.title()}</span><h1 style="margin-top:10px">{title}</h1><p class="lead">{desc}</p><div class="page-meta"><span class="meta-tag">Vérifié : MM/AAAA</span></div></div></section><div class="container"><div class="content-layout"><article class="content-main">{ans}{rel}</article><aside class="content-sidebar"><div class="sidebar-box"><div class="sidebar-box-head">Sommaire</div><div class="sidebar-box-body"><nav class="toc-list"></nav></div></div><div class="sidebar-box"><div class="sidebar-box-head">Affiliation</div><div class="sidebar-box-body"><p class="affil-note">Liens affiliés présents. <a href="/transparence-affiliation/">En savoir plus.</a></p></div></div><a href="/calculateur-autonomie/" class="btn btn-primary" style="width:100%;justify-content:center">⚡ Calculateur</a></aside></div></div>'
