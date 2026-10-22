@@ -125,6 +125,15 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = solar_recharging_content
         title = "Recharger une station électrique avec un panneau solaire : méthode et durée"
         desc = "Brancher un panneau solaire à une station : compatibilité, procédure, calcul du temps de recharge et erreurs courantes."
+    elif canonical.startswith("/accessoires/"):
+        from accessory_photo_data import PHOTOS
+        import html as html_lib
+        if canonical in PHOTOS:
+            image_url, image_name, image_source, note = PHOTOS[canonical]
+            figure = '<figure class="accessory-photo" style="margin:1.5rem 0"><img src="{}" alt="Photographie réelle : {}" width="550" height="550" loading="lazy" decoding="async" style="max-width:100%;height:auto;border-radius:12px"><figcaption>{}, source {}. {}</figcaption></figure>'.format(html_lib.escape(image_url, quote=True), html_lib.escape(image_name), html_lib.escape(image_name), html_lib.escape(image_source), html_lib.escape(note))
+            ans = figure + "<!-- Contenu à rédiger -->"
+        else:
+            ans += "<!-- Contenu à rédiger -->"
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
