@@ -16,6 +16,13 @@ Date : 2026-10-22 · Inventaire GitHub : branche main
 - Autres pages : non modifiées par cette passe ; les pages modèles, marques et comparatifs exigent des photographies officielles authentiques. Aucun visuel produit IA inventé.
 - Génération/récupération des photos requises, QA visuelle et vérification du domaine public : **non terminées**. Ne pas assimiler les fichiers GitHub à une validation du site en ligne.
 
+## Mise en œuvre complémentaire — 22 octobre 2026
+
+- **Image réelle de produit :** `/modeles/ecoflow-delta-2/` : photographie de l’EcoFlow DELTA 2 depuis EcoFlow.nl, intégrée dans le HTML et dans `_generate.py`. Il s'agit d'une image distante ; droits de réutilisation et pérennité du lien restent à examiner.
+- **Diagramme exact W / Wh :** intégré aux quatre pages `/puissance-capacite/station-electrique-{500w,1000w,2000w,3000w}/` et à leurs modules sources.
+- **Pages modèles restantes :** sans photographie non vérifiée, conformément au statut `VRAIE_IMAGE`; les images IA et les SVG génériques ne satisfont pas la décision.
+- **Pages candidates IA :** créations photographiques non téléversées sur le domaine, donc **non terminées**. **L'ensemble des 82 décisions n'est pas encore implémenté.**
+
 ## Synthèse
 
 - VRAIE_IMAGE : 39 pages
