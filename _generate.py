@@ -142,6 +142,12 @@ def modele_page(m):
     photo_map["/modeles/ecoflow-river-3/"] = ["/modeles/ecoflow-river-3/","https://media.cdn.bauhaus/m/3390163-2/prod_large_square.webp","EcoFlow RIVER 3","Bauhaus"]
     photo_map["/modeles/jackery-explorer-2000-v2/"] = ["/modeles/jackery-explorer-2000-v2/","https://eu.jackery.com/cdn/shop/files/E2000_HTE117_EU__1_V1_241213_0e1a8ff8-8c64-4402-98fc-89ebd85f61aa.png?v=1739428461&width=3840","Jackery Explorer 2000 v2","Jackery Europe"]
     photo_map["/modeles/bluetti-ac200max/"] = ["/modeles/bluetti-ac200max/","https://upload.cdn.baselinker.com/products/1003143/5277e05ccc7c94b7ec5cb3d388d8b09a.jpg","BLUETTI AC200MAX","Hurtomat"]
+    photo_map["/modeles/allpowers-s700/"] = ["/modeles/allpowers-s700/","https://www.iallpowers.de/cdn/shop/products/allpowerss700_1.jpg?v=1684222187&width=1800","ALLPOWERS S700","ALLPOWERS Allemagne"]
+    photo_map["/modeles/bluetti-elite-200-v2/"] = ["/modeles/bluetti-elite-200-v2/","https://www.bluettipower.eu/cdn/shop/files/Elite-200-V2-2025-02-13_3_1780x.png?v=1758590283","BLUETTI Elite 200 V2","BLUETTI Europe"]
+    photo_map["/modeles/ecoflow-delta-3-plus/"] = ["/modeles/ecoflow-delta-3-plus/","https://solaireoutdoor.com/37186/station-electrique-portable-de-la-gamme-ecoflow-delta-3-plus.jpg","EcoFlow DELTA 3 Plus","Solaire Outdoor"]
+    photo_map["/modeles/aferiy-p210/"] = ["/modeles/aferiy-p210/","https://img.staticbg.com/images/oaupload/banggood/images/8D/D3/c72557c5-e12a-4b7b-bebb-aa1dde84e262.png","AFERIY P210","Banggood"]
+    photo_map["/modeles/ecoflow-delta-pro/"] = ["/modeles/ecoflow-delta-pro/","https://merk.anwb.nl/transform/f521eeb9-764b-419c-8d42-4d5f453c9ba0/Ecoflow-Portable-Power-Station-Delta-Pro","EcoFlow DELTA Pro","ANWB"]
+    photo_map["/modeles/jackery-explorer-3000-pro/"] = ["/modeles/jackery-explorer-3000-pro/","https://de.jackery.com/cdn/shop/products/Jackery-Explorer-3000-Pro-EU-1800x1800-5.jpg?v=1702263357","Jackery Explorer 3000 Pro","Jackery Allemagne"]
     photo = ""
     if m["path"] in photo_map:
         import html as html_escape
