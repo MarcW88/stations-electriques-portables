@@ -85,3 +85,12 @@ L'archive `audit-visuel-global` de l'exécution contient `report.json`, `summary
 - GitHub a démarré plusieurs nouveaux audits automatiques, encore en file d'attente à la dernière consultation ; **aucune réussite n'est revendiquée** pour cette nouvelle passe.
 
 **Dette ouverte :** remplacer les 22 URLs d'images distantes en échec par des sources réelles autorisées et stables ; examiner les captures desktop/mobile post-correction ; vérifier que les pages restent illustrées et accessibles lorsque les photos échouent. Le fallback seul ne suffit pas à clore la qualité des images.
+
+## Validation après corrections — passe de contrôle
+
+- Les exécutions concurrentes avaient créé une file d'attente : `concurrency.cancel-in-progress` ajouté au workflow, afin que seule la version la plus récente de `main` soit auditée.
+- Le script Playwright exporte maintenant un fichier `broken-image-inventory.csv` répertoriant chaque image défaillante et toutes ses pages consommatrices ; résultat attendu dans les artéfacts de l'exécution récente.
+- Le **premier** rapport confirmé comptait 22 URLs d'images défaillantes sur 24 pages distinctes. Il ne faut pas supposer que masquer les `<img>` en erreur a corrigé ces URLs : les requêtes réseau peuvent continuer d'échouer.
+- Nouveau run déclenché : https://github.com/MarcW88/stations-electriques-portables/actions/runs/39844898569 ; en attente au moment de la dernière lecture.
+- **Remplacement par des photographies locales : pas réalisé**. Les URL exactes de sources à traiter sont désormais isolées. La récupération automatique des photographies de fabricants/distributeurs exige une source qui réponde effectivement et la vérification des droits ; un fichier distant bloqué ne peut pas devenir une image réelle par un fallback CSS.
+
