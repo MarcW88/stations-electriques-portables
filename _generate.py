@@ -114,6 +114,11 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = solar_panel_compatibility_content
         title = "Quel panneau solaire pour une station électrique ? Compatibilité"
         desc = "Vérifiez Voc, Vmp, courant, puissance MPPT et connecteurs avant de relier un panneau solaire à votre station électrique."
+    elif canonical == "/solaire/recharger-station-electrique-panneau-solaire/":
+        from solar_recharging_content import CONTENT as solar_recharging_content
+        ans = solar_recharging_content
+        title = "Recharger une station électrique avec un panneau solaire : méthode et durée"
+        desc = "Brancher un panneau solaire à une station : compatibilité, procédure, calcul du temps de recharge et erreurs courantes."
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
