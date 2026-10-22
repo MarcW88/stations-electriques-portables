@@ -64,13 +64,18 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = cpap_content
         title = "Station électrique pour CPAP : autonomie et compatibilité"
         desc = "Alimenter une CPAP sur batterie : calcul d’autonomie, compatibilité électrique, humidificateur et précautions avant de choisir."
+    elif canonical == "/puissance-capacite/station-electrique-500w/":
+        from power_500w_content import CONTENT as power_500w_content
+        ans = power_500w_content
+        title = "Station électrique 500 W : quels appareils peut-elle alimenter ?"
+        desc = "Quels appareils fonctionnent avec une station de 500 W ? Vérifiez puissance continue, démarrage et autonomie selon les Wh."
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
     import html as html_lib
     toc_items = re.findall(r'<h2\s+id="([^"]+)"[^>]*>(.*?)</h2>', ans, flags=re.S | re.I)
     toc = "".join(f'<a href="#{sid}">{html_lib.escape(re.sub(r"<[^>]+>", "", heading))}</a>' for sid, heading in toc_items)
-    stamp = "Documentation : 10/2026" if canonical.startswith("/usages/") and toc_items else "Vérifié : MM/AAAA"
+    stamp = "Documentation : 10/2026" if (canonical.startswith("/usages/") or canonical == "/puissance-capacite/station-electrique-500w/") and toc_items else "Vérifié : MM/AAAA"
     body=f'<div class="container"><nav class="breadcrumb">{bc_html(*bc_items)}</nav></div><section class="page-hero"><div class="container"><span class="ctype ctype-{ctype}">{ctype.title()}</span><h1 style="margin-top:10px">{title}</h1><p class="lead">{desc}</p><div class="page-meta"><span class="meta-tag">{stamp}</span></div></div></section><div class="container"><div class="content-layout"><article class="content-main">{ans}{rel}</article><aside class="content-sidebar"><div class="sidebar-box"><div class="sidebar-box-head">Sommaire</div><div class="sidebar-box-body"><nav class="toc-list">{toc}</nav></div></div><div class="sidebar-box"><div class="sidebar-box-head">Affiliation</div><div class="sidebar-box-body"><p class="affil-note">Liens affiliés présents. <a href="/transparence-affiliation/">En savoir plus.</a></p></div></div><a href="/calculateur-autonomie/" class="btn btn-primary" style="width:100%;justify-content:center">⚡ Calculateur</a></aside></div></div>'
     return doc(title,desc,canonical,body)
 
