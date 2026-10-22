@@ -104,6 +104,11 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = solar_mppt_content
         title = "MPPT solaire : fonctionnement et compatibilité avec une station"
         desc = "Comprendre le régulateur MPPT, son fonctionnement et les limites de tension, courant et puissance des panneaux solaires."
+    elif canonical == "/solaire/panneau-solaire-portable/":
+        from solar_portable_panel_content import CONTENT as solar_portable_panel_content
+        ans = solar_portable_panel_content
+        title = "Panneau solaire portable : choisir puissance, format et compatibilité"
+        desc = "Panneau pliable 100, 200 ou 400 W ? Comparez formats, production réelle, tension et compatibilité avec votre station."
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
