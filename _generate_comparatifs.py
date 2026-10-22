@@ -135,15 +135,14 @@ def product_sections(data, ranking):
         if facts.get("ups"):
             facts_text.append(f"UPS/ASI {facts['ups']}")
         spec_sentence = ", ".join(facts_text)
-        images = {
-            "Jackery Explorer 1000 v2": ("https://de.jackery.com/cdn/shop/files/1000_v2_423d3646-5772-40dd-a395-3cc66c25bb24_1024x1024.jpg?v=1749713371", "Jackery Allemagne"),
-            "EcoFlow DELTA 2": ("https://www.ecoflow.nl/data/upload/Shop/images/ecoflow-delta-2-power-station-3.jpg", "EcoFlow.nl"),
-            "BLUETTI AC180": ("https://www.cdiscount.com/pdt2/0/9/1/1/550x550/blu1686560566091/rw/bluetti-officiel-station-electrique-portable-blu.jpg", "Cdiscount"),
-        }
+        images = {"Jackery Explorer 1000 v2":["https://de.jackery.com/cdn/shop/files/1000_v2_423d3646-5772-40dd-a395-3cc66c25bb24_1024x1024.jpg?v=1749713371","Jackery Allemagne"],"Jackery Générateur Solaire 1000 v2":["https://de.jackery.com/cdn/shop/files/1000_v2_423d3646-5772-40dd-a395-3cc66c25bb24_1024x1024.jpg?v=1749713371","Jackery Allemagne"],"Jackery Générateur Solaire 2000 v2":["https://eu.jackery.com/cdn/shop/files/E2000_HTE117_EU__1_V1_241213_0e1a8ff8-8c64-4402-98fc-89ebd85f61aa.png?v=1739428461&width=3840","Jackery Europe"],"EcoFlow DELTA 3 Plus":["https://solaireoutdoor.com/37186/station-electrique-portable-de-la-gamme-ecoflow-delta-3-plus.jpg","Solaire Outdoor"],"BLUETTI Elite 200 V2":["https://www.bluettipower.eu/cdn/shop/files/Elite-200-V2-2025-02-13_3_1780x.png?v=1758590283","BLUETTI Europe"],"BLUETTI Elite 30 V2":["https://media.adeo.com/mkp/3ef703607e1c9615c80ae88e5ae2d198/media.jpg","Leroy Merlin (kit avec panneau)"],"Jackery Explorer 300 Plus":["https://eu.jackery.com/cdn/shop/files/300plus_8f5c82cd-36d1-4c24-8ff2-e2263fe1a359.jpg?v=1704681363","Jackery Europe"],"Jackery Explorer 2000 v2":["https://eu.jackery.com/cdn/shop/files/E2000_HTE117_EU__1_V1_241213_0e1a8ff8-8c64-4402-98fc-89ebd85f61aa.png?v=1739428461&width=3840","Jackery Europe"],"AFERIY P210":["https://img.staticbg.com/images/oaupload/banggood/images/8D/D3/c72557c5-e12a-4b7b-bebb-aa1dde84e262.png","Banggood"],"EcoFlow DELTA 2":["https://www.ecoflow.nl/data/upload/Shop/images/ecoflow-delta-2-power-station-3.jpg","EcoFlow.nl"],"BLUETTI AC180":["https://www.cdiscount.com/pdt2/0/9/1/1/550x550/blu1686560566091/rw/bluetti-officiel-station-electrique-portable-blu.jpg","Cdiscount"]}
         photo = ""
-        if p["name"] in images:
-            picture, publisher = images[p["name"]]
-            photo = f'<figure class="product-photo" style="margin:1rem 0"><img src="{html.escape(picture, quote=True)}" alt="Photo réelle du modèle {html.escape(p["name"])}" width="550" height="550" loading="lazy" style="max-width:100%;height:auto;border-radius:12px"><figcaption>Photo du produit, source {publisher}.</figcaption></figure>'
+        photo_entry = next((entry for key, entry in images.items() if key.casefold() in p["name"].casefold()), None)
+        if photo_entry:
+            picture, publisher = photo_entry
+            product_only = " + " in p["name"] or "Générateur Solaire" in p["name"]
+            label = "Photographie de la station seule (panneaux non représentés)" if product_only else "Photographie du produit"
+            photo = f'<figure class="product-photo" style="margin:1rem 0"><img src="{html.escape(picture, quote=True)}" alt="{label} : {html.escape(p["name"])}" width="550" height="550" loading="lazy" style="max-width:100%;height:auto;border-radius:12px"><figcaption>{label}, source {publisher}.</figcaption></figure>'
         out.append(f"""
 <h3>{row['rank']}. {html.escape(p['name'])}</h3>
 {photo}
