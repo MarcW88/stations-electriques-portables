@@ -1,0 +1,28 @@
+{
+  "url": "/usages/station-electrique-van/",
+  "decision": "DEEP_REWRITE",
+  "status": "QA_IN_PROGRESS",
+  "updated_at": "2026-10-22",
+  "intent": "Dimensionner alimentation électrique d'un van selon consommation, durée stationnaire et recharge",
+  "jtbd": "Alimenter les appareils utiles pendant les étapes et nuits sans prise, sans surdimensionner le stockage",
+  "claims": [
+    {
+      "source": "https://www.victronenergy.com/knowledge-articles/2026/9/12/rv-battery-bank-size",
+      "class": "SUPPORTED"
+    },
+    {
+      "source": "https://www.victronenergy.fr/inverters-chargers/help-me-choose",
+      "class": "SUPPORTED"
+    },
+    {
+      "source": "https://manuals.ecoflow.com/us/product/power-hub-5kva?lang=en_US",
+      "class": "SUPPORTED"
+    }
+  ],
+  "limitations": [
+    "Scénario chiffré hypothétique",
+    "Rendu navigateur non vérifié",
+    "Aucun test de produit effectué"
+  ],
+  "robots": "noindex, follow"
+}
