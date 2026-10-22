@@ -5,6 +5,9 @@ on:
     paths:
       - '.github/workflows/site-wide-visual-audit.yml'
       - 'scripts/site-wide-visual-audit.mjs'
+      - 'style.css'
+      - 'marques/index.html'
+      - 'usages/station-electrique-coupure-courant/index.html'
 jobs:
   design-review:
     runs-on: ubuntu-latest
