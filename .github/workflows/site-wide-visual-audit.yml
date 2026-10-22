@@ -6,6 +6,9 @@ on:
       - '.github/workflows/site-wide-visual-audit.yml'
       - 'scripts/site-wide-visual-audit.mjs'
       - 'style.css'
+      - '**/index.html'
+      - 'index.html'
+      - '_generate.py'
       - 'marques/index.html'
       - 'usages/station-electrique-coupure-courant/index.html'
 jobs:
