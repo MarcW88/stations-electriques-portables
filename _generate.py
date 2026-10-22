@@ -84,6 +84,11 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = power_3000w_content
         title = "Station électrique 3 000 W : appareils, démarrage et autonomie"
         desc = "À quoi servent 3 000 W ? Vérifiez appareils, puissance de crête, autonomie réelle et contraintes de transport."
+    elif canonical == "/puissance-capacite/station-electrique-2000wh/":
+        from capacity_2000wh_content import CONTENT as capacity_2000wh_content
+        ans = capacity_2000wh_content
+        title = "Station électrique 2 000 Wh : quelle autonomie réelle ?"
+        desc = "Combien de temps dure une batterie de 2 000 Wh ? Exemples de calcul, usages, recharge et différence entre W et Wh."
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
