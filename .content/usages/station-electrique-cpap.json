@@ -1,0 +1,24 @@
+{
+  "url": "/usages/station-electrique-cpap/",
+  "decision": "DEEP_REWRITE",
+  "status": "QA_IN_PROGRESS",
+  "updated_at": "2026-10-22",
+  "intent": "Déterminer une alimentation portable compatible avec un appareil de pression positive continue",
+  "jtbd": "Alimenter la CPAP durant le sommeil loin du secteur avec une compatibilité et une continuité adaptées à la situation médicale",
+  "evidence": [
+    {
+      "url": "https://document.resmed.com/documents/products/machine/airsense-11/user-guide/airsense11_user-guide_amer_mul.pdf",
+      "class": "SUPPORTED"
+    },
+    {
+      "url": "https://ap.resmed.com/healthcare-professional/resource-centre/patient-support/faq-devices",
+      "class": "SUPPORTED"
+    }
+  ],
+  "uncertainties": [
+    "Autonomie réelle non mesurée",
+    "Compatibilité propre à chaque modèle non validée",
+    "Avis médical nécessaire pour modifier les fonctions du traitement"
+  ],
+  "robots": "noindex, follow"
+}
