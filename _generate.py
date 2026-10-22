@@ -99,13 +99,18 @@ def page(title,desc,canonical,bc_items,ctype="guide",answer="",related=None):
         ans = solar_generator_content
         title = "Générateur solaire portable : fonctionnement, panneaux et autonomie"
         desc = "Comment fonctionne un générateur solaire ? Dimensionnement en Wh, production des panneaux, compatibilité MPPT et usages."
+    elif canonical == "/solaire/mppt/":
+        from solar_mppt_content import CONTENT as solar_mppt_content
+        ans = solar_mppt_content
+        title = "MPPT solaire : fonctionnement et compatibilité avec une station"
+        desc = "Comprendre le régulateur MPPT, son fonctionnement et les limites de tension, courant et puissance des panneaux solaires."
     else:
         ans += "<!-- Contenu à rédiger -->"
     import re
     import html as html_lib
     toc_items = re.findall(r'<h2\s+id="([^"]+)"[^>]*>(.*?)</h2>', ans, flags=re.S | re.I)
     toc = "".join(f'<a href="#{sid}">{html_lib.escape(re.sub(r"<[^>]+>", "", heading))}</a>' for sid, heading in toc_items)
-    stamp = "Documentation : 10/2026" if (canonical.startswith("/usages/") or (canonical.startswith("/puissance-capacite/") or canonical == "/solaire/generateur-solaire/")) and toc_items else "Vérifié : MM/AAAA"
+    stamp = "Documentation : 10/2026" if (canonical.startswith("/usages/") or (canonical.startswith("/puissance-capacite/") or canonical.startswith("/solaire/")) and toc_items else "Vérifié : MM/AAAA"
     body=f'<div class="container"><nav class="breadcrumb">{bc_html(*bc_items)}</nav></div><section class="page-hero"><div class="container"><span class="ctype ctype-{ctype}">{ctype.title()}</span><h1 style="margin-top:10px">{title}</h1><p class="lead">{desc}</p><div class="page-meta"><span class="meta-tag">{stamp}</span></div></div></section><div class="container"><div class="content-layout"><article class="content-main">{ans}{rel}</article><aside class="content-sidebar"><div class="sidebar-box"><div class="sidebar-box-head">Sommaire</div><div class="sidebar-box-body"><nav class="toc-list">{toc}</nav></div></div><div class="sidebar-box"><div class="sidebar-box-head">Affiliation</div><div class="sidebar-box-body"><p class="affil-note">Liens affiliés présents. <a href="/transparence-affiliation/">En savoir plus.</a></p></div></div><a href="/calculateur-autonomie/" class="btn btn-primary" style="width:100%;justify-content:center">⚡ Calculateur</a></aside></div></div>'
     return doc(title,desc,canonical,body)
 
