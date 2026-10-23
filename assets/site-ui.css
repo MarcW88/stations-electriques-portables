@@ -54,3 +54,31 @@
  .audited-page .technical-figure { display:none; }
  .audited-page .hub-link-meta { font-size:.8rem; }
 }
+/* Keep product evidence beside its explanation, without oversized catalogue photos. */
+.image-placement-page .comparison-product { margin:32px 0; padding-bottom:24px; border-bottom:1px solid var(--border); }
+.image-placement-page .comparison-product-body { display:grid; grid-template-columns:260px minmax(0,1fr); gap:24px; align-items:start; }
+.image-placement-page .comparison-product-body > .product-photo { margin:0!important; }
+.image-placement-page .comparison-product-copy { min-width:0; }
+.image-placement-page .comparison-product-copy > p:first-child { margin-top:0; }
+.image-placement-page .comparison-product .product-photo img { display:block; width:100%; height:260px!important; object-fit:contain; }
+.image-placement-page .comparison-product figcaption { margin-top:8px; }
+.image-placement-page .brand-photo { max-width:320px; margin:24px 0!important; }
+.image-placement-page .brand-photo img { display:block; width:100%; height:260px!important; object-fit:contain; }
+.image-placement-page .editorial-photo img { max-height:320px; object-fit:contain; }
+.image-placement-page .model-overview { display:grid; grid-template-columns:300px minmax(0,1fr); align-items:start; gap:24px; margin-bottom:28px; }
+.image-placement-page .model-overview > .product-photo { margin:0!important; }
+.image-placement-page .model-overview img { display:block; width:100%; height:300px!important; object-fit:contain; }
+.image-placement-page .model-overview .pro-con-grid { grid-template-columns:1fr; gap:16px; margin:0; }
+.image-placement-page .hub-link { justify-content:flex-start; gap:12px; }
+.image-placement-page .hub-link > div { flex:1; }
+@media(max-width:768px) {
+ .image-placement-page .comparison-product-body,.image-placement-page .model-overview { grid-template-columns:minmax(0,1fr); gap:16px; }
+ .image-placement-page .comparison-product-body > .product-photo { width:100%; max-width:260px; margin:0 auto!important; }
+ .image-placement-page .comparison-product .product-photo img { height:200px!important; }
+ .image-placement-page .comparison-product { margin:24px 0; }
+ .image-placement-page .brand-photo { max-width:260px; }
+ .image-placement-page .brand-photo img,.image-placement-page .editorial-photo img { max-height:220px; }
+ .image-placement-page .model-overview > .product-photo { max-width:280px; margin:0 auto!important; }
+ .image-placement-page .model-overview img { height:240px!important; }
+}
+.image-placement-page .comparison-product-text { grid-template-columns:minmax(0,1fr); }
