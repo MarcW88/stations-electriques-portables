@@ -5,6 +5,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'index.html'
       - 'guides/**'
       - 'marques/**'
       - 'comparatifs/**'
@@ -51,20 +52,25 @@ jobs:
         run: node -e "import('@playwright/test').then(async ({chromium}) => { const b = await chromium.launch({headless:true}); console.log('CHROMIUM_SMOKE_PASS', b.version()); await b.close(); })"
       - name: Audit all guides in desktop and mobile
         run: npm run visual:guides -- --output .artifacts/design-review/guides
+      - name: Audit homepage in desktop and mobile
+        run: node .agents/skills/site-design-review/scripts/run-visual-review.mjs --route / --output .artifacts/design-review/homepage
       - name: Publish audit verification to repository
         if: success() && github.event_name == 'push'
         run: |
-          mkdir -p audit-results/guides
+          mkdir -p audit-results/guides audit-results/homepage
+          cp .artifacts/design-review/homepage/report.json audit-results/homepage/report.json
           cp .artifacts/design-review/guides/report.json audit-results/guides/report.json
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add audit-results/guides/report.json
+          git add audit-results/guides/report.json audit-results/homepage/report.json
           git diff --cached --quiet || (git commit -m 'chore(audit): save verified guides Playwright report [skip ci]' && git push)
       - name: Upload screenshots and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: guides-design-review
-          path: .artifacts/design-review/guides/
+          path: |
+            .artifacts/design-review/guides/
+            .artifacts/design-review/homepage/
           if-no-files-found: warn
           retention-days: 14
