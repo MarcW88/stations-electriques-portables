@@ -78,8 +78,8 @@ def apply(slug: str, source: Path):
     page = page.replace('<article class="content-main">', mobile_toc + '<article class="content-main">', 1)
     page = decorate_page(page)
 
-    if 'name="robots" content="noindex, follow"' not in page:
-        raise ValueError(f"{slug}: noindex, follow must be preserved")
+    if 'name="robots" content="index, follow"' not in page:
+        raise ValueError(f"{slug}: index, follow must be preserved")
     if "<!-- Contenu à rédiger -->" in page:
         raise ValueError(f"{slug}: placeholder remains")
     target.write_text(page, encoding="utf-8")

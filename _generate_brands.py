@@ -57,7 +57,7 @@ def apply(slug: str, source: Path):
     page = replace_once(r'(<nav class="toc-list">).*?(</nav>)', rf"\g<1>{build_toc(body)}\2", page, f"{slug} toc")
 
     if not re.search(r'name="robots"\s+content="noindex,\s*follow"', page, re.I):
-        raise ValueError(f"{slug}: noindex, follow must be preserved")
+        raise ValueError(f"{slug}: index, follow must be preserved")
     if "<!-- Contenu à rédiger -->" in page:
         raise ValueError(f"{slug}: placeholder remains")
     target.write_text(page, encoding="utf-8")

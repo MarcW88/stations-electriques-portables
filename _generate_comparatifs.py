@@ -293,7 +293,7 @@ def render_one(path, data):
         '</nav>'
     )
     html_text = replace_once(r'<nav class="toc-list">.*?</nav>', toc, html_text, flags=re.S)
-    if '<meta name="robots" content="noindex, follow">' not in html_text:
+    if '<meta name="robots" content="index, follow">' not in html_text:
         raise RuntimeError(f"noindex missing in {path}")
     path.write_text(html_text, encoding="utf-8")
     return data

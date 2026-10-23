@@ -58,7 +58,7 @@ def main():
         checks = [
             ("<!-- Contenu à rédiger -->" not in page, "placeholder présent"),
             ("MM/AAAA" not in page, "MM/AAAA présent"),
-            ('name="robots" content="noindex, follow"' in page, "noindex, follow absent"),
+            ('name="robots" content="index, follow"' in page, "index, follow absent"),
             (page.count("<!-- GUIDE_CONTENT_START -->") == 1, "GUIDE_CONTENT_START incorrect"),
             (page.count("<!-- GUIDE_CONTENT_END -->") == 1, "GUIDE_CONTENT_END incorrect"),
             ('class="article-answer"' in article, "article-answer absent"),

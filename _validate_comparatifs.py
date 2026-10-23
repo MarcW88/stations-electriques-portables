@@ -54,8 +54,8 @@ for data_file in files:
     sources = set(re.findall(r'href="https?://[^"]+"', s))
     markers = s.count("<!-- COMPARISON_CONTENT_START -->")
 
-    if '<meta name="robots" content="noindex, follow">' not in s:
-        fail(f"{slug}: noindex, follow missing")
+    if '<meta name="robots" content="index, follow">' not in s:
+        fail(f"{slug}: index, follow missing")
     if "<!-- Contenu à rédiger -->" in s or "MM/AAAA" in s:
         fail(f"{slug}: placeholder remains")
     if "Comparatif 2025" in vis or "comparatif 2025" in vis:
