@@ -1,0 +1,20 @@
+{
+  "id": "guide-recharge-rapide",
+  "page": "guides/recharge-rapide-station-electrique/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Remplacer l'absence d'illustration éditoriale pertinente par une photographie contextuelle BFL, sans créer de faux visuels produit.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:guide-recharge-rapide -->",
+  "output_path": "assets/generated/guide-recharge-rapide.webp",
+  "prompt": "Photorealistic independent specialist editorial photo of an unbranded portable power station on a neat home utility worktop, a realistic wall power cable plugged into a socket as device recharges, natural daylight and tidy domestic surroundings, no brands, no legible markings, no technical numerical claims, no CGI, no text or watermarks.",
+  "alt": "Station électrique portable générique branchée sur une prise secteur pour la recharge",
+  "caption": "",
+  "placement": "replace",
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null
+}
