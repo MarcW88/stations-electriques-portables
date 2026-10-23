@@ -10,7 +10,7 @@ SOURCE_FILES = [ROOT / name for name in (
     "_generate_guides.py", "_validate_brands.py", "_validate_comparatifs.py",
     "_validate_guides.py"
 )]
-ROBOT_META = re.compile(r'(<meta\s+[^>]*name=["\']robots["\'][^>]*content=["\'])([^"\']+)(["\'][^>]*>)', re.I)
+ROBOT_META = re.compile(r"""(<meta\s+[^>]*name=["']robots["'][^>]*content=["'])([^"']+)(["'][^>]*>)""", re.I)
 NOINDEX = re.compile(r'\bnoindex\b', re.I)
 
 def update_page(path):
