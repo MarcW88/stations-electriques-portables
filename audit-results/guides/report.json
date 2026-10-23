@@ -1,0 +1,937 @@
+{
+  "generatedAt": "2026-10-23T08:44:38.966Z",
+  "baseUrl": "http://127.0.0.1:4173",
+  "scope": "guides",
+  "routes": [
+    "/guides/",
+    "/guides/batterie-nomade-ou-station-electrique/",
+    "/guides/calculer-autonomie-station-electrique/",
+    "/guides/calculer-capacite-station-electrique/",
+    "/guides/comment-choisir-station-electrique-portable/",
+    "/guides/duree-vie-cycles-batterie/",
+    "/guides/lifepo4-ou-lithium-ion/",
+    "/guides/onde-sinusoidale-pure/",
+    "/guides/recharge-rapide-station-electrique/",
+    "/guides/recharger-station-electrique-voiture/",
+    "/guides/station-electrique-portable-comment-ca-marche/",
+    "/guides/ups-eps-station-electrique/",
+    "/guides/watt-ou-watt-heure/"
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "pages": [
+    {
+      "route": "/guides/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Guides techniques",
+      "statusReady": "interactive",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 10285
+    },
+    {
+      "route": "/guides/batterie-nomade-ou-station-electrique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--batterie-nomade-ou-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Batterie nomade ou station électrique : laquelle choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 1,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 95,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 591,
+        "top": 422,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/calculer-autonomie-station-electrique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--calculer-autonomie-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Calculer l’autonomie d’une station électrique : méthode et exemples",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 71,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 591,
+        "top": 501,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/calculer-capacite-station-electrique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--calculer-capacite-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Calculer la capacité d’une station électrique : combien de Wh faut-il ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 71,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 571,
+        "top": 471,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/comment-choisir-station-electrique-portable/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--comment-choisir-station-electrique-portable.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Comment choisir une station électrique portable ? Guide 2026",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 95,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 571,
+        "top": 501,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/duree-vie-cycles-batterie/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--duree-vie-cycles-batterie.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Cycles de charge : comprendre la durée de vie d’une station électrique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 95,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 653,
+        "top": 501,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/lifepo4-ou-lithium-ion/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--lifepo4-ou-lithium-ion.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "LiFePO4 ou lithium-ion NMC : quelle batterie pour une station électrique ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 1,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 119,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 571,
+        "top": 501,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/onde-sinusoidale-pure/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--onde-sinusoidale-pure.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Onde sinusoïdale pure : pourquoi elle compte sur une station électrique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 95,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 612,
+        "top": 471,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/recharge-rapide-station-electrique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--recharge-rapide-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Recharge rapide d’une station électrique : secteur, solaire et batterie",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 95,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 632,
+        "top": 471,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/recharger-station-electrique-voiture/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--recharger-station-electrique-voiture.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Recharger une station électrique en voiture : 12 V, 24 V et limites",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 95,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 632,
+        "top": 501,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/station-electrique-portable-comment-ca-marche/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--station-electrique-portable-comment-ca-marche.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Comment fonctionne une station électrique portable ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 71,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 591,
+        "top": 451,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/ups-eps-station-electrique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--ups-eps-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "UPS / EPS sur une station électrique : temps de transfert et limites",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 95,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 653,
+        "top": 471,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/watt-ou-watt-heure/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--watt-ou-watt-heure.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Watt ou watt-heure : comprendre W et Wh sur une station électrique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 1,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 71,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 591,
+        "top": 501,
+        "position": "sticky"
+      },
+      "headerHeight": 97
+    },
+    {
+      "route": "/guides/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Guides techniques",
+      "statusReady": "interactive",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 2953
+    },
+    {
+      "route": "/guides/batterie-nomade-ou-station-electrique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--batterie-nomade-ou-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Batterie nomade ou station électrique : laquelle choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 1,
+      "overflowingTables": [
+        {
+          "scrollWidth": 798,
+          "clientWidth": 342
+        }
+      ],
+      "articleAnswer": {
+        "height": 238,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 509,
+        "top": 5230,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/calculer-autonomie-station-electrique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--calculer-autonomie-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Calculer l’autonomie d’une station électrique : méthode et exemples",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 214,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 550,
+        "top": 5509,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/calculer-capacite-station-electrique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--calculer-capacite-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Calculer la capacité d’une station électrique : combien de Wh faut-il ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 190,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 509,
+        "top": 5341,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/comment-choisir-station-electrique-portable/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--comment-choisir-station-electrique-portable.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Comment choisir une station électrique portable ? Guide 2026",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 238,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 550,
+        "top": 5652,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/duree-vie-cycles-batterie/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--duree-vie-cycles-batterie.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Cycles de charge : comprendre la durée de vie d’une station électrique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 214,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 571,
+        "top": 5622,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/lifepo4-ou-lithium-ion/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--lifepo4-ou-lithium-ion.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "LiFePO4 ou lithium-ion NMC : quelle batterie pour une station électrique ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 1,
+      "overflowingTables": [
+        {
+          "scrollWidth": 760,
+          "clientWidth": 342
+        }
+      ],
+      "articleAnswer": {
+        "height": 285,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 529,
+        "top": 5694,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/onde-sinusoidale-pure/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--onde-sinusoidale-pure.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Onde sinusoïdale pure : pourquoi elle compte sur une station électrique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 238,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 571,
+        "top": 5412,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/recharge-rapide-station-electrique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--recharge-rapide-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Recharge rapide d’une station électrique : secteur, solaire et batterie",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 238,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 571,
+        "top": 5127,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/recharger-station-electrique-voiture/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--recharger-station-electrique-voiture.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Recharger une station électrique en voiture : 12 V, 24 V et limites",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 214,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 550,
+        "top": 5038,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/station-electrique-portable-comment-ca-marche/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--station-electrique-portable-comment-ca-marche.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Comment fonctionne une station électrique portable ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 190,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 550,
+        "top": 5544,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/ups-eps-station-electrique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--ups-eps-station-electrique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "UPS / EPS sur une station électrique : temps de transfert et limites",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 238,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 571,
+        "top": 5567,
+        "position": "static"
+      },
+      "headerHeight": 61
+    },
+    {
+      "route": "/guides/watt-ou-watt-heure/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--watt-ou-watt-heure.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Watt ou watt-heure : comprendre W et Wh sur une station électrique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 7,
+      "tocParentClass": "sidebar-box-body",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 1,
+      "overflowingTables": [
+        {
+          "scrollWidth": 548,
+          "clientWidth": 342
+        }
+      ],
+      "articleAnswer": {
+        "height": 166,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderLeftWidth": "0px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(26, 36, 51)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 509,
+        "top": 5444,
+        "position": "static"
+      },
+      "headerHeight": 61
+    }
+  ]
+}
