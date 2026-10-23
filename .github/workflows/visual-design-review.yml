@@ -30,6 +30,9 @@ on:
       - '.agents/skills/site-design-review/**'
       - '.github/workflows/visual-design-review.yml'
 
+permissions:
+  contents: write
+
 jobs:
   visual-guides:
     runs-on: ubuntu-latest
@@ -48,6 +51,15 @@ jobs:
         run: node -e "import('@playwright/test').then(async ({chromium}) => { const b = await chromium.launch({headless:true}); console.log('CHROMIUM_SMOKE_PASS', b.version()); await b.close(); })"
       - name: Audit all guides in desktop and mobile
         run: npm run visual:guides -- --output .artifacts/design-review/guides
+      - name: Publish audit verification to repository
+        if: success() && github.event_name == 'push'
+        run: |
+          mkdir -p audit-results/guides
+          cp .artifacts/design-review/guides/report.json audit-results/guides/report.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit-results/guides/report.json
+          git diff --cached --quiet || (git commit -m 'chore(audit): save verified guides Playwright report [skip ci]' && git push)
       - name: Upload screenshots and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
