@@ -1,0 +1,36 @@
+name: Index all public pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/enable_site_indexing.py
+      - .github/workflows/index-public-pages.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-indexing-pages
+  cancel-in-progress: false
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Remove noindex on all public pages and from generators
+        run: python scripts/enable_site_indexing.py
+      - name: Publish updated pages on main
+        run: |
+          git config user.name "Marc Williame"
+          git config user.email "146358493+MarcW88@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(seo): enable indexing on all public pages"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
