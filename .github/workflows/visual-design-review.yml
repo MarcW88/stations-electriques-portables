@@ -44,6 +44,8 @@ jobs:
         run: npm ci
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
+      - name: Confirm actual Chromium launch
+        run: node -e "import('@playwright/test').then(async ({chromium}) => { const b = await chromium.launch({headless:true}); console.log('CHROMIUM_SMOKE_PASS', b.version()); await b.close(); })"
       - name: Audit all guides in desktop and mobile
         run: npm run visual:guides -- --output .artifacts/design-review/guides
       - name: Upload screenshots and diagnostics
