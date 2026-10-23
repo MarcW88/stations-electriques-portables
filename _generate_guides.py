@@ -42,6 +42,16 @@ def build_toc(body: str) -> str:
     return "".join(links)
 
 
+def decorate_page(page: str) -> str:
+    if 'class="guides-page"' not in page:
+        page = page.replace('<body>', '<body class="guides-page">', 1)
+    if '/assets/guides.css' not in page:
+        page = page.replace('</head>', '<link rel="stylesheet" href="/assets/guides.css"><script src="/assets/guides.js" defer></script></head>', 1)
+    page = page.replace('<nav class="site-nav">', '<nav class="site-nav" id="guide-navigation" aria-label="Navigation principale">')
+    page = page.replace('<button class="burger">', '<button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="guide-navigation">')
+    return page
+
+
 def apply(slug: str, source: Path):
     target = BASE / "guides" / slug / "index.html"
     if not target.exists():
@@ -60,8 +70,13 @@ def apply(slug: str, source: Path):
     article = f'<article class="content-main">\n<!-- GUIDE_CONTENT_START -->\n{body}\n<!-- GUIDE_CONTENT_END -->\n</article>'
     page = replace_once(r'<article class="content-main">.*?</article>', article, page, f"{slug} article")
 
+    page = re.sub(r'<details class="mobile-toc">.*?</details>', "", page, flags=re.S)
     toc = build_toc(body)
     page = replace_once(r'(<nav class="toc-list">).*?(</nav>)', rf"\g<1>{toc}\2", page, f"{slug} toc")
+
+    mobile_toc = f'<details class="mobile-toc"><summary>Sommaire du guide</summary><nav class="toc-list" aria-label="Sommaire du guide">{toc}</nav></details>'
+    page = page.replace('<article class="content-main">', mobile_toc + '<article class="content-main">', 1)
+    page = decorate_page(page)
 
     if 'name="robots" content="noindex, follow"' not in page:
         raise ValueError(f"{slug}: noindex, follow must be preserved")
@@ -77,6 +92,12 @@ def main():
         raise SystemExit("no guide content sources found")
     for source in sources:
         apply(source.stem, source)
+    hub = BASE / "guides" / "index.html"
+    page = decorate_page(hub.read_text(encoding="utf-8"))
+    if 'href="/guides/calculer-capacite-station-electrique/" class="hub-link"' not in page:
+        card = '<a href="/guides/calculer-capacite-station-electrique/" class="hub-link"><div><div>Calculer la capacité</div><div class="hub-link-meta">Dimensionner le besoin en Wh</div></div><span>→</span></a>'
+        page = page.replace('<div class="hub-grid">', '<div class="hub-grid">' + card, 1)
+    hub.write_text(page, encoding="utf-8")
     print(f"PASS: generated {len(sources)} guides")
 
 
