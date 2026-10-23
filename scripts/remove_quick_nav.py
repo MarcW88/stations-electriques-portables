@@ -5,7 +5,7 @@ import re
 
 ROOT = Path(__file__).resolve().parent.parent
 PATTERN = re.compile(r'<div class="quick-nav">\s*<div class="quick-nav-inner">\s*<span class="qn-label">Accès rapide</span>\s*<div class="qn-links">.*?</div>\s*</div>\s*</div>', re.DOTALL)
-files = [p for p in ROOT.rglob('*.html') if '.agents' not in p.parts and '.github' not in p.parts]
+PATTERN = re.compile(r'<div class="quick-nav">\s*<div class="quick-nav-inner">\s*<span class="qn-label">Accès rapide</span>\s*<div class="qn-links">.*?</div>\s*</div>\s*</div>', re.DOTALL)
 files += [p for p in ROOT.glob('*.py')]
 changed = []
 for p in sorted(set(files)):
