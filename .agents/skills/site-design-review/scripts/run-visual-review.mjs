@@ -112,6 +112,8 @@ const report = {
 let browser;
 try {
   browser = await chromium.launch({ headless: true });
+  console.log(`CHROMIUM_LAUNCH_PASS: ${browser.version()}`);
+  console.log(`AUDIT_ROUTES: ${options.routes.length} x ${VIEWPORTS.length} viewports`);
 
   for (const viewport of VIEWPORTS) {
     const context = await browser.newContext({
@@ -128,9 +130,9 @@ try {
       });
       page.on('pageerror', error => pageErrors.push(error.message));
 
-      const response = await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle' });
+      const response = await page.goto(`${baseUrl}${route}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
       if (!response || response.status() >= 400) throw new Error(`Route inaccessible: ${route} (HTTP ${response?.status() ?? 'aucune réponse'})`);
-      await page.evaluate(() => document.fonts?.ready);
+      await Promise.race([page.evaluate(() => document.fonts?.ready), new Promise(resolve => setTimeout(resolve, 2500))]);
 
       const measurements = await page.evaluate(() => {
         const sidebar = document.querySelector('.content-sidebar');
@@ -182,7 +184,7 @@ try {
       if (viewport.name === 'mobile' && route === options.routes[0]) {
         const burger = page.locator('.burger');
         if (await burger.count()) {
-          await burger.click();
+          await burger.click({ timeout: 5000 });
           await page.screenshot({
             path: path.join(viewportFolder, `${slug(route)}--menu-open.png`),
             fullPage: false,
@@ -212,6 +214,7 @@ try {
   if (server) server.kill('SIGTERM');
 }
 
+if (report.pages.length !== options.routes.length * VIEWPORTS.length) throw new Error(`INCOMPLETE_AUDIT: expected ${options.routes.length * VIEWPORTS.length} pages, got ${report.pages.length}`);
 await writeFile(path.join(outputRoot, 'report.json'), `${JSON.stringify(report, null, 2)}\n`);
 console.log(`Captures créées : ${report.pages.length}`);
 console.log(`Rapport : ${path.join(outputRoot, 'report.json')}`);
