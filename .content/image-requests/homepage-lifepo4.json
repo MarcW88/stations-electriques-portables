@@ -1,0 +1,20 @@
+{
+  "id": "homepage-lifepo4",
+  "page": "index.html",
+  "slot": "lifepo4",
+  "required": true,
+  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:homepage-lifepo4 -->",
+  "output_path": "assets/generated/station-homepage-lifepo4.webp",
+  "prompt": "Photorealistic editorial product-category photograph: unbranded generic portable power station on neutral workshop bench next to a safely enclosed battery module casing with no exposed terminals, sophisticated material details, technical yet inviting, no diagram, no false specification labels, soft natural side lighting, no text no logo no watermark",
+  "width": 1024,
+  "height": 672,
+  "alt": "Station électrique et module batterie générique",
+  "caption": "",
+  "placement": "replace",
+  "prompt_upsampling": true,
+  "seed": null
+}
