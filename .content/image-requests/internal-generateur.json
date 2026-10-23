@@ -1,0 +1,19 @@
+{
+  "id": "internal-generateur",
+  "page": "solaire/generateur-solaire/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer la scène réelle de recharge solaire sans remplacer le schéma explicatif précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:internal-generateur -->",
+  "output_path": "assets/generated/internal-generateur-station.webp",
+  "prompt": "Premium realistic documentary editorial photograph of an unbranded portable power station recharging outdoors via a folding portable solar panel, panel and cable visibly connected on a sunny garden terrace, practical everyday setting, realistic product scale and ports, no logos no labels no text no diagrams, soft natural light.",
+  "alt": "Panneau solaire pliable rechargeant une station électrique générique",
+  "caption": "",
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null
+}
