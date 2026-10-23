@@ -1,0 +1,47 @@
+{
+  "max_pages": 10,
+  "routes": {
+    "guides": {
+      "workflow": "guide",
+      "cadence_days": 90,
+      "validator": "_validate_guides.py"
+    },
+    "puissance-capacite": {
+      "workflow": "guide",
+      "cadence_days": 90,
+      "validator": "_validate_guides.py"
+    },
+    "solaire": {
+      "workflow": "guide",
+      "cadence_days": 90,
+      "validator": "_validate_guides.py"
+    },
+    "comparatifs": {
+      "workflow": "comparison",
+      "cadence_days": 30,
+      "validator": "_validate_comparatifs.py"
+    },
+    "marques": {
+      "workflow": "brand",
+      "cadence_days": 45,
+      "validator": "_validate_brands.py"
+    }
+  },
+  "overrides": {
+    "/guides/": {
+      "enabled": false
+    },
+    "/puissance-capacite/": {
+      "enabled": false
+    },
+    "/solaire/": {
+      "enabled": false
+    },
+    "/comparatifs/": {
+      "enabled": false
+    },
+    "/marques/": {
+      "enabled": false
+    }
+  }
+}
