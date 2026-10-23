@@ -60,7 +60,8 @@ function parseArgs(argv) {
     throw new Error(`Scope inconnu : ${options.scope}. Scopes disponibles : ${Object.keys(SCOPES).join(', ')}`);
   }
   if (!options.routes.length && options.scope) options.routes = SCOPES[options.scope];
-  if (!options.routes.length) options.routes = ['/marques/'];
+  if (!options.routes.length && options.scope) throw new Error(`Aucune page trouvée pour le scope ${options.scope}`);
+  if (!options.routes.length) options.routes = ['/guides/'];
   return options;
 }
 
@@ -128,6 +129,7 @@ try {
       page.on('pageerror', error => pageErrors.push(error.message));
 
       const response = await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle' });
+      if (!response || response.status() >= 400) throw new Error(`Route inaccessible: ${route} (HTTP ${response?.status() ?? 'aucune réponse'})`);
       await page.evaluate(() => document.fonts?.ready);
 
       const measurements = await page.evaluate(() => {
@@ -198,6 +200,9 @@ try {
         pageErrors,
         ...measurements
       });
+      if (pageErrors.length || consoleErrors.length) {
+        console.warn(`Erreurs navigateur sur ${route} (${viewport.name}):`, { pageErrors, consoleErrors });
+      }
       await page.close();
     }
     await context.close();
