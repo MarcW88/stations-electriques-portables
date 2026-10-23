@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "**/*.html"
+      - "content/**"
       - "CNAME"
       - ".nojekyll"
       - ".github/workflows/publish-pages.yml"
