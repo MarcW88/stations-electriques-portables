@@ -5,100 +5,29 @@ import { spawn } from 'node:child_process';
 import { mkdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-const BRAND_ROUTES = [
-  '/marques/',
-  '/marques/remarkable/',
-  '/marques/remarkable/remarkable-paper-pro/',
-  '/marques/remarkable/remarkable-paper-pro-avis/',
-  '/marques/remarkable/remarkable-2/',
-  '/marques/remarkable/remarkable-2-avis/',
-  '/marques/remarkable/abonnement-connect/',
-  '/marques/remarkable/accessoires/',
-  '/marques/remarkable/alternatives/',
-  '/marques/boox/',
-  '/marques/boox/boox-note-air/',
-  '/marques/boox/boox-tab-ultra/',
-  '/marques/boox/avis/',
-  '/marques/boox/accessoires/',
-  '/marques/boox/alternatives/',
-  '/marques/kindle-scribe/',
-  '/marques/kobo-elipsa/',
-  '/marques/supernote/'
-];
+// Discover real HTML routes in this repository, instead of inheriting routes
+// from the Bloc-notes numérique reference project.
+import { existsSync, readdirSync } from 'node:fs';
 
-const COMPARISON_ROUTES = [
-  '/comparatifs/',
-  '/comparatifs/meilleur-bloc-notes-numerique/',
-  '/comparatifs/tablette-e-ink/',
-  '/comparatifs/bloc-notes-numerique-professionnel/',
-  '/comparatifs/bloc-notes-numerique-etudiant/',
-  '/comparatifs/bloc-notes-numerique-couleur/',
-  '/comparatifs/bloc-notes-numerique-a4/',
-  '/comparatifs/bloc-notes-numerique-sans-abonnement/',
-  '/comparatifs/bloc-notes-numerique-pas-cher/',
-  '/comparatifs/kindle-scribe-vs-remarkable/',
-  '/comparatifs/kindle-scribe-vs-kobo-elipsa/',
-  '/comparatifs/remarkable-vs-boox/',
-  '/comparatifs/remarkable-vs-supernote/',
-  '/comparatifs/boox-vs-supernote/',
-  '/comparatifs/kobo-elipsa-vs-remarkable/'
-];
-
-const USAGE_ROUTES = [
-  '/usages/',
-  '/usages/prise-de-notes-professionnelle/',
-  '/usages/prise-de-notes-etudiant/',
-  '/usages/prise-de-notes-reunion/',
-  '/usages/lecture-et-prise-de-notes/',
-  '/usages/dessin/',
-  '/usages/remplacer-cahiers-papier/'
-];
-
-const GUIDE_ROUTES = [
-  '/guides/',
-  '/guides/choisir-bloc-notes-numerique/',
-  '/guides/liseuse-ou-bloc-notes-numerique/',
-  '/guides/tablette-classique-ou-tablette-e-ink/',
-  '/guides/taille-ecran-bloc-notes-numerique/',
-  '/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/',
-  '/guides/bloc-notes-numerique-avec-ou-sans-abonnement/',
-  '/guides/prix-bloc-notes-numerique/',
-  '/guides/tablette-e-ink/',
-  '/guides/encre-electronique-fonctionnement/',
-  '/guides/latence-ecriture/',
-  '/guides/ocr-manuscrit/',
-  '/guides/autonomie-tablette-e-ink/',
-  '/guides/formats-fichiers-compatibles/',
-  '/guides/exporter-notes/',
-  '/guides/synchroniser-notes-cloud/',
-  '/guides/bloc-notes-numerique-google-drive/',
-  '/guides/bloc-notes-numerique-onedrive/',
-  '/guides/bloc-notes-numerique-dropbox/',
-  '/guides/ecosysteme-ouvert-ou-ferme/',
-  '/guides/annoter-pdf-tablette-e-ink/',
-  '/guides/convertir-notes-manuscrites-en-texte/',
-  '/guides/organiser-notes-numeriques/',
-  '/guides/transfert-notes-vers-ordinateur/',
-  '/guides/imprimer-notes-numeriques/'
-];
-
-const DEAL_ROUTES = [
-  '/bons-plans/',
-  '/bons-plans/bloc-notes-numerique/',
-  '/bons-plans/remarkable/',
-  '/bons-plans/kindle-scribe/',
-  '/bons-plans/kobo-elipsa/',
-  '/bons-plans/boox/',
-  '/bons-plans/bloc-notes-numerique-occasion/',
-  '/bons-plans/black-friday/'
-];
+function discoverRoutes(section) {
+  const routes = [];
+  const walk = (directory, route) => {
+    if (!existsSync(directory)) return;
+    if (existsSync(path.join(directory, 'index.html'))) routes.push(route);
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      if (entry.isDirectory()) walk(path.join(directory, entry.name), route + entry.name + '/');
+    }
+  };
+  walk(section, '/' + section + '/');
+  return routes;
+}
 
 const SCOPES = {
-  brands: BRAND_ROUTES,
-  comparisons: COMPARISON_ROUTES,
-  usages: USAGE_ROUTES,
-  guides: GUIDE_ROUTES,
-  deals: DEAL_ROUTES
+  brands: discoverRoutes('marques'),
+  comparisons: discoverRoutes('comparatifs'),
+  usages: discoverRoutes('usages'),
+  guides: discoverRoutes('guides'),
+  deals: discoverRoutes('bons-plans')
 };
 
 const VIEWPORTS = [
@@ -204,10 +133,10 @@ try {
       const measurements = await page.evaluate(() => {
         const sidebar = document.querySelector('.content-sidebar');
         const headings = [...document.querySelectorAll('.content-main h2, .content-main h3')];
-        const toc = document.querySelector('.sidebar-toc');
-        const tocLinks = [...document.querySelectorAll('.sidebar-toc a')];
+        const toc = document.querySelector('.sidebar-toc, .toc-list');
+        const tocLinks = [...document.querySelectorAll('.sidebar-toc a, .toc-list a')];
         const fixedHeader = document.querySelector('.site-header');
-        const tables = [...document.querySelectorAll('.table-wrapper')];
+        const tables = [...document.querySelectorAll('.table-wrapper, .table-wrap')];
         const articleAnswer = document.querySelector('.article-answer');
         const firstEditorialLink = document.querySelector('.content-main a:not(.btn)');
         return {
