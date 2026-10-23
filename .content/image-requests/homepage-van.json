@@ -1,0 +1,20 @@
+{
+  "id": "homepage-van",
+  "page": "index.html",
+  "slot": "van",
+  "required": true,
+  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:homepage-van -->",
+  "output_path": "assets/generated/station-homepage-van.webp",
+  "prompt": "Photorealistic documentary-style editorial photo of an unbranded portable power station inside the sliding doorway of a campervan, charging a camera and laptop with neat cables, soft daylight, visible practical van interior and storage, realistic proportions, restrained colors, no brands no writing no watermark",
+  "width": 1024,
+  "height": 672,
+  "alt": "Station électrique dans un van aménagé",
+  "caption": "",
+  "placement": "replace",
+  "prompt_upsampling": true,
+  "seed": null
+}
