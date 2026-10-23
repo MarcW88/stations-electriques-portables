@@ -15,18 +15,18 @@ ROOT = Path(__file__).resolve().parent.parent
 REQUESTS = ROOT / ".content/image-requests"
 EXCLUDED = {"modeles", "marques", "accessoires", "comparatifs"}
 EDITORIAL = {"usages", "guides", "solaire", "puissance-capacite"}
-FIGURE = re.compile(r"<figure\\b[^>]*>.*?</figure\\s*>", re.I | re.S)
-IMG = re.compile(r"<img\\b[^>]*>", re.I | re.S)
-SRC = re.compile(r'\\bsrc\\s*=\\s*["\\']([^"\\']+)["\\']', re.I)
-ALT = re.compile(r'\\balt\\s*=\\s*["\\']([^"\\']*)["\\']', re.I)
-TITLE = re.compile(r"<h1\\b[^>]*>(.*?)</h1>", re.I | re.S)
+FIGURE = re.compile(r"<figure\b[^>]*>.*?</figure\s*>", re.I | re.S)
+IMG = re.compile(r"<img\b[^>]*>", re.I | re.S)
+SRC = re.compile(r"""src\s*=\s*['"]([^'"]+)['"]""", re.I)
+ALT = re.compile(r"""alt\s*=\s*['"]([^'"]*)['"]""", re.I)
+TITLE = re.compile(r"<h1\b[^>]*>(.*?)</h1>", re.I | re.S)
 TAGS = re.compile(r"<[^>]+>")
 GENERATED = re.compile(r"/?assets/generated/", re.I)
 STOCK = ("commons.wikimedia.org", "upload.wikimedia.org", "unsplash.com",
          "pexels.com", "pixabay.com", "images.pexels.com")
 PRODUCT = ("ecoflow", "bluetti", "jackery", "anker", "aferiy", "allpowers",
            "izywatt", "or ium", "amazon", "cdn.shopify", "shopify.com")
-SVG_EDITORIAL = re.compile(r"(?:^|/)editorial-[a-z0-9-]+\\.svg(?:\\?.*)?$", re.I)
+SVG_EDITORIAL = re.compile(r"(?:^|/)editorial-[a-z0-9-]+\.svg(?:\?.*)?$", re.I)
 
 def candidate(img, path):
     src_match = SRC.search(img)
@@ -99,7 +99,7 @@ def main():
             if updated == page:
                 continue
             page = updated
-            destination.write_text(json.dumps(request, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+            destination.write_text(json.dumps(request, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             count += 1
         if count and page != file.read_text(encoding="utf-8"):
             file.write_text(page, encoding="utf-8")
