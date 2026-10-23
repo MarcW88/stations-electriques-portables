@@ -1,0 +1,19 @@
+{
+  "id": "internal-lifepo4",
+  "page": "guides/lifepo4-ou-lithium-ion/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Ajouter une photographie originale pertinente dans une page technique ou remplacer une image externe.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:internal-lifepo4 -->",
+  "output_path": "assets/generated/internal-lifepo4-station.webp",
+  "prompt": "Photorealistic premium specialist editorial photography about portable electrical stations: Generic power station on a technical workbench next to a securely closed unbranded battery module, editorial photography. Credible real materials, realistic cables and proportions, soft natural light, composition suitable for a French independent technical buying guide, no brand marks, no writing, no watermark, no artificial CGI appearance.",
+  "alt": "Illustration éditoriale : lifepo4",
+  "caption": "",
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null
+}
