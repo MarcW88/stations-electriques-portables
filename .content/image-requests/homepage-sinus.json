@@ -1,0 +1,20 @@
+{
+  "id": "homepage-sinus",
+  "page": "index.html",
+  "slot": "sinus",
+  "required": true,
+  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:homepage-sinus -->",
+  "output_path": "assets/generated/station-homepage-sinus.webp",
+  "prompt": "Photorealistic editorial photograph of a portable power station on a modern work desk visibly powering a small audio speaker and laptop through realistic AC cables, home studio context, clean honest composition emphasizing connected AC devices without charts, natural light, no brands no text no watermark",
+  "width": 1024,
+  "height": 672,
+  "alt": "Station électrique alimentant des appareils électroniques",
+  "caption": "",
+  "placement": "replace",
+  "prompt_upsampling": true,
+  "seed": null
+}
