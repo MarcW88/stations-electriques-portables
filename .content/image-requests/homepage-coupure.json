@@ -1,0 +1,20 @@
+{
+  "id": "homepage-coupure",
+  "page": "index.html",
+  "slot": "coupure",
+  "required": true,
+  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:homepage-coupure -->",
+  "output_path": "assets/generated/station-homepage-coupure.webp",
+  "prompt": "Photorealistic editorial indoor scene during a power outage, generic unbranded portable power station on the floor of a warm living room, visibly powering one lamp and home internet router via tidy cables, exterior dim evening through window, authentic residential setting, no brands no text no watermark",
+  "width": 1024,
+  "height": 672,
+  "alt": "Batterie portable alimentant une lampe et un routeur lors d'une coupure",
+  "caption": "",
+  "placement": "replace",
+  "prompt_upsampling": true,
+  "seed": null
+}
