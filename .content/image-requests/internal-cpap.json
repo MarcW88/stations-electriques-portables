@@ -1,0 +1,19 @@
+{
+  "id": "internal-cpap",
+  "page": "usages/station-electrique-cpap/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Remplacer une illustration générique/externe ou combler l'absence d'image éditoriale utile.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:internal-cpap -->",
+  "output_path": "assets/generated/internal-cpap-station.webp",
+  "prompt": "Photorealistic premium specialist editorial photography about portable electrical stations: Generic portable backup battery by a bedside generic CPAP device with mask, no implication of certified compatibility. Credible real materials, realistic cables and proportions, soft natural light, composition suitable for a French independent technical buying guide, no brand marks, no writing, no watermark, no artificial CGI appearance.",
+  "alt": "Illustration éditoriale : cpap",
+  "caption": "",
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null
+}
