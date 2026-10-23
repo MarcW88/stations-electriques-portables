@@ -1,0 +1,20 @@
+{
+  "id": "homepage-camping",
+  "page": "index.html",
+  "slot": "camping",
+  "required": true,
+  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:homepage-camping -->",
+  "output_path": "assets/generated/station-homepage-camping.webp",
+  "prompt": "Realistic editorial photograph of a compact unbranded portable battery power station supplying a warm LED lantern and a small electric camping cooler beside a tent, quiet French campsite at dawn, authentic camping equipment, battery and cable visibly connected, natural photographic lighting, no logos no text no watermark",
+  "width": 1024,
+  "height": 672,
+  "alt": "Station portable avec glacière et lampe dans un campement",
+  "caption": "",
+  "placement": "replace",
+  "prompt_upsampling": true,
+  "seed": null
+}
