@@ -19,6 +19,7 @@ on:
       - 'bons-plans/**/index.html'
       - 'assets/generated/**'
       - 'scripts/generate_bfl_images.py'
+      - 'scripts/plan_site_bfl_replacements.py'
       - '.github/workflows/generate-editorial-images.yml'
   workflow_dispatch:
 
@@ -47,6 +48,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Plan replacements throughout the site
+        run: python scripts/plan_site_bfl_replacements.py
 
       - name: Validate image requests and detect work
         id: inspect
@@ -79,6 +83,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Plan replacements throughout the site
+        run: python scripts/plan_site_bfl_replacements.py
 
       - name: Generate or restore approved images
         env:
