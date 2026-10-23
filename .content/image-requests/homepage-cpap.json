@@ -1,0 +1,20 @@
+{
+  "id": "homepage-cpap",
+  "page": "index.html",
+  "slot": "cpap",
+  "required": true,
+  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:homepage-cpap -->",
+  "output_path": "assets/generated/station-homepage-cpap.webp",
+  "prompt": "Photorealistic editorial photograph showing a generic unbranded portable battery station near a bedside table with a generic CPAP machine and mask, power connection apparent but not suggesting medically validated compatibility, calm bedroom, morning light, discreet technically plausible equipment, no text no logos no watermark",
+  "width": 1024,
+  "height": 672,
+  "alt": "Batterie portable à côté d'un appareil CPAP générique",
+  "caption": "",
+  "placement": "replace",
+  "prompt_upsampling": true,
+  "seed": null
+}
