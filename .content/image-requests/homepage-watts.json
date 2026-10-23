@@ -1,0 +1,20 @@
+{
+  "id": "homepage-watts",
+  "page": "index.html",
+  "slot": "watts",
+  "required": true,
+  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:homepage-watts -->",
+  "output_path": "assets/generated/station-homepage-watts.webp",
+  "prompt": "Photorealistic premium editorial still life of an unbranded portable power station alongside a laptop and LED lamp on a wooden desk, tidy visible power cables and a notebook with completely blank pages, softly lit technical decision-making scene illustrating electrical power and stored energy without text or infographics, no logos no watermark",
+  "width": 1024,
+  "height": 672,
+  "alt": "Station électrique et appareils pour comprendre les watts et watt-heures",
+  "caption": "",
+  "placement": "replace",
+  "prompt_upsampling": true,
+  "seed": null
+}
