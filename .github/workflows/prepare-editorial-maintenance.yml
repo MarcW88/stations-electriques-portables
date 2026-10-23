@@ -1,0 +1,43 @@
+name: Prepare editorial maintenance (chat)
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_pages:
+        description: 'Maximum pages to prepare (1–100)'
+        type: number
+        required: false
+        default: 10
+      urls:
+        description: 'Optional comma-separated page paths'
+        type: string
+        required: false
+        default: ''
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/maintenance_orchestrator.py'
+      - 'maintenance.config.json'
+      - '.content/maintenance/index.json'
+      - '.github/workflows/prepare-editorial-maintenance.yml'
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate shared agent installation
+        run: python3 scripts/verify_site_agents.py
+      - name: Prepare editorial handoff
+        env:
+          MAX_PAGES: ${{ github.event.inputs.max_pages || '10' }}
+          URLS: ${{ github.event.inputs.urls || '' }}
+        run: python3 scripts/maintenance_orchestrator.py prepare --max-pages "$MAX_PAGES" --urls "$URLS"
+      - name: Upload prepared plan (not an AI audit)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-maintenance-handoff
+          path: .artifacts/maintenance/
+          if-no-files-found: warn
+          retention-days: 14
