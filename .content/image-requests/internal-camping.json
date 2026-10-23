@@ -1,0 +1,19 @@
+{
+  "id": "internal-camping",
+  "page": "usages/station-electrique-camping/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Remplacer une illustration générique/externe ou combler l'absence d'image éditoriale utile.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:internal-camping -->",
+  "output_path": "assets/generated/internal-camping-station.webp",
+  "prompt": "Photorealistic premium specialist editorial photography about portable electrical stations: Generic portable power station powering a lantern and camping cooler beside a tent in a French campground at dawn. Credible real materials, realistic cables and proportions, soft natural light, composition suitable for a French independent technical buying guide, no brand marks, no writing, no watermark, no artificial CGI appearance.",
+  "alt": "Illustration éditoriale : camping",
+  "caption": "",
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null
+}
