@@ -1,0 +1,20 @@
+{
+  "id": "guide-recharge-voiture",
+  "page": "guides/recharger-station-electrique-voiture/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Remplacer l'absence d'illustration éditoriale pertinente par une photographie contextuelle BFL, sans créer de faux visuels produit.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:guide-recharge-voiture -->",
+  "output_path": "assets/generated/guide-recharge-voiture.webp",
+  "prompt": "Realistic editorial documentary photograph of an unbranded portable power station being safely charged from a parked car's 12V socket via a visible car charging cable, car parked outdoors near a campsite, correctly scaled generic device, natural light, no labels, no logos, no fake test claims, no text, no watermarks.",
+  "alt": "Recharge d'une station électrique portable générique depuis une voiture",
+  "caption": "",
+  "placement": "replace",
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null
+}
