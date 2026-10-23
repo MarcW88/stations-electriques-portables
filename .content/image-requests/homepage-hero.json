@@ -3,7 +3,7 @@
   "page": "index.html",
   "slot": "hero",
   "required": true,
-  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "reason": "Créer une photographie éditoriale originale d'une station portable réellement identifiable comme batterie électrique, pour remplacer l'image générique actuelle du hero et soutenir le choix du visiteur.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
   "status": "PENDING",
