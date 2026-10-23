@@ -1,0 +1,20 @@
+{
+  "id": "guide-batterie-nomade",
+  "page": "guides/batterie-nomade-ou-station-electrique/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer visuellement les différences d'échelle et d'usage entre batterie USB-C et station électrique générique sans imiter de produit commercial",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:guide-batterie-nomade -->",
+  "output_path": "assets/generated/guide-batterie-nomade.webp",
+  "prompt": "Photorealistic specialist editorial photograph for French portable power guide. Side-by-side on a natural wooden worktable: one ordinary small smartphone USB-C power bank on the left, a noticeably larger anonymous unbranded portable electric power station with AC outlets on right, laptop and small camping lamp nearby, accurate plausible electrical proportions and cable connections. Natural daylight, documentary magazine photography, neutral palette, no brand, no logos, no readable text, no labels, no watermarks, no fake specifications.",
+  "alt": "Petite batterie nomade USB-C à côté d'une station électrique portable générique",
+  "caption": "",
+  "placement": "replace",
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null
+}
