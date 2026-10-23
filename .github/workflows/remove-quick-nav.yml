@@ -1,0 +1,33 @@
+name: Remove quick access menu across site
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/remove_quick_nav.py
+      - .github/workflows/remove-quick-nav.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  remove:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Remove quick navigation from pages and generators
+        run: python scripts/remove_quick_nav.py
+      - name: Commit and publish on main
+        run: |
+          git config user.name "Marc Williame"
+          git config user.email "146358493+MarcW88@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(ui): remove quick access menu across site"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
