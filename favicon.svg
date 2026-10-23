@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Stations électriques portables</title>
+  <rect width="64" height="64" rx="14" fill="#0e172a"/>
+  <rect x="20" y="12" width="24" height="42" rx="5" fill="#ffffff"/>
+  <rect x="27" y="8" width="10" height="6" rx="2" fill="#16b8a6"/>
+  <rect x="23" y="15" width="18" height="36" rx="3" fill="#173a45"/>
+  <path d="M34 20 25 35h8l-3 11 11-17h-8z" fill="#16b8a6"/>
+</svg>
