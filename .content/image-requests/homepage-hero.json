@@ -6,7 +6,7 @@
   "reason": "Créer une photographie éditoriale originale d'une station portable réellement identifiable comme batterie électrique, pour remplacer l'image générique actuelle du hero et soutenir le choix du visiteur.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:homepage-hero -->",
   "output_path": "assets/generated/station-homepage-hero.webp",
   "prompt": "Premium natural-light editorial photograph, a realistic generic unbranded portable power station with visible AC outlets in foreground on a wooden surface, powering a small camping lantern next to a compact laptop, discreet foldable solar panel in background, carefully composed modern weekend campsite, unmistakably a portable electricity battery system, premium technical magazine photography, plausible cables and details, neutral graphite and muted teal, no logos no words no watermarks, landscape 3:2",
@@ -16,5 +16,9 @@
   "caption": "",
   "placement": "replace",
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "dc4437c0-cc2e-409b-a998-f000a0a1ffdd",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T14:09:15.774448+00:00"
 }

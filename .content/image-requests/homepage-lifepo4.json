@@ -6,7 +6,7 @@
   "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:homepage-lifepo4 -->",
   "output_path": "assets/generated/station-homepage-lifepo4.webp",
   "prompt": "Photorealistic editorial product-category photograph: unbranded generic portable power station on neutral workshop bench next to a safely enclosed battery module casing with no exposed terminals, sophisticated material details, technical yet inviting, no diagram, no false specification labels, soft natural side lighting, no text no logo no watermark",
@@ -16,5 +16,9 @@
   "caption": "",
   "placement": "replace",
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "71c69ae3-9aa2-42c6-9378-878a7793a793",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T14:09:23.713026+00:00"
 }

@@ -6,7 +6,7 @@
   "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:homepage-watts -->",
   "output_path": "assets/generated/station-homepage-watts.webp",
   "prompt": "Photorealistic premium editorial still life of an unbranded portable power station alongside a laptop and LED lamp on a wooden desk, tidy visible power cables and a notebook with completely blank pages, softly lit technical decision-making scene illustrating electrical power and stored energy without text or infographics, no logos no watermark",
@@ -16,5 +16,9 @@
   "caption": "",
   "placement": "replace",
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "e625f02e-f8d0-4884-97f7-2b1dfcc3e1ad",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T14:09:55.401485+00:00"
 }

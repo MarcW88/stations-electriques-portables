@@ -6,7 +6,7 @@
   "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:homepage-solaire -->",
   "output_path": "assets/generated/station-homepage-solaire.webp",
   "prompt": "Natural-light editorial photograph of a large folding portable solar panel outdoors connected by a visible cable to a generic unbranded portable power station, grassy terrace, clear sky, practical charging setup, physically plausible scale, no branding no text no watermark",
@@ -16,5 +16,9 @@
   "caption": "",
   "placement": "replace",
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "d9c77941-a740-4435-a628-27511c107bf9",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T14:09:40.497344+00:00"
 }

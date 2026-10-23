@@ -6,7 +6,7 @@
   "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:homepage-van -->",
   "output_path": "assets/generated/station-homepage-van.webp",
   "prompt": "Photorealistic documentary-style editorial photo of an unbranded portable power station inside the sliding doorway of a campervan, charging a camera and laptop with neat cables, soft daylight, visible practical van interior and storage, realistic proportions, restrained colors, no brands no writing no watermark",
@@ -16,5 +16,9 @@
   "caption": "",
   "placement": "replace",
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "475f4011-6744-468f-a91e-47890c9ac2c8",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T14:09:49.293786+00:00"
 }

@@ -6,7 +6,7 @@
   "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:homepage-camping -->",
   "output_path": "assets/generated/station-homepage-camping.webp",
   "prompt": "Realistic editorial photograph of a compact unbranded portable battery power station supplying a warm LED lantern and a small electric camping cooler beside a tent, quiet French campsite at dawn, authentic camping equipment, battery and cable visibly connected, natural photographic lighting, no logos no text no watermark",
@@ -16,5 +16,9 @@
   "caption": "",
   "placement": "replace",
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "05344d37-97a2-4000-8d6a-ff14c8e19ca8",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T14:08:49.343804+00:00"
 }
