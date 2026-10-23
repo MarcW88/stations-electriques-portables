@@ -1,0 +1,20 @@
+{
+  "id": "homepage-chantier",
+  "page": "index.html",
+  "slot": "chantier",
+  "required": true,
+  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:homepage-chantier -->",
+  "output_path": "assets/generated/station-homepage-chantier.webp",
+  "prompt": "Photorealistic editorial photograph of a generic portable power station being used at a renovation site, safely supplying a small low-consumption work light beside hand tools and protective gear, clean credible electrical connections, daylight from workshop window, dusty but tidy setting, no branding no text no watermark",
+  "width": 1024,
+  "height": 672,
+  "alt": "Station électrique portable utilisée sur un chantier",
+  "caption": "",
+  "placement": "replace",
+  "prompt_upsampling": true,
+  "seed": null
+}
