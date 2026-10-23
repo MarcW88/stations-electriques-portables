@@ -1,0 +1,19 @@
+{
+  "id": "internal-choisir",
+  "page": "guides/comment-choisir-station-electrique-portable/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Ajouter une photographie originale pertinente dans une page technique ou remplacer une image externe.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:internal-choisir -->",
+  "output_path": "assets/generated/internal-choisir-station.webp",
+  "prompt": "Photorealistic premium specialist editorial photography about portable electrical stations: Portable power station on desk near a folded solar panel, phone, laptop and portable lantern, illustrating practical selection criteria. Credible real materials, realistic cables and proportions, soft natural light, composition suitable for a French independent technical buying guide, no brand marks, no writing, no watermark, no artificial CGI appearance.",
+  "alt": "Illustration éditoriale : choisir",
+  "caption": "",
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null
+}
