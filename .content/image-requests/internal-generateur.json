@@ -6,7 +6,7 @@
   "reason": "Illustrer la scène réelle de recharge solaire sans remplacer le schéma explicatif précis.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:internal-generateur -->",
   "output_path": "assets/generated/internal-generateur-station.webp",
   "prompt": "Premium realistic documentary editorial photograph of an unbranded portable power station recharging outdoors via a folding portable solar panel, panel and cable visibly connected on a sunny garden terrace, practical everyday setting, realistic product scale and ports, no logos no labels no text no diagrams, soft natural light.",
@@ -15,5 +15,9 @@
   "width": 1024,
   "height": 672,
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "f394536b-abfc-4ce6-af62-9caec60c19f9",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T14:28:13.909716+00:00"
 }

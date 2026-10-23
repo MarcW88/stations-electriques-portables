@@ -6,7 +6,7 @@
   "reason": "Remplacer une illustration générique/externe ou combler l'absence d'image éditoriale utile.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:internal-camping -->",
   "output_path": "assets/generated/internal-camping-station.webp",
   "prompt": "Photorealistic premium specialist editorial photography about portable electrical stations: Generic portable power station powering a lantern and camping cooler beside a tent in a French campground at dawn. Credible real materials, realistic cables and proportions, soft natural light, composition suitable for a French independent technical buying guide, no brand marks, no writing, no watermark, no artificial CGI appearance.",
@@ -15,5 +15,9 @@
   "width": 1024,
   "height": 672,
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "8f9b2222-9162-4d73-890b-b20a2f5779f9",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T14:27:34.580278+00:00"
 }

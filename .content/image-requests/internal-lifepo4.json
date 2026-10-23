@@ -6,7 +6,7 @@
   "reason": "Ajouter une photographie originale pertinente dans une page technique ou remplacer une image externe.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:internal-lifepo4 -->",
   "output_path": "assets/generated/internal-lifepo4-station.webp",
   "prompt": "Photorealistic premium specialist editorial photography about portable electrical stations: Generic power station on a technical workbench next to a securely closed unbranded battery module, editorial photography. Credible real materials, realistic cables and proportions, soft natural light, composition suitable for a French independent technical buying guide, no brand marks, no writing, no watermark, no artificial CGI appearance.",
@@ -15,5 +15,9 @@
   "width": 1024,
   "height": 672,
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "50cd46ea-d9e6-4e70-a89c-56ce627caa69",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T14:28:21.857893+00:00"
 }
