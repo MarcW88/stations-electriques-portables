@@ -1,0 +1,20 @@
+{
+  "id": "homepage-solaire",
+  "page": "index.html",
+  "slot": "solaire",
+  "required": true,
+  "reason": "Photographie éditoriale originale et thématiquement pertinente pour une section de la homepage",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<!-- EDITORIAL_IMAGE:homepage-solaire -->",
+  "output_path": "assets/generated/station-homepage-solaire.webp",
+  "prompt": "Natural-light editorial photograph of a large folding portable solar panel outdoors connected by a visible cable to a generic unbranded portable power station, grassy terrace, clear sky, practical charging setup, physically plausible scale, no branding no text no watermark",
+  "width": 1024,
+  "height": 672,
+  "alt": "Panneau solaire pliable rechargeant une station électrique portable",
+  "caption": "",
+  "placement": "replace",
+  "prompt_upsampling": true,
+  "seed": null
+}
