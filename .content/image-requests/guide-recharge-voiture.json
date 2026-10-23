@@ -6,7 +6,7 @@
   "reason": "Remplacer l'absence d'illustration éditoriale pertinente par une photographie contextuelle BFL, sans créer de faux visuels produit.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:guide-recharge-voiture -->",
   "output_path": "assets/generated/guide-recharge-voiture.webp",
   "prompt": "Realistic editorial documentary photograph of an unbranded portable power station being safely charged from a parked car's 12V socket via a visible car charging cable, car parked outdoors near a campsite, correctly scaled generic device, natural light, no labels, no logos, no fake test claims, no text, no watermarks.",
@@ -16,5 +16,9 @@
   "width": 1024,
   "height": 672,
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "1db9f76a-f003-4ac8-9156-95038b291ae0",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T15:42:41.507917+00:00"
 }

@@ -6,7 +6,7 @@
   "reason": "Remplacer l'absence d'illustration éditoriale pertinente par une photographie contextuelle BFL, sans créer de faux visuels produit.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<!-- EDITORIAL_IMAGE:guide-recharge-rapide -->",
   "output_path": "assets/generated/guide-recharge-rapide.webp",
   "prompt": "Photorealistic independent specialist editorial photo of an unbranded portable power station on a neat home utility worktop, a realistic wall power cable plugged into a socket as device recharges, natural daylight and tidy domestic surroundings, no brands, no legible markings, no technical numerical claims, no CGI, no text or watermarks.",
@@ -16,5 +16,9 @@
   "width": 1024,
   "height": 672,
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "0aa94e06-808c-4716-b465-3f56908e6702",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-10-23T15:42:34.609707+00:00"
 }
