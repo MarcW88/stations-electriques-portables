@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
+      - main
       - content/marques-workflow
       - adapt-brand-workflows-stations
     paths:
@@ -17,6 +18,9 @@ on:
       - 'brand-workflow.config.yaml'
       - '_generate_brands.py'
       - '_validate_brands.py'
+      - 'style.css'
+      - 'brand.css'
+      - 'marques/**'
       - '.github/workflows/generate-brands-content.yml'
   pull_request:
     paths:
@@ -28,6 +32,8 @@ on:
       - 'brand-workflow.config.yaml'
       - '_generate_brands.py'
       - '_validate_brands.py'
+      - 'style.css'
+      - 'brand.css'
       - 'marques/**'
       - '.github/workflows/generate-brands-content.yml'
 
@@ -55,18 +61,34 @@ jobs:
       - name: Restore researched comparisons
         run: python _generate_comparatifs.py
 
-      - name: Generate seven brand hubs
+      - name: Generate brand hub and seven brand pages
         run: python _generate_brands.py
 
       - name: Run repo-specific hard brand invariants
         run: python _validate_brands.py
+
+      - name: Check brand design hooks
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          pages = sorted(Path('marques').glob('*/index.html'))
+          hub = Path('marques/index.html')
+          assert 'class="brand-hub-page"' in hub.read_text(encoding='utf-8'), hub
+          for p in pages:
+              s = p.read_text(encoding='utf-8')
+              assert 'class="brand-page"' in s, p
+              assert 'class="brand-mobile-toc"' in s, p
+              assert 'class="brand-sources"' in s, p
+              assert 'class="table-wrap"' not in s, p
+          print('PASS: brand-only design hooks present')
+          PY
 
       - name: Check idempotence
         run: |
           python - <<'PY'
           from pathlib import Path
           import hashlib, subprocess
-          pages = sorted(Path('marques').glob('*/index.html'))
+          pages = [Path('marques/index.html'), *sorted(Path('marques').glob('*/index.html'))]
           before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
           subprocess.run(['python', '_generate_brands.py'], check=True)
           after = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in pages}
@@ -81,7 +103,8 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import re
-          for p in Path('marques').glob('*/index.html'):
+          pages = [Path('marques/index.html'), *Path('marques').glob('*/index.html')]
+          for p in pages:
               s=p.read_text(encoding='utf-8')
               assert re.search(r'name="robots"\s+content="noindex,\s*follow"', s, re.I), p
           print('PASS: noindex, follow preserved')
@@ -98,7 +121,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add marques/*/index.html
+          git add marques/index.html marques/*/index.html
           if git diff --cached --quiet; then
             echo 'No rendered changes to commit'
           else
