@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T11:02:23.223Z",
+  "generatedAt": "2026-10-24T09:19:56.920Z",
   "baseUrl": "http://127.0.0.1:4173",
   "scope": "guides",
   "routes": [
@@ -52,7 +52,7 @@
       "articleAnswer": null,
       "firstEditorialLink": null,
       "sidebar": null,
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/batterie-nomade-ou-station-electrique/",
@@ -84,10 +84,10 @@
       },
       "sidebar": {
         "height": 591,
-        "top": 422,
+        "top": 386,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/calculer-autonomie-station-electrique/",
@@ -119,10 +119,10 @@
       },
       "sidebar": {
         "height": 591,
-        "top": 501,
+        "top": 465,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/calculer-capacite-station-electrique/",
@@ -154,10 +154,10 @@
       },
       "sidebar": {
         "height": 571,
-        "top": 471,
+        "top": 435,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/comment-choisir-station-electrique-portable/",
@@ -189,10 +189,10 @@
       },
       "sidebar": {
         "height": 571,
-        "top": 501,
+        "top": 465,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/duree-vie-cycles-batterie/",
@@ -224,10 +224,10 @@
       },
       "sidebar": {
         "height": 653,
-        "top": 501,
+        "top": 465,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/lifepo4-ou-lithium-ion/",
@@ -259,10 +259,10 @@
       },
       "sidebar": {
         "height": 571,
-        "top": 501,
+        "top": 465,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/onde-sinusoidale-pure/",
@@ -294,10 +294,10 @@
       },
       "sidebar": {
         "height": 612,
-        "top": 471,
+        "top": 435,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/recharge-rapide-station-electrique/",
@@ -329,10 +329,10 @@
       },
       "sidebar": {
         "height": 632,
-        "top": 471,
+        "top": 435,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/recharger-station-electrique-voiture/",
@@ -364,10 +364,10 @@
       },
       "sidebar": {
         "height": 632,
-        "top": 501,
+        "top": 465,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/station-electrique-portable-comment-ca-marche/",
@@ -399,10 +399,10 @@
       },
       "sidebar": {
         "height": 591,
-        "top": 451,
+        "top": 415,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/ups-eps-station-electrique/",
@@ -434,10 +434,10 @@
       },
       "sidebar": {
         "height": 653,
-        "top": 471,
+        "top": 435,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/watt-ou-watt-heure/",
@@ -469,10 +469,10 @@
       },
       "sidebar": {
         "height": 591,
-        "top": 501,
+        "top": 465,
         "position": "sticky"
       },
-      "headerHeight": 97
+      "headerHeight": 61
     },
     {
       "route": "/guides/",
@@ -533,7 +533,7 @@
       },
       "sidebar": {
         "height": 134,
-        "top": 5651,
+        "top": 5903,
         "position": "static"
       },
       "headerHeight": 61
@@ -638,7 +638,7 @@
       },
       "sidebar": {
         "height": 134,
-        "top": 5698,
+        "top": 5971,
         "position": "static"
       },
       "headerHeight": 61
@@ -713,7 +713,7 @@
       },
       "sidebar": {
         "height": 134,
-        "top": 6456,
+        "top": 6729,
         "position": "static"
       },
       "headerHeight": 61
@@ -748,7 +748,7 @@
       },
       "sidebar": {
         "height": 134,
-        "top": 5631,
+        "top": 5903,
         "position": "static"
       },
       "headerHeight": 61
@@ -783,7 +783,7 @@
       },
       "sidebar": {
         "height": 134,
-        "top": 5447,
+        "top": 5700,
         "position": "static"
       },
       "headerHeight": 61
@@ -818,7 +818,7 @@
       },
       "sidebar": {
         "height": 134,
-        "top": 5145,
+        "top": 5398,
         "position": "static"
       },
       "headerHeight": 61
@@ -928,7 +928,7 @@
       },
       "sidebar": {
         "height": 134,
-        "top": 6016,
+        "top": 6289,
         "position": "static"
       },
       "headerHeight": 61
