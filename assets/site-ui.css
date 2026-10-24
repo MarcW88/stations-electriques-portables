@@ -82,3 +82,21 @@
  .image-placement-page .model-overview img { height:240px!important; }
 }
 .image-placement-page .comparison-product-text { grid-template-columns:minmax(0,1fr); }
+
+
+/* Consistent product and brand image positioning across editorial pages. */
+.audited-page .brand-photo,.audited-page .product-photo { box-sizing:border-box; max-width:100%; }
+.audited-page .brand-photo img,.audited-page .product-photo img { display:block; max-width:100%; object-fit:contain; object-position:center; }
+.audited-page .image-placement-page .brand-photo { float:none; clear:both; }
+.image-placement-page .brand-photo { width:min(100%,320px); margin:20px auto 24px!important; text-align:center; }
+.image-placement-page .brand-photo img { width:100%; height:220px!important; object-fit:contain; object-position:center; }
+.image-placement-page .brand-photo figcaption { text-align:center; }
+.image-placement-page .comparison-product-body > .product-photo,.image-placement-page .model-overview > .product-photo { min-width:0; align-self:start; }
+.image-placement-page .comparison-product .product-photo img { max-height:240px; }
+.image-placement-page .model-overview img { max-height:260px; }
+@media(max-width:768px) {
+ .image-placement-page .brand-photo { width:min(100%,260px); margin:16px auto 20px!important; }
+ .image-placement-page .brand-photo img { height:190px!important; }
+ .image-placement-page .comparison-product .product-photo img { max-height:200px; }
+ .image-placement-page .model-overview img { max-height:220px; }
+}
