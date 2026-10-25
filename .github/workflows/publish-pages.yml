@@ -6,6 +6,7 @@ on:
     paths:
       - "**/*.html"
       - "content/**"
+      - "scripts/add_structured_data.py"
       - "CNAME"
       - ".nojekyll"
       - ".github/workflows/publish-pages.yml"
@@ -40,6 +41,10 @@ jobs:
           grep -q 'id="autonomie"' puissance-capacite/station-electrique-1000wh/index.html
           grep -q 'id="autonomie"' puissance-capacite/station-electrique-2000wh/index.html
           grep -q 'id="demarrage"' puissance-capacite/station-electrique-2000w/index.html
+      - name: Build and validate structured data
+        run: |
+          python3 scripts/add_structured_data.py
+          python3 scripts/add_structured_data.py --check
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
